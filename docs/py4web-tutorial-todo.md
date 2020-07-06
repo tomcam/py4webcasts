@@ -41,6 +41,9 @@ This lesson assumes your system contains:
 * A text editor. Vim is used here but anywhere you see a command line with vim on it just replace it with Visual Studio, Notepad++, or whatever text editor you prefer
 * And of course, [py4web](https://py4web.com)
 
+## What you'll create in this lesson
+
+![Screen shot of the todo app created in this lesson](/assets/img/py4web-todo-app-index-1280x512.png)
 
 ## Create the database model
 
@@ -48,7 +51,6 @@ py4web uses a database access abstraction layer (DAL) package called [PyDal](glo
 
 What makes PyDal more compelling than other DALs is that it is packed with features that control how data is validated going in through forms, or going in through database import, or how it is displayed. PyDal supports many, many different databases but lets you do virtually everything you need in Pythoh. You may never have to drop into SQL at all.
 
-### The 
 
 ### Add the following lines to `models.py`:
 
