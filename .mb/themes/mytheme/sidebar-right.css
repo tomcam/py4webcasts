@@ -1,0 +1,6 @@
+/* Put sidebar on the right side of the page. Article area floats to the left. */
+:root 
+{
+}
+article, aside {float:left}
+

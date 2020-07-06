@@ -1,0 +1,38 @@
+:root{
+
+		/* ****************/
+		/* DIMENSIONS      */
+		/* ****************/
+	
+		 --max-article-width: 80%; 
+
+		/* The maximum number of characters the aside column should be */
+		--max-aside-width: 20%;   
+
+		/* Header, nav, and footer stretch all the way across
+		 * the screen at 100%. To see gaps (margins) on either side
+		 * reduce that number, then increase --left-gap
+		 * and --right-gap. */
+		--full-page:80%; 
+
+		/* Margin/background visible surrounding article. 
+		 * When --full-page is 100% these should be at 0.
+		 * When --full-page is less than 100% then these
+		 * two should add up to the difference. */
+		--left-gap:10%;
+		--right-gap:0%;
+
+		/* Starting point from left where text (and by default headers) appears */
+		--left-start:5%;
+
+		/* Adjusts header height and keeps it vertically centered */
+		--header-height: 6rem;
+
+		--branding-height:4rem;
+
+		/* Adjusts navbar height and keeps it vertically centered */
+		--nav-height: 6rem;
+
+}
+
+

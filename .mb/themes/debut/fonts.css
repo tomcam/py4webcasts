@@ -1,0 +1,49 @@
+/* font @imports should appear here ABOVE :root */
+@import url('https://fonts.googleapis.com/css?family=Kanit:400,700&display=swap');
+:root
+{
+
+		/* Docset adds the styles formal, informal, and code */
+		/* to the existing serif, sans-serif, and monospace for  */
+		/* improved appearance per operating system.  */
+
+		--informal:
+			/* Good resource for common system fonts: 
+			 * https://www.cssfontstack.com */
+			"system-ui",
+			"-apple-system",
+			"LucidaGrandeUI",
+			"HelveticaNeueDeskInterface-Regular",
+			"HelveticaNeueDeskInterface-Light",
+			"DroidSans",
+			"Ubuntu Light",
+			"Arial",
+			"Roboto-Light",
+			"Segoe UI Light",
+			"Tahoma",
+			"sans-serif";
+
+ 		--code:
+ 			"Consolas",
+			"Monaco",
+			"Menlo",
+			"DejaVue Sans Mono",
+			"Lucida Console",
+			"monospace";
+
+		--formal:
+			"Palatino Linotype",
+			"Palatino",
+  			"Georgia",
+			"Times",
+			"Times New Roman",
+  			"New York",
+			"sans-serif";
+}
+
+/* System fonts always look best so it's a good default */
+html,body,p {font-family:var(--informal),sans-serif;}
+/* OTOH Courier is a lousy code font by default */
+code,pre{font-family:var(--code),monospace;}
+
+

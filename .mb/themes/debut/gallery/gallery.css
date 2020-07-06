@@ -1,0 +1,95 @@
+/* Default (paragraph) text is used for main branding in header */
+header > p {font-weight:700;display:inline;} 
+
+h2{ font-size:2em;margin-top:1.5rem; }
+h3{ font-size:1.75em;margin-top:1.5rem; }
+h4{ font-size:.8em;margin-top:1rem;font-weight:bold;}
+h5{ font-size:.8em; }
+h6{ font-size:0.9em; }
+
+table > thead > tr > th  {margin-top:4rem;}
+blockquote {font-style:italic;margin: 2rem 2rem 2rem 2rem;}
+
+/* HEADER */
+header > img, header > p > img {display:inline;}
+header {padding:0;width:100%;margin-left:auto;margin-right:auto;text-align:center;margin-top:2%;margin-bottom:2%;}
+header > p > a,
+header > p > a:link,
+header > p > a:visited {font-family:'Kanit',var(--informal);display:block;margin-right:0;font-weight:700;line-height:1rem;font-size:var(--branding-height);margin-bottom:.5rem;margin:1.5rem;padding:0;text-decoration:none;}
+header > p > a:hover,
+header > p > a:active {text-decoration:underlinen;}
+
+/* NAV */
+nav > img {display:inline;}
+nav > ul > li {display:inline;list-style-type:none;font-size:1.25rem;margin-right:1rem;} 
+nav > ul > li > a,
+nav > ul > li > a:link,
+nav > ul > li > a:visited {display:inline;} 
+/* For accessibility purposes show visual distinction when hovering or active */
+nav > ul > li > a:hover,
+nav > ul > li > a:active {text-decoration:none;} 
+
+/* ARTICLE */
+article {padding:2rem 4rem 4rem 4rem}
+article > p {padding-right:8rem;width:var(--text-width);font-family:var(--formal);margin-bottom:1rem;font-size:1.5rem;line-height:2rem;}
+article > p > img, article > p > a > img {padding-right:0;width:100%;;margin-bottom:2rem;border:4px solid var(--fg);}
+article > h1 {font-size:2.5rem;float:left;font-weight:700;padding-right:0%;width:80%;padding-bottom:2rem;}
+article > h1 > strong {margin-left:1rem;font-weight:900;font-family:var(--informal);}
+article > h1 > del {font-weight:normal;color:gray;text-decoration:none;}
+article > h2, article > h1 + h2 {text-align:left;font-weight:bold;clear:left;}
+article > h2 {color:var(--trim-fg);}
+article > h3 {color:var(--trim-fg);font-weight:bold;}
+article > ul > li > p > a,
+article > ul > li > p > a:link,
+article > ul > li > p > a:visited {font-weight:bold;} 
+/* For accessibility purposes show visual distinction when hovering or active */
+article > ul > li > p > a:hover,
+article > ul > li > p > a:active {text-decoration:none;} 
+
+article > ul > li > a,
+article > ul > li > a:link,
+article > ul > li > a:visited {list-style-type:none;font-weight:bold;} 
+/* For accessibility purposes show visual distinction when hovering or active */
+article > ul > li > a:hover,
+article > ul > li > a:active {text-decoration:none;} 
+
+article > ul li > 
+ {list-style-type:none;font-weight:bold;} 
+
+
+/* ASIDE */
+aside {padding:2rem;}
+aside {margin: 2rem;}
+aside > h3 {font-size:.75em;font-weight:bold;}
+
+/* FOOTER from gallery.css */
+footer {margin-top:1rem;} 
+
+
+footer > p > a > img {padding-top:1rem;margin-right:.75rem;height:var(--branding-height);}
+footer > p > a,
+footer > p > a:link,
+footer > p > a:visited {font-family:'Kanit',var(--informal);font-size:var(--branding-height);font-weight:700;text-decoration:none;color:var(--nav-fg);} 
+/* For accessibility purposes show visual distinction when hovering or active */
+footer > p > a:hover,
+footer > p > a:active {text-decoration:underline;} 
+
+
+article > table, footer > table {font-size:calc(120%);}
+/* Give table columns to get some breathing room */
+article > table > thead > tr > th, footer > table > thead > tr > th {font-size:.75em;font-weight:normal;padding-top:1rem;padding-right:4rem;margin-top:2rem;} 
+footer > table > thead > tr > th {padding-top:1em;padding-right:0em;padding-bottom:1em;}
+article > table, footer > table > tbody > tr > td {font-size:1.75em;}
+
+/* Color of links in main rows (body) of table */
+article > table > tbody > tr > td > a:link, footer > table > tbody > tr > td > a:link,
+article > table > tbody > tr > td > a:link, footer > table > tbody > tr > td > a:visited
+	{text-decoration:underline;}
+article > table > tbody > tr > td > a:hover, footer > table > tbody > tr > td > a:hover,
+article > table > tbody > tr > td > a:hover, footer > table > tbody > tr > td > a:active
+	{text-decoration:underline;}
+
+footer {text-align:center;}
+footer > h2 > a {font-family:'Kanit',var(--informal),sans-serif;font-weight:700;margin:2rem auto 4rem auto;}
+
+

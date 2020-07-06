@@ -1,0 +1,12 @@
+stylesheets = [ "reset.css","fonts.css","layout.css", "skin.css", "pillar.css"  ]
+[nav]
+file = "nav.md"
+
+[header]
+file = "header.md"
+
+[footer]
+file = "footer.md"
+
+[sidebar]
+file = "sidebar.md"

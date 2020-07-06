@@ -1,0 +1,31 @@
+:root 
+{
+
+
+	/* ****************/
+	/* DIMENSIONS      */
+	/* ****************/
+
+  /* Width of the main client area (article) */
+	--max-article-width: 80%; 
+
+	/* Widest the aside column should be */
+	--max-aside-width: 0%;    
+
+	/* Margin/background visible surrounding article.  */
+	--left-gap:10%;
+	--right-gap:10%;
+
+	/* Starting point from left where text (and by default headers) appears */
+	--left-start:0%;
+
+	/* Adjusts header height and keeps it vertically centered */
+	--header-height: 4rem;
+
+	/* Size of the main text in the header. */
+	--branding-height:2rem;
+
+	/* Adjusts navbar height and keeps it vertically centered */
+	--nav-height:0;
+
+}

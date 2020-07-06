@@ -1,0 +1,201 @@
+h1 font-size:2.5em;margin-top:2rem; }
+h2{ font-size:2em;margin-top:1.5rem; }
+h3{ font-size:1.5em;margin-top:1.5rem; }
+h4{ font-size:.9em;margin-top:1rem;}
+h5{ font-size:.8em; }
+h6{ font-size:0.9em; }
+
+table > thead > tr > th  {margin-top:4rem;}
+blockquote {font-style:italic;margin: 2rem 2rem 2rem 2rem;}
+
+/* HEADER */
+/* Unordered lists show horizontally, not vertically, in the header */
+header > p {float:left;} 
+
+header > p > img {float:left;height:var(--branding-height);}
+/*
+ * --------------------------------------------------
+ * If you have more than one item, use an unordered list. 
+ * These styles show the first item with branding applied,
+ * any number of links following, still slightly
+ * larger than body text, and a last link that
+ * looks like a button.
+ * --------------------------------------------------
+ */
+
+/* Unordered lists show horizontally, not vertically, in the header */
+header > ul {line-height:var(--header-height);}
+header > ul {margin-left:0;padding-left:0;list-style-type:none;display:inline;}
+header > ul > li{display:inline;} 
+header > ul > li > a {
+	font-family:'Heebo',var(--informal);
+	font-size:1.5rem;
+	padding-right:.25em;	
+	text-decoration:none;
+	margin-right:2rem;
+}
+/*
+ * --------------------------------------------------
+ * Special feature: First item in list has biggest
+ * branding
+ * --------------------------------------------------
+ */
+
+
+header > ul > li:first-child > a {font-size:var(--branding-height);font-weight:700;letter-spacing:-.2rem;padding-right:.5em;}
+
+/*
+header > ul > li:first-child {
+  &:before {
+  content: '';
+  display: inline-block;
+  height: 4em;
+  width: 4em;
+  background-image: url(globe-24x24-darkpurple.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right:0.5em;   
+  }
+}
+*/
+
+
+/*
+ * --------------------------------------------------
+ * Special feature: Unicode character rotated at 45
+ * degrees in its own color (if desired). You can
+ * eliminate this by deleting the content item
+ * between single quotes.
+ * Thank you, methodofaction! 
+ * https://stackoverflow.com/questions/9779919/css-rotate-a-pseudo-after-or-before-content 
+ * --------------------------------------------------
+ */
+
+/* ⣠ ▦ ␥ ▛ ◍ ☶ ⚙ */
+header > ul:before  {
+ 	content:'⿹';
+  color:red;
+  transform:rotate(30deg);
+	text-decoration:none;
+	font-size:var(--branding-height);
+	padding-bottom:6rem;
+	margin-right:1em;
+	display:inline-block;
+}
+
+
+header > ul > li{display:inline;list-style-type:none;font-weight:bold;} 
+header > ul > li > a,
+header > ul > li > a:link,
+header > ul > li > a:visited
+	{color:var(--trim-fg);text-decoration:none;line-height:2rem;margin-right:1.5rem;}
+header > ul > li > a:hover,
+header > ul > li > a:active
+	{color:var(--trim-fg);text-decoration:underline;}
+header > ul > li:first-child > a {
+  color:black;
+  display:inline;
+  clear:right;
+  margin-right:0;
+  font-size:4rem;
+  font-weight:700;
+  line-height:1rem;
+  font-size:var(--branding-height);
+  margin-bottom:2rem;margin-top:4rem;
+}
+
+/* NAV */
+nav > ul > li {display:inline;list-style-type:none;font-size:1.25rem;margin-right:1rem;} 
+nav > ul > li > a,
+nav > ul > li > a:link,
+nav > ul > li > a:visited {display:inline;color:var(--nav-fg);} 
+/* For accessibility purposes show visual distinction when hovering or active */
+nav > ul > li > a:hover,
+nav > ul > li > a:active {text-decoration:none;} 
+
+/* ARTICLE */
+article > h1 {font-weight:700;font-size:3rem;color:var(--nav-fg);}
+article > h2 {color:var(--fg);font-size:1.5rem;line-height:1.5em;}
+article > h3 {color:var(--fg);}
+article > h4 {font-weight:normal;font-size:1em;color:gray;margin-bottom:1em; } /* Byline */
+aside > h4 {color:var(--trim-bg);background-color:var(--article-bg)}
+iarticle {max-width:var(--full-page);}
+article {width:var(--max-article-width);}
+article > p,
+article > ul,
+article > ol,
+article > li,
+article > dd,
+article > dl,
+article > hr {
+	font-size:1.5rem;
+	line-height:2.25rem;
+	margin-bottom:2em;
+}     
+   
+article > p {color:var(--header-bg)}
+article > p > code, article > code, article > pre, article > pre > code {
+	font-family:var(--code);
+	font-size:1em;
+	overflow:auto;
+	margin-bottom:1em;
+	line-height:1.5em;
+}
+
+article > pre {font-size:1.25rem;}
+
+article > a,
+article > a:link,
+article > a:visited {color:var(--nav-fg);} 
+/* For accessibility purposes show visual distinction when hovering or active */
+article > a:hover,
+article > a:active {text-decoration:none;} 
+
+article > p > a,
+article > p > a:link,
+article > p > a:visited {color:var(--nav-fg);} 
+/* For accessibility purposes show visual distinction when hovering or active */
+article > p > a:hover,
+article > p > a:active {text-decoration:none;} 
+
+
+/* Links in unordered lists */
+article > ul > li > a,
+article > ul > li > a:link,
+article > ul > li > a:visited {color:var(--nav-fg);} 
+/* For accessibility purposes show visual distinction when hovering or active */
+article > ul > li > a:hover,
+article > ul > li > a:active {text-decoration:none;} 
+
+
+/* Article tables use colors same as header, but reversed in first row */
+article >  table {width:var(--max-article-width);margin-top:2rem;margin-bottom:3rem;}
+article > table > thead > tr > th {font-size:1.5rem;}
+article > table > td,th {padding:1rem;}
+article > table > tbody > tr > td {padding:1rem;border-bottom:.1px solid gray;}
+
+
+/* ASIDE */
+aside {padding:2rem;}
+aside {margin: 2rem;}
+aside > h3 {color:var(--trim-bg);font-size:.75em;font-weight:bold;margin-bottom:2;}
+
+/* FOOTER */
+footer {border-top: 1px solid var(--trim-fg);} 
+footer > h2 {text-align:center;}
+footer > table {font-size:calc(80%);}
+/* Give table columns to get some breathing room */
+footer > table > thead > tr > th {padding-right:2rem;} 
+footer > table > thead > tr > th {color:var(--trim-fg);background-color:var(--footer-bg);}
+footer > table > thead > tr > th {padding-top:1em;padding-right:2em;padding-bottom:1em;}
+footer > table > tbody > tr > td {padding-right:3em;}
+
+/* Color of links in main rows (body) of table */
+footer > table > tbody > tr > td > a:link,
+footer > table > tbody > tr > td > a:visited
+	{color:var(--header-fg);text-decoration:none;}
+footer > table > tbody > tr > td > a:hover,
+footer > table > tbody > tr > td > a:active
+	{color:var(--header-fg);text-decoration:underline;}
+
+

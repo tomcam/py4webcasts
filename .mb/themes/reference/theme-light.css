@@ -1,0 +1,97 @@
+/* IMPORTANT: Downloadable fonts should be imported above this rule  */
+:root 
+{
+
+		/* ****************/
+		/* COLORS         */
+		/* ****************/
+
+		/* Default foreground (text) and background colors  */
+		--fg:black;
+		--bg:white;
+
+		/* Default foreground (text) and background colors in article */
+		--article-fg: black;
+		--article-bg: white;
+				
+		/* Default foreground (text) and background colors in aside */
+		--aside-fg: black;
+		--aside-bg: white;
+
+		/* Primary foreground (text) and background colors in header */
+		--header-fg:blue;
+		--header-bg:white; 
+
+		/* Primary foreground (text) and background colors in navbar */
+		--nav-fg:blue;
+		--nav-bg:white;
+
+		/* Secondary foreground (text) and background colors for accents. */
+		--trim-fg: #05386B; /* Dark blue */ 
+		--trim-bg: #EDF5E1; /* Almost white */
+		
+		/* Primary foreground (text) and background colors in footer */
+		--footer-fg:var(--header-fg);
+		--footer-bg:var(--header-bg);
+
+
+}
+
+/* HEADER */
+header > ul > li:first-child > a {color:var(--header-fg);}
+
+header > ul:before  {
+	color:red;
+}
+
+
+
+header > ul > li > a:link,
+header > ul > li > a:visited
+	{color:var(--header-fg);text-decoration:none;}
+header > ul > li > a:hover,
+header > ul > li > a:active
+	{color:var(--header-fg);text-decoration:underline;}
+
+header {border-bottom:1px solid black;padding-bottom:7rem;padding-top:2rem;}
+
+
+
+/* NAVBAR */
+nav > p {background-color:var(--nav-bg); }
+nav > p > a {color:var(--nav-fg);}
+/* Color nav links */
+nav > p > a{color:var(--nav-fg);background-color:var(--nav-bg)}
+
+/* ARTICLE */
+article > h4 {color:gray;}
+article > h4 > strong {color:black; }
+
+/* ASIDE */
+
+/* The 1st 3 levels of li represent a hierarchy for a TOC in the sidebar */
+aside > ul > li > a,
+aside > ul > li > a:link,
+aside > ul > li > a:visited,
+aside > ul > li li > a,
+aside > ul > li li > a:link,
+aside > ul > li li > a:visited,
+aside > ul > li li > a,
+aside > ul > li li li > a:link,
+aside > ul > li li li > a:visited
+{
+  color:black;
+}
+
+aside > ul > li > a:hover,
+aside > ul > li > a:active,
+aside > ul > li li > a:hover,
+aside > ul > li li > a:active,
+aside > ul > li li li > a:hover,
+aside > ul > li li li > a:active
+{
+  color:white;background-color:black;
+}
+
+
+

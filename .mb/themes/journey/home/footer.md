@@ -1,0 +1,2 @@
+![Landsteading logo](landsteading-fake-80x40.png)
+Copyright 2020 Your name &middot; 12345 Main St. &middot; Springfield &middot; USA &middot; 12345 &middot; +1 (555) 1212 

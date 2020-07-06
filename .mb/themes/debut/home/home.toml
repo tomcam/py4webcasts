@@ -1,0 +1,25 @@
+Branding = "Debut theme"
+Description = ""
+Stylesheets = ["sizes.css", "layout.css", "home.css", "theme-light.css", "responsive.css"]
+RootStylesheets = ["reset.css", "fonts.css"]
+PathName = ""
+
+[Nav]
+  HTML = ""
+  File = "nav.md"
+
+[Header]
+  HTML = ""
+  File = "header.md"
+
+[Article]
+  HTML = ""
+  File = ""
+
+[Footer]
+  HTML = ""
+  File = "footer.md"
+
+[Sidebar]
+  HTML = ""
+  File = "sidebar.md"

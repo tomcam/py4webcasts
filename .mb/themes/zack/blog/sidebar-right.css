@@ -1,0 +1,10 @@
+/* Put sidebar on the right side of the page. Article area floats to the left. */
+:root 
+{
+	--max-article-width:60%;
+	--full-page:75%;
+}
+article, aside {float:left}
+article {clear:left;}
+aside {margin-left:0;padding-left:0;padding-right:10%;}
+

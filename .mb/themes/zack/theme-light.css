@@ -1,0 +1,57 @@
+/* IMPORTANT: Downloadable fonts should be imported above this rule  */
+:root 
+{
+
+		/* ****************/
+		/* COLORS         */
+		/* ****************/
+		/*
+		 * Most but not all colors used by a theme appear
+		 * in this CSS file as CSS variables, so that you
+		 * can make big changes to your theme by doing 
+		 * nothing more than altering these values.
+		 * 
+		 * Text colors use fg, meaning foreground, and
+		 * background colors use fg. Sometimes they're
+		 * used to color non-text objects, which is why
+		 * they aren't called -text or -background.
+		 *
+		 * --------------------------------------------------
+		 * Header style
+		 * -------------------------------------------------- 
+		 */
+	
+		/* Default foreground (text) and background colors  */
+		--fg: black;
+		--bg: white;
+
+		/* Default foreground (text) and background colors in article */
+		--article-fg: var(--header-bg);
+		--article-bg: whitesmoke;
+				
+		/* Default foreground (text) and background colors in aside */
+		--aside-fg: var(--fg);
+		--aside-bg: var(--article-bg);
+
+		/* Primary foreground (text) and background colors in header */
+		--header-fg: white;
+		--header-bg: #12343B; /* darkblue; */
+
+		/* Primary foreground (text) and background colors in navbar */
+		--nav-fg: var(--header-fg);
+		--nav-bg: var(--header-bg);
+
+		/* Secondary foreground (text) and background colors for accents. */
+		--trim-fg: gray;
+		--trim-bg: white;
+		
+		/* Primary foreground (text) and background colors in footer */
+		--footer-fg: var(--header-fg);
+		--footer-bg: var(--header-bg);
+
+
+}
+
+header > p {color:var(--header-fg);background-color:var(--header-bg);} 
+header > ul > li > a {color:white;} 
+footer > table > tbody > tr > td > a {color:white;}

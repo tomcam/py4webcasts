@@ -1,0 +1,381 @@
+/* Default (paragraph) text is used for main branding in header */
+html {font-family:var(--formal);}
+header > p {color:var(--header-fg);background-color:var(--header-bg);font-size:var(--branding-height);font-weight:700;display:inline;} 
+
+h1{ font-size:2.5em;margin-top:2rem; }
+h2{ font-size:2em;margin-top:1.5rem; }
+h3{ font-size:1.5em;margin-top:1.5rem; }
+h4{ font-size:.9em;margin-top:1rem;}
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+table > thead > tr > th  {margin-top:4rem;}
+blockquote {font-style:italic;margin: 2rem 2rem 2rem 2rem;}
+
+/* HEADER */
+header > ul {line-height:var(--header-height);padding-left:0;}
+header > ul > li {display:inline;font-size:1.25rem;} 
+header > ul > li > a,
+header > ul > li > a:link,
+header > ul > li > a:visited {text-decoration:none;color:var(--header-fg);} 
+/* For accessibility purposes show visual distinction when hovering or active */
+header > ul > li > a:hover,
+header > ul > li > a:active {text-decoration:underline;} 
+header > ul > li:first-child > a {font-family:serif;color:var(--header-fg);font-size:var(--branding-height);font-weight:700;margin-right:2rem;}
+
+
+/* NAV */
+nav > img {display:inline;}
+nav > ul {padding-left:0;} 
+nav > ul > li {display:inline;font-family:var(--informal);margin-right:.5rem;} 
+nav > ul > li > a,
+nav > ul > li > a:link,
+nav > ul > li > a:visited {text-decoration:none;color:var(--header-fg);} 
+/* For accessibility purposes show visual distinction when hovering or active */
+nav > ul > li > a:hover,
+nav > ul > li > a:active {text-decoration:underline;} 
+/* Display the last time (the date) bigger and bolder */
+nav > ul > li:last-child  {font-size:1.25em;font-weight:bold;} 
+
+/* Add spacing to clickable image links to separate them from other links on the line. */
+nav > ul > li > a > img {margin-right:1rem;margin-left:1rem;}
+
+/* ARTICLE */
+article {margin-bottom:4rem;}
+article {padding-right:0;margin-right:0;}
+article > p > img {width:95%;}
+article > p {margin-top:1em;} 
+article > h1 {font-weight:bold;}
+article > h2 {color:var(--fg);font-size:1.5rem;line-height:1.5em;}
+article > h3 {font-weight:bold;color:var(--fg);}
+article > h4 {font-family:var(--informal);font-weight:bold;font-size:1em;color:gray;margin-bottom:1em; } /* Byline */
+article > h4 > strong {font-weight:bold;color:black; } /* Byline */
+article > h5 {font-family:var(--informal);}
+article > h5 > strong {color:black;}
+article > pre, article > p, article > ul, article > ol, article > li 
+	{font-size:1.25rem;line-height:1.5em;padding-right:0;margin-right:0;}
+
+
+
+h1{ font-size:2.5em;margin-top:2rem; }
+h2{ font-size:2em;}
+h3{ font-size:1.5em;margin-top:1.5rem; }
+h4{ font-size:.9em;margin-top:1rem;}
+h5{ font-size:.8em; }
+h6{ font-size:0.9em; }
+
+table > thead > tr > th  {margin-top:4rem;}
+blockquote {font-style:italic;margin: 2rem 2rem 2rem 2rem;}
+
+/* ****************************/
+/*  HEADER BRANDING AND LINKS */
+/* ****************************/
+
+
+
+/*
+ * --------------------------------------------------
+ * Simplest case: Branded name, nothing else
+ * Doesn't act like a link.
+ * --------------------------------------------------
+ */
+header > p {color:var(--header-fg);background-color:var(--header-bg);font-size:var(--branding-height);font-weight:700;display:inline;} 
+
+ 
+/*
+ * --------------------------------------------------
+ * If you have more than one item, use an unordered list. 
+ * These styles show the first item with branding applied,
+ * any number of links following, still slightly
+ * larger than body text, and a last link that
+ * looks like a button.
+ * --------------------------------------------------
+ */
+header > ul {line-height:var(--header-height);font-size:1.25rem;}
+header > ul {margin-left:0;padding-left:0;list-style-type:none;display:inline;}
+header > ul > li{display:inline;padding-right:1.5rem;} 
+header > ul > li > a,
+header > ul > li > a:link,
+header > ul > li > a:visited
+	{color:var(--header-fg);text-decoration:none;}
+header > ul > li > a:hover,
+header > ul > li > a:active
+	{color:var(--header-fg);text-decoration:underline;}
+
+/*
+ * --------------------------------------------------
+ * Special feature: First item in list has biggest
+ * branding
+ * --------------------------------------------------
+ */
+header > ul > li:first-child > a {color:var(--header-fg);font-size:var(--branding-height);font-weight:700;padding-right:2em;}
+
+/*
+ * --------------------------------------------------
+ * Special feature: Last item in list is styled like 
+ * a button. Just leave omit text after the
+ * bullet character (asterisk) in your Markdown 
+ * if you don't want the effect. (Or just remove
+ * these lines of CSS.)
+ * --------------------------------------------------
+ */
+/* Make the last item look and act like a button */
+header > ul > li:last-child > a {border: 2px solid var(--header-fg);border-radius:.25rem;padding: .25rem;color: var(--header-fg);padding: 1em 1.5em;text-decoration: none;text-transform: uppercase;font-weight:bold;}
+
+header > ul > li:last-child > a:hover {color: var(--header-bg);background-color: var(--header-fg);cursor: pointer;}
+
+/* Center the header */
+header {text-align:center;padding-left:0;padding-right:0;width:100%;margin-left:auto;margin-right:auto;}
+
+/* ******************************/
+/*  NAVBAR                      */
+/* ******************************/
+nav {margin-left:var(--left-gap);}
+nav > p > a {font-size:1.5em;margin-right:1em;font-weight:700;}
+nav > p {margin-top:0;line-height:var(--nav-height);}
+nav > p {background-color:var(--nav-bg); }
+nav > img {display:inline;}
+nav > p > a {color:var(--nav-fg);font-style:normal;}
+
+nav > ul > li {list-style-type:none;} 
+nav > ul > li > a,
+nav > ul > li > a:link,
+nav > ul > li > a:visited {display:inline;text-decoration:none;color:var(--nav-fg);} 
+/* For accessibility purposes show visual distinction when hovering or active */
+nav > ul > li > a:hover,
+nav > ul > li > a:active {text-decoration:underline;} 
+
+
+
+
+/* ******************************/
+/*  ARTICLE-MAIN PORTION OF TEXT*/
+/* ******************************/
+
+
+/*
+ * --------------------------------------------------
+ * Special (and required) feature: An image
+ * following an H1 is 100% of the container size.
+ * --------------------------------------------------
+ */
+
+article > h1 + p > img {width:100%;}
+/* Style link like button. Expands when mouse hovers over it. */
+article > h1 + p > a,
+article > h1 + p > a:link,
+article > h1 + p > a:visited
+	{font-size:1em;color:white;background-color:black;padding:.25rem .5rem .25rem .5rem;border-radius:.25em;text-decoration:none;}
+article > h1 + p > a:hover,
+article > h1 + p > a:active
+	{padding:.5rem .75rem .5rem .75rem;}
+
+
+
+
+/*
+ * --------------------------------------------------
+ * Special feature: "WHAT'S NEW" section showing
+ * a column of teasers where there's an image
+ * on the left, and to its left are an H3 title,
+ * an H4 under it, and a paragraph of text.
+ * Start with an h2 (the "WHAT'S NEW" title),
+ * then each teaser consists of the H3, the H4,
+ * and a normal paragraph.
+ * There can be any number of these.
+ * --------------------------------------------------
+ */
+
+article > h2 { padding-left:1em;}
+article > h2 + ul {padding:0;margin:0;list-style-type:none;}
+article > h2 + ul li {max-width:60%;width:60%;margin-bottom:8rem;clear:left;}
+/* Leave some room on the right side of each image */
+article > h2 + ul li > img {width:80%;margin:0%;float:left;}
+/* H3 is to the right of the image. */
+article > h2 + ul > li > h3 {font-weight:bold;padding-right:25%;padding-top:1.5em;margin-left:85%;width:80%;}
+/* H4 under the H3 */
+article > h2 + ul > li > h4 {font-weight:bold;margin-left:85%;width:80%;margin-top:0;}
+/* Paragraph under the H3 */
+article > h2 + ul > li >  p{margin-left:85%;width:80%;display:block;}
+/* Style link like button. Expands when mouse hovers over it. */
+article > ul > li > p > a,
+article > ul > li > p > a:link,
+article > ul > li > p > a:visited
+	{font-size:.65em;color:white;background-color:black;padding:.25rem .5rem .25rem .5rem;border-radius:.25em;text-decoration:none;}
+article > ul > li > p > a:hover,
+article > ul > li > p > a:active
+	{padding:.5rem .75rem .5rem .75rem;}
+
+
+
+/*
+ * --------------------------------------------------
+ * Special feature: "Featured Posts" section showing
+ * 3 images in a row with captions underneath.
+ * Start with an h3 ("Featured Posts, for example)
+ * then a ul with 3 items consiting of an image
+ * and text for it.
+ * --------------------------------------------------
+ */
+
+
+article > h3 {margin-top:4rem;clear:left;}
+article > h3 + ul {
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+
+
+/* Leave some room on the right side of each image */
+article > h3 + ul li > img {
+	width:30%;
+	margin-right:65%;
+}
+
+article > h3 + ul li > img br {
+  padding-left:4rem;
+}
+/* Each li is 1/3 as wide as the container. */
+article > h3 + ul li {
+	font-family:var(--informal);
+	padding-top:.5rem;
+	max-width:33.3%;
+	width:33.3%;
+	float:left;
+	line-height:1em;
+}
+
+/* Start a new line after the 3rd column */
+article > h3 + ul li:nth-child(3) {
+	display:block;
+}
+
+
+/* Style link like a button. Expands when mouse hovers over it. */
+
+article > h3 + ul li > a,
+article > h3 + ul li > a:link,
+article > h3 + ul li > a:visited
+	{font-size:.65em;color:white;background-color:black;padding:.25rem .5rem .25rem .5rem;border-radius:.25em;text-decoration:none;}
+article > h3 + ul li > a:hover,
+article > h3 + ul li > a:active
+	{padding:.5rem .75rem .5rem .75rem;}
+
+
+article > h1,article > h2 {color:white;background-color:var(--header-fg);font-weight:700;}
+article > h1 {text-align:center;padding:.5em;}
+article > h3 {font-weight:bold;color:white;background-color:black;padding-top:.5rem;padding-bottom:.5rem;text-align:center;margin-bottom:2rem;}
+article > h4 {font-weight:normal;font-size:1em;color:gray;margin-bottom:1em; } /* Byline */
+article > h4 > strong {font-weight:bold;color:black; } /* Byline */
+
+article > p, 
+  article > ul, 
+  article > ol, 
+  article > li, 
+  article > dd, 
+  article > dl,
+  article > hr {
+		font-size:1.5rem;
+		line-height:2.25rem;
+		margin-bottom:2em;
+}
+article > p > strong {font-family:var(--informal);font-weight:700;}
+/* Override font rule for code */
+article > p > code, article > code, article > pre, article > pre > code {
+		font-family:var(--code);
+		font-size:1em;
+		overflow:auto;
+    margin-bottom:1em;
+    line-height:1.5em;
+		}
+article > pre { padding-left: 1em;}
+article > p > a,
+article > p > a:link,
+article > p >  a:visited
+	{font-family:var(--informal);font-weight:bold;color:var(--trim-fg);text-decoration:underline;}
+article > p >  a:hover,
+article > p >  a:active
+	{text-decoration:underline;color:var(--trim-bg);background-color:var(--trim-fg);}
+
+
+/* Article tables use colors same as header, but reversed in first row */
+article > table {width:var(--full-page);margin-top:2rem;margin-bottom:3rem;}
+article > table > thead > tr > th {color:var(--header-bg);background-color:var(--header-fg);}
+article > table > td,th {padding:1rem;}
+article > table > tbody > tr > td {padding:1rem;border-bottom:.1px solid gray;}
+
+
+/* ******************************/
+/*  SIDEBAR (ASIDE TAG)         */
+/* ******************************/
+
+aside, aside > p, aside > h2, aside > h3, aside > h4 {margin-left:4em;margin-right:1rem;padding-left:1rem;padding-right:1rem;} 
+aside > h2 {margin-top:2em;font-size:1rem;color:white;background-color:var(--trim-fg);text-align:center;padding:1em;}
+aside > h2 + p > img {text-align:center;width:80%;max-width:80%;border-radius:50%;margin:0;padding:0;}
+aside > h3 {color:var(--trim-fg);}
+aside > h4 {color:var(--header-bg);background-color:var(--header-fg)}
+aside {padding:2rem;}
+aside {margin: 2rem;}
+iaside h2 {margin-top: 1em;margin-bottom:.5em}
+aside > p {margin-top:1rem;margin-bottom:1rem;}
+/*
+ * --------------------------------------------------
+ * Special feature: Use Strikethrough markup to get
+ * a big box around text. Works great on a single
+ * letter.
+ * --------------------------------------------------
+ */
+aside > h3 > del {font-size:3rem;font-weight:900;color:var(--header-bg);margin:.25rem;padding:.25em;border:.5rem solid var(--header-bg);text-decoration:none;} 
+aside > h3 + p {margin-top:2rem;}
+
+
+
+/* ******************************/
+/*  FOOTER                      */
+/* ******************************/
+
+/* FOOTER */
+footer {margin-left:var(--left-start);border-top:2px solid var(--trim-fg);font-size:1.5rem;text-align:center;margin-top:4rem;margin-bottom:2rem;padding-top:2rem;} 
+footer > h2 {text-align:center;}
+footer > table {font-size:calc(80%);}
+/* Give table columns to get some breathing room */
+footer > table > thead > tr > th {padding-right:2rem;} 
+footer > table > thead > tr > th {color:var(--trim-fg);background-color:var(--footer-bg);}
+footer > table > thead > tr > th {padding-top:1em;padding-right:2em;padding-bottom:1em;}
+footer > table > tbody > tr > td {padding-right:3em;}
+
+/* Color of links in main rows (body) of table */
+footer > table > tbody > tr > td > a:link,
+footer > table > tbody > tr > td > a:visited
+	{color:var(--header-fg);text-decoration:none;}
+footer > table > tbody > tr > td > a:hover,
+footer > table > tbody > tr > td > a:active
+	{color:var(--header-fg);text-decoration:underline;}
+
+
+
+
+
+
+
+
+
+/* ASIDE */
+aside > p > img {margin-top:1em;}
+aside {padding-left:0;margin-left:0;}
+aside > h3 {color:var(--fg);font-size:1.2rem;font-family:var(--informal);font-weight:bold;margin-bottom:2;}
+
+/* FOOTER */
+footer {border-top: 1px solid var(--trim-fg);} 
+footer > h2 {text-align:center;}
+footer > table {font-size:calc(80%);}
+/* Give table columns to get some breathing room */
+footer > table > thead > tr > th {padding-right:2rem;} 
+footer > table > thead > tr > th {color:var(--trim-fg);background-color:var(--footer-bg);}
+footer > table > thead > tr > th {padding-top:1em;padding-right:2em;padding-bottom:1em;}
+footer > table > tbody > tr > td {padding-right:3em;}
+footer > table > tbody > tr > td > a:link {color:var(--footer-fg);text-decoration:none;}
+footer > table > tbody > tr > td > a:hover{color:var(--footer-fg);text-decoration:underline;}
+
+

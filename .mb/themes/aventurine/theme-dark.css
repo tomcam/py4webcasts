@@ -1,0 +1,107 @@
+/* IMPORTANT: Downloadable fonts should be imported above this rule  */
+:root 
+{
+
+		/* ****************/
+		/* COLORS         */
+		/* ****************/
+		/*
+		 * Most but not all colors used by a theme appear
+		 * in this CSS file as CSS variables, so that you
+		 * can make big changes to your theme by doing 
+		 * nothing more than altering these values.
+		 * 
+		 * Text colors use fg, meaning foreground, and
+		 * background colors use fg. Sometimes they're
+		 * used to color non-text objects, which is why
+		 * they aren't called -text or -background.
+		 *
+		 * --------------------------------------------------
+		 * Header style
+		 * --------------------------------------------------
+		 */
+	
+		--fg:whitesmoke;
+		--bg:black;
+    /* Default link colors */
+    --a: whitesmoke;
+    --a-link: var(--a);
+    --a-visited: var(--a);
+    --a-hover: var(--a);
+    --a-active: var(--a);
+
+
+		/* Secondary foreground (text) and background colors for accents. */
+		--trim-fg:red; /* cyan: #03DAC6; */
+		--trim-bg: white;
+
+
+		/* Primary foreground (text) and background colors in header */
+		--header-fg: darkblue;
+		--header-bg: white;
+    /* Link colors specific to header*/
+    --a-header: var(--a); 
+    --a-header-link:  var(--a);
+    --a-header-visited:  var(--a);
+    --a-header-hover: var(--a); 
+    --a-header-active:  var(--a);
+
+
+		/* Primary foreground (text) and background colors in navbar */
+		--nav-fg: black;
+		--nav-bg: lightgray;
+    /* Link colors specific to navbar */
+    --a-nav: var(--a); 
+    --a-nav-link:  var(--a);
+    --a-nav-visited:  var(--a);
+    --a-nav-hover: var(--a); 
+    --a-nav-active:  var(--a);
+
+
+		/* Default foreground (text) and background colors in article */
+		--article-fg: var(--fg);
+		--article-bg: var(--bg);
+    /* Link colors specific to article */
+    --a-article: var(--a); 
+    --a-article-link:  var(--a);
+    --a-article-visited:  var(--a);
+    --a-article-hover: var(--a); 
+    --a-article-active:  var(--a);
+
+	
+		/* Primary foreground (text) and background colors in footer */
+		--footer-fg: var(--header-fg);
+		--footer-bg: var(--header-bg);
+    /* Link colors specific to footer */
+    --a-footer: var(--a); 
+    --a-footer-link: var(--a);
+    --a-footer-visited: var(--a);
+    --a-footer-hover: var(--a); 
+    --a-footer-active: var(--a);
+
+}
+
+
+html, body {color:var(--fg);background-color:var(--bg);}
+
+header > ul > li > a,
+header > ul > li > a:link,
+header > ul > li > a:visited
+	{color:var(--fg);}
+header > ul > li > a:hover,
+header > ul > li > a:active
+	{color:var(--fg);}
+
+nav > ul > li > a:visited {color:var(--a);} 
+/* For accessibility purposes show visual distinction when hovering or active */
+nav > ul > li > a:hover,
+nav > ul > li > a:active {text-decoration:underline;} 
+
+article > a {color:var(--a);}
+article > h2 {color:var(--fg);}
+article > h3 {color:var(--fg);}
+article > h4 {color:gray;} /* Byline */
+article > h4 > strong {font-weight:bold;color:black; } /* Byline */
+
+header > p + p {color:var(--fg)}
+

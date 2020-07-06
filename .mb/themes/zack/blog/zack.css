@@ -1,0 +1,141 @@
+h1{ font-size:2.5em;margin-top:2rem; }
+h2{ font-size:2em;margin-top:1.5rem; }
+h3{ font-size:1.5em;margin-top:1.5rem; }
+h4{ font-size:.9em;margin-top:1rem;}
+h5{ font-size:.8em; }
+h6{ font-size:0.9em; }
+p,ul,ol,dl {margin-top:1rem;}
+table > thead > tr > th  {margin-top:4rem;}
+blockquote {font-style:italic;margin: 2rem 2rem 2rem 2rem;}
+
+/* ****************************/
+/*  HEADER BRANDING AND LINKS */
+/* ****************************/
+
+header {font-weight:100;}
+/*
+ * --------------------------------------------------
+ * Simplest case: Branded name, nothing else
+ * Doesn't act like a link.
+ * --------------------------------------------------
+ */
+header > p {color:var(--header-fg);background-color:var(--header-bg);font-size:var(--branding-height);font-weight:100;display:inline;} 
+ 
+/*
+ * --------------------------------------------------
+ * If you have more than one item, use an unordered list. 
+ * These styles show the first item with branding applied,
+ * then any number of links following, still slightly
+ * larger than body text.
+ * --------------------------------------------------
+ */
+header > ul {line-height:var(--header-height);font-size:1.25rem;}
+header > ul {margin-left:0;padding-left:0;padding-right:1rem;list-style-type:none;display:inline;}
+header > ul > li{display:inline;} 
+header > ul > li > a {text-decoration:none;color:var(--header-fg);margin-right:2rem;} 
+/* For accessibility purposes show visual distinction when hovering */
+header > ul > li > a:hover {text-decoration:underline;} 
+
+
+/*
+ * --------------------------------------------------
+ * Special feature: Use strikethrough to add emphasis 
+ * --------------------------------------------------
+ */
+header > ul > li > a > del {color:var(--header-fg);text-decoration:none;}
+
+/*
+ * --------------------------------------------------
+ * Special feature: First item in list has biggest
+ * branding
+ * --------------------------------------------------
+ */
+header > ul > li:first-child > a {color:var(--header-fg);font-size:var(--branding-height);}
+
+/* ******************************/
+/*  NAVBAR                      */
+/* ******************************/
+nav {font-weight:100;margin-bottom:3rem;}
+nav > p > a {font-size:1.5em;margin-right:1em;font-weight:light;}
+nav > p {margin-top:0;line-height:var(--nav-height);}
+nav > p {background-color:var(--nav-bg); }
+nav > img {display:inline;}
+nav > p > a {color:var(--nav-fg);font-style:normal;}
+nav > p {margin-right:3rem;}
+
+
+
+
+
+
+/* ******************************/
+/*  ARTICLE-MAIN PORTION OF TEXT*/
+/* ******************************/
+
+article > h1,article > h2 {font-weight:light;}
+article > h2 {margin-top:4rem;}
+article > h2 {color:var(--header-bg);}
+article > h3 {color:var(--fg);}
+article > h4 {font-weight:normal;font-size:1em;color:gray;margin-bottom:1em; } /* Byline */
+article > h4 > strong {font-weight:light;color:black; } /* Byline */
+article > pre, article > p, article > ul, article > ol, article > li {line-height:1.5em; max-width:var(--max-article-width)}
+article > pre > code {font-family:var(--code);max-width:var(--max-article-width);overflow:auto;}
+article > code, article > pre{font-size:1em;}
+article > hr {margin-right:var(--right-gap);}
+article {margin-bottom:3rem;}
+
+/* ******************************/
+/*  SIDEBAR (ASIDE TAG)         */
+/* ******************************/
+
+aside {color:var(--header-fg);background-color:var(--header-bg);}
+aside, aside > p, aside > h2, aside > h3, aside > h4 {margin-left:0;padding-left:1rem;padding-right:1rem;} 
+aside > h3 {color:var(--trim-fg);}
+aside > h4 {color:var(--header-fg);background-color:var(--header-bg)}
+aside {padding:2rem;}
+aside {margin: 2rem;}
+aside h2 {margin-top: 1em;margin-bottom:.5em}
+aside > p {margin-top:1rem;margin-bottom:1rem;}
+
+/*
+ * --------------------------------------------------
+ * Show unordered list links vertically but with no bullets
+ * --------------------------------------------------
+ */
+/* TODO: Complete these */
+
+aside > ul > li {list-style:none}
+aside > ul >li > a:link,
+aside > ul >li > a:visited
+	{color:var(--header-fg);text-decoration:none;}
+/* For accessibility purposes show visual distinction when hovering or active */
+aside > ul >li > a:hover,
+aside > ul >li > a::active
+	{color:var(--header-fg);text-decoration:underline;}
+
+
+
+
+/* ******************************/
+/*  FOOTER                      */
+/* ******************************/
+
+/* FOOTER */
+footer {border-top: 1px solid var(--trim-fg);padding-bottom:1rem;} 
+footer > h2 {text-align:center;}
+footer > table {font-size:calc(80%);}
+/* Give table columns to get some breathing room */
+footer > table > thead > tr > th {padding-right:2rem;} 
+/* Color of links for table header */
+footer > table > thead > tr > th {color:var(--header-fg);background-color:var(--header-bg);}
+footer > table > thead > tr > th {padding-top:1em;padding-right:2em;padding-bottom:1em;}
+footer > table > tbody > tr > td {padding-right:3em;}
+/* Color of links in main rows (body) of table */
+footer > table > tbody > tr > td > a:link,
+footer > table > tbody > tr > td > a:visited
+	{color:var(--header-fg);text-decoration:none;}
+footer > table > tbody > tr > td > a:hover,
+footer > table > tbody > tr > td > a:active
+	{color:var(--header-fg);text-decoration:underline;}
+
+

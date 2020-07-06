@@ -1,0 +1,79 @@
+/* IMPORTANT: Downloadable fonts should be imported above this rule  */
+:root 
+{
+		/* ****************/
+		/* FONT SELECTION */
+		/* ****************/
+		/*
+		 * --------------------------------------------------
+		 * Header text style
+		 * --------------------------------------------------
+		 *
+		 * Font family used for headings (it can easily be
+		 * overridden). Often you want headings h1 through
+		 * h6 to use a font familu that contrasts with the
+		 * body text, so you can set it here.
+		 * Docset adds the styles formal, informal, and code  
+		 * to the existing styles serif, sans-serif, and 
+		 * monospace. This can give better results depending
+		 * on the platform, which is a combination of the
+		 * operating system, browser, and versions of both.
+		 */
+
+		--header-style:var(--informal);
+
+		/* Font style (family) used in body text */
+		--body-style:var(--informal):
+
+
+		/* ****************/
+		/* COLORS         */
+		/* ****************/
+		/*
+		 * Most but not all colors used by a theme appear
+		 * in this CSS file as CSS variables, so that you
+		 * can make big changes to your theme by doing 
+		 * nothing more than altering these values.
+		 * 
+		 * Text colors use fg, meaning foreground, and
+		 * background colors use fg. Sometimes they're
+		 * used to color non-text objects, which is why
+		 * they aren't called -text or -background.
+		 *
+		 * --------------------------------------------------
+		 * Header style
+		 * --------------------------------------------------
+		 */
+	
+		/* Default foreground (text) and background colors  */
+		--fg: black;
+		--bg: white;
+
+		/* Default foreground (text) and background colors in article */
+		--article-fg: var(--fg);
+		--article-bg: var(--bg);
+				
+		/* Default foreground (text) and background colors in aside */
+		--aside-fg: var(--fg);
+		--aside-bg: var(--bg);
+
+		/* Primary foreground (text) and background colors in header */
+		--header-fg: #347515; /* Grassy green */
+		--header-bg: white;
+
+		/* Primary foreground (text) and background colors in navbar */
+		--nav-fg: var(--header-bg);
+		--nav-bg: var(--header-fg);
+
+		/* Secondary foreground (text) and background colors for accents. */
+		--trim-fg: #6B5646; /* brown */
+		--trim-bg: white;
+		
+		/* Primary foreground (text) and background colors in footer */
+		--footer-fg: var(--header-fg);
+		--footer-bg: var(--header-bg);
+
+
+}
+
+

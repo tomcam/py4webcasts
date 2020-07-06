@@ -1,0 +1,14 @@
+stylesheets = [ "sizes.css", "theme-light.css", "update.css","responsive.css"  ]
+rootstylesheets = [ "reset.css","fonts.css","layout.css" ]
+
+[nav]
+file = "nav.md"
+
+[header]
+file = "header.md"
+
+[footer]
+file = "footer.md"
+
+[sidebar]
+file = "sidebar.md"

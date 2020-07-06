@@ -1,0 +1,9 @@
+/* RESPONSIVE SIZING */
+@media (max-width: 1024px) {
+header,nav,article {margin-left:0;margin-right:0;padding-left:1rem;padding-right:0}
+article{width:100%;max-width:100%;}
+aside {display:none}
+footer {display:none}
+}
+
+

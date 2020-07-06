@@ -1,0 +1,51 @@
+/* STANDARD LAYOUT */
+html,body,nav,header,article,footer{float:left;height:auto;clear:both;display:block;max-width:100%;width:100%;overflow:auto;}
+
+
+/* INDENT LISTS TO 3 LEVELS */
+li li {margin-left:1rem;}
+li li li {margin-left:1rem;}
+
+
+/* DEFINITION LISTS */
+dt {font-weight:bold;}
+dd {margin-bottom:1em;}
+
+
+/* HEADER */
+header {width:var(--full-page);}
+header {height:var(--header-height);line-height:var(--header-height);}
+header {margin-left:var(--left-gap);margin-right:var(--right-gap);}
+header {padding-left:var(--left-start);}
+header {overflow:hidden;}
+/* Prevent word wrap from occurring; it can look bad on smaller screens. */
+header {white-space:nowrap;}
+
+
+/* NAV */
+nav {width:var(--full-page);}
+nav {height:var(--nav-height);line-height:var(--nav-height);}
+nav {margin-left:var(--left-gap);margin-right:var(--right-gap);}
+nav {padding-left:var(--left-start);}
+nav {white-space:nowrap;}
+
+
+/* ARTICLE */
+article {margin-left:var(--left-gap);margin-right:var(--right-gap);}
+article {max-width:var(--full-page);}
+article {padding-left:var(--left-start);}
+/* float and clear left means a right sidebar,and vice-versa */
+article {clear:left;}
+
+
+/* ASIDE */
+aside {border-bottom:none;}
+aside {width:var(--max-aside-width);}
+
+
+/* FOOTER */
+footer {width:var(--full-page);}
+footer {margin-left:var(--left-gap);margin-right:var(--right-gap);}
+footer {padding-left:var(--left-start);}
+
+

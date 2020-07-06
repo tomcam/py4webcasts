@@ -1,0 +1,27 @@
+Branding = "Reference"
+Description = ""
+Stylesheets = [ "sizes.css", "theme-light.css", "reference.css"  ]
+rootstylesheets = [ "reset.css","fonts.css","layout.css" ]
+
+
+
+PathName = ""
+
+[Nav]
+  HTML = ""
+
+[Header]
+  HTML = ""
+  File = "header.md"
+
+[Article]
+  HTML = ""
+  File = ""
+
+[Footer]
+  HTML = ""
+  File = "footer.md"
+
+[Sidebar]
+  HTML = ""
+  File = "sidebar.md"

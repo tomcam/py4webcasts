@@ -1,0 +1,89 @@
+/* IMPORTANT: Downloadable fonts should be imported above this rule  */
+:root 
+{
+
+		/* *******************/
+		/* LIGHT & DARK LOGOS
+		/* *******************/
+
+    --logo-file:"metabuzz-tilt-black.svg"
+	
+		/* ****************/
+		/* COLORS         * 
+     * https://coolors.co/dd7373-3b3561-ead94c-448fa3-d1d1d01 
+     * https://coolors.co/b80c09-d0cfec-ff7700-e7d965-201d33
+		/* ****************/
+		/*
+		 * Most but not all colors used by a theme appear
+		 * in this CSS file as CSS variables, so that you
+		 * can make big changes to your theme by doing 
+		 * nothing more than altering these values.
+		 * 
+		 * Text colors use fg, meaning foreground, and
+		 * background colors use fg. Sometimes they're
+		 * used to color non-text objects, which is why
+		 * they aren't called -text or -background.
+		 *
+		 * --------------------------------------------------
+		 * Header style
+		 * --------------------------------------------------
+		 */
+	
+		/* Default foreground (text) and background colors  */
+		--fg: black; 
+		--bg: white;
+
+		/* Default foreground (text) and background colors in article */
+		--article-fg: black; /* #EAD94C; */
+		--article-bg: white; /* #03B3561; */
+				
+		/* Default foreground (text) and background colors in aside */
+		--aside-fg: var(--fg);
+		--aside-bg: var(--bg);
+
+		/* Primary foreground (text) and background colors in header */
+		--header-fg: black;
+		--header-bg: var(--nav-fg);/* #211D35; Dark purple */
+
+		/* Primary foreground (text) and background colors in navbar */
+		--nav-fg: #FFAA400; /* #211D35  #EAD94C; Gold */
+		--nav-bg: #221C35; /* #03B3561;  */
+
+		/* Secondary foreground (text) and background colors for accents. */
+		--trim-fg: #56008A; /* #E5E5E5; */
+		--trim-bg: whitesmoke; 
+		
+		/* Primary foreground (text) and background colors in footer */
+		--footer-fg: var(--header-fg);
+		--footer-bg: var(--header-bg);
+
+}
+
+
+/* HEADER */
+header > p > a {color:var(--header-fg);background-color:var(--header-bg);} 
+
+/* NAV */
+nav > ul > li > a,
+nav > ul > li > a:link,
+nav > ul > li > a:visited {color:var(--nav-fg);} 
+
+/* ARTICLE */
+article > h1 > strong {color:var(--trim-fg);}
+article > h1 + ul > li > h2 > strong {color:var(--trim-fg);}
+article > h1 + ul > li > h3 > strong {color:var(--nav-fg);}
+article > h3 {color:var(--trim-fg);}
+article > ul > li > p > a:visited {color:var(--trim-fg);} 
+article > p > a > img {box-shadow: rgb(128,128,128) 1px 1px 3px 0px;iborder:1px solid black;}
+/* ASIDE */
+aside > h3 {color:var(--trim-bg);}
+
+/* FOOTER */
+footer > p > a:visited {color:var(--nav-fg);} 
+footer > table > thead > tr > th {color:var(--trim-fg);background-color:var(--footer-bg);}
+/* Color of links in main rows (body) of table */
+footer > table > tbody > tr > td > a:link,
+footer > table > tbody > tr > td > a:visited
+	{color:var(--header-fg);}
+
+

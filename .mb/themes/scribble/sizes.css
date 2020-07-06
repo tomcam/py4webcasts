@@ -1,0 +1,47 @@
+:root 
+{
+
+		/* ****************/
+		/* DIMENSIONS      */
+		/* ****************/
+	
+		/* Maximum characters on a line in an article. */
+		--max-article-width:90%; 
+
+		/* Widest the aside column should be */
+		--max-aside-width: 25%;    
+
+		/* Header, nav, and footer stretch all the way across
+		 * the screen at 100%. To see gaps (margins) on either side
+		 * reduce that number, then increase --left-gap
+		 * and --right-gap. */
+		--full-page:100%; 
+
+		/* Margin/background visible surrounding article. 
+		 * Header, nav, and footer stretch all the way across
+		 * the screen at 100%. To create a pillar-style theme
+		 * (wth gaps aka margins on either side)
+		 * reduce that number, then increase --left-gap
+		 * and --right-gap. 
+		 * When --full-page is 100% these should be at 0.
+		 * When --full-page is less than 100% then these
+		 * two should add up to the difference. */
+		--left-gap:0%;
+		--right-gap:0%;
+
+		/* Starting point from left where text (and by default headers) appears */
+		--left-start:10%;
+
+		/* Empty space between right end of text and article width. Normally padding-right. */
+		--text-end:0%;
+    
+		/* Adjusts header height and keeps it vertically centered */
+		--header-height:5rem;
+
+		/* Size of the main text in the header. */
+		--branding-height:4rem;
+
+		/* Adjusts navbar height and keeps it vertically centered */
+		--nav-height:0;
+
+}

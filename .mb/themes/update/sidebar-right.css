@@ -1,0 +1,9 @@
+/* Put sidebar on the right side of the page. Article area floats to the left. */
+:root 
+{
+	/* Pushes in each side of text (padding, actually. 
+	 * Use only when --full-page is 100%
+	 * This centers the article on the page. */
+}
+article, aside {float:left}
+aside {margin-right:0%;padding-left:0}

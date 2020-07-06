@@ -1,0 +1,122 @@
+/* IMPORTANT: Downloadable fonts should be imported above this rule  */
+@import url('https://fonts.googleapis.com/css?family=Nova+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap');
+:root 
+{
+
+    /* ******************************/
+    /* COLORS BY SECTION            */
+    /* ******************************/
+    /*
+     * --------------------------------------------------
+     * Palette 
+     *
+     * https://coolors.co/08415c-cc2936-6b818c-f1bf98-eee5e9  
+     *
+     * #CC2936 red  
+     * #08415C teal?  
+     * #EEE5E9 light pinkish gray?  
+     * 
+     * --------------------------------------------------
+     *
+		 * Most or all colors used by a theme appear
+		 * in this CSS file as CSS variables, so that you
+		 * can make big changes to your theme by doing 
+		 * nothing more than altering these values.
+		 * 
+		 * Text colors use fg, meaning foreground, and
+		 * background colors use fg. Sometimes they're
+		 * used to color non-text objects, which is why
+		 * they aren't called -text or -background.
+		 */
+
+	  /* --------------------------------------------------
+	   * Default foreground (text) and background colors  
+		 * Header style
+		 * -------------------------------------------------- */
+		--fg:#EEE5E9;
+		--bg: black;/* red #CC2936; */
+
+	  /* --------------------------------------------------
+	   * HEADER default foreground (text) and 
+     * background colors  
+		 * -------------------------------------------------- */
+		--header-fg:#CC2936;
+		--header-bg:black;
+
+	  /* --------------------------------------------------
+	   * NAV default foreground (text) and 
+     * background colors  
+		 * -------------------------------------------------- */
+		--nav-fg:white;	
+		--nav-bg:black;
+
+	  /* --------------------------------------------------
+	   * ARTICLE default foreground (text) and 
+     * background colors  
+		 * -------------------------------------------------- */
+		--article-fg:white;
+		--article-bg:#CC2936;
+				
+	  /* --------------------------------------------------
+	   * SIDEBAR default foreground (text) and 
+     * background colors  
+		 * -------------------------------------------------- */
+		--aside-fg:var(--article-fg);
+		--aside-bg:var(--article-bg);
+
+	  /* --------------------------------------------------
+	   * FOOTER default foreground (text) and 
+     * background colors  
+		 * -------------------------------------------------- */
+		--footer-fg: var(--header-fg);
+		--footer-bg: var(--header-bg);
+
+  	/* --------------------------------------------------
+	   * Secondary default foreground (text) and 
+     * background colors. Often unused.
+		 * -------------------------------------------------- */
+		--trim-fg:#CC2936;
+		--trim-bg: blue;	
+		
+  
+
+}
+html,body {font-family:'Roboto Condensed',informal}
+
+/* ******************************/
+/* SPECIFIC TEXT COLORS GO HERE */
+/* ******************************/
+/*
+ * --------------------------------------------------
+ * Header text colors 
+ * --------------------------------------------------
+ */
+header > p, header > p > a {
+		color:white;
+/*
+    color:var(--header-fg);
+    background-color:var(--header-bg);
+	*/
+} 
+
+header > ul > li > a {
+  color:white;
+
+  
+}
+
+header > ul > li:first-child > a {
+  color:var(--header-fg);
+}
+
+nav > p > a,
+nav > p > a:link,
+nav > p > a:visited {color:white;} 
+
+article > p > a,
+article > p > a:link,
+/*article > p > a:visited {color:#6E0C38;} */
+article > p > a:visited {color:#470623;} 
+
+

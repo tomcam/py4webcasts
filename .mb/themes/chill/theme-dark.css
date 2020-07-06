@@ -1,0 +1,61 @@
+/* IMPORTANT: Downloadable fonts should be imported above this rule  */
+:root 
+{
+
+		/* ****************/
+		/* COLORS         */
+		/* ****************/
+		/*
+		 * Most but not all colors used by a theme appear
+		 * in this CSS file as CSS variables, so that you
+		 * can make big changes to your theme by doing 
+		 * nothing more than altering these values.
+		 * 
+		 * Text colors use fg, meaning foreground, and
+		 * background colors use fg. Sometimes they're
+		 * used to color non-text objects, which is why
+		 * they aren't called -text or -background.
+		 *
+		 * --------------------------------------------------
+		 * Header style
+		 * --------------------------------------------------
+		 */
+	
+		/* Default foreground (text) and background colors  */
+		--fg: black;
+		--bg: #F6F6F8;
+    /* Default link colors */
+    --a: white;
+    --a-link: white;
+    --a-visited: white;
+    --a-hover: white;
+    --a-active: white;
+
+		/* Default foreground (text) and background colors in article */
+		--article-fg: var(--fg);
+		--article-bg: var(--header-fg);
+				
+		/* Default foreground (text) and background colors in aside */
+		--aside-fg: var(--fg);
+		--aside-bg: var(--bg);
+
+		/* Primary foreground (text) and background colors in header */
+		--header-fg: purple;
+		--header-bg: var(--bg);
+
+		/* Primary foreground (text) and background colors in navbar */
+		--nav-fg: var(--header-fg);
+		--nav-bg: var(--bg);
+
+		/* Secondary foreground (text) and background colors for accents. */
+		--trim-fg:#E56236;
+		--trim-bg: white;
+		
+		/* Primary foreground (text) and background colors in footer */
+		--footer-fg: var(--header-fg);
+		--footer-bg: var(--header-bg);
+
+
+}
+
+

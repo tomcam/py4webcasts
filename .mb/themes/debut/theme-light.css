@@ -1,0 +1,147 @@
+/* IMPORTANT: Downloadable fonts should be imported above this rule  */
+:root 
+{
+
+		/* *******************/
+		/* LIGHT & DARK LOGOS
+		/* *******************/
+
+    --logo-file:"metabuzz-tilt-black.svg"
+	
+		/* ****************/
+		/* COLORS         * 
+     * https://coolors.co/dd7373-3b3561-ead94c-448fa3-d1d1d01 
+     * https://coolors.co/b80c09-d0cfec-ff7700-e7d965-201d33
+		/* ****************/
+		/*
+		 * Most but not all colors used by a theme appear
+		 * in this CSS file as CSS variables, so that you
+		 * can make big changes to your theme by doing 
+		 * nothing more than altering these values.
+		 * 
+		 * Text colors use fg, meaning foreground, and
+		 * background colors use fg. Sometimes they're
+		 * used to color non-text objects, which is why
+		 * they aren't called -text or -background.
+		 *
+		 * --------------------------------------------------
+		 * Header style
+		 * --------------------------------------------------
+		 */
+	
+		/* Default foreground (text) and background colors  */
+		--fg: black; /* #E8EAEB; */
+		--bg: white; /*#201D34 #211D35; Dark purple */
+
+		/* Default foreground (text) and background colors in article */
+		--article-fg: black; /* #EAD94C; */
+		--article-bg:white;
+				
+		/* Default foreground (text) and background colors in aside */
+		--aside-fg:white;
+		--aside-bg:var(--bg);
+
+		/* Primary foreground (text) and background colors in header */
+		--header-fg:#221C35;
+		--header-bg:white;/* #211D35; Dark purple */
+
+		/* Primary foreground (text) and background colors in navbar */
+		--nav-fg: white; /* #211D35  #EAD94C; Gold */
+		--nav-bg: #221C35; /* #03B3561;  */
+
+		/* Secondary foreground (text) and background colors for accents. */
+		--trim-fg: #56008A; /* #E5E5E5; */
+		--trim-bg: #AACCD5; 
+		
+		/* Primary foreground (text) and background colors in footer */
+		--footer-fg: var(--header-fg);
+		--footer-bg: var(--header-bg);
+/*
+ * --------------------------------------------------
+ * Special feature: Adjustable bullet character for
+ * hanging indents
+ * --------------------------------------------------
+ */
+    --sidebar-bullet: '▶';
+
+}
+
+/* HEADER */
+header > ul > li > a,
+header > ul > li > a:link,
+header > ul > li > a:visited
+	{color:var(--trim-fg);}
+header > ul > li > a:hover,
+header > ul > li > a:active
+	{color:var(--trim-fg);}
+
+/* NAVBAR */
+nav > ul > li > a,
+nav > ul > li > a:link,
+nav > ul > li > a:visited {color:white} 
+
+
+/* ARTICLE */
+img, article > p > img {
+  width:80%;
+  box-shadow: rgb(128,128,128) 1px 1px 3px 0px;
+  margin-right:4rem;
+}
+
+article > h1 {color:var(--nav-bg);}
+/*
+ * --------------------------------------------------
+ * Special feature: When and only when an h2 follows 
+ * an h1, it's shown much differently than other h2s.
+ * --------------------------------------------------
+ */
+article > h1 + p + h2, article > h1 > p > img + h2, article > h1 + h2 {color:var(--trim-fg);}
+article > h2, article > h3 {color:black;}
+article > h4 {color:gray;}
+article > p {color:black;}
+
+article > a,
+article > a:link,
+article > a:visited {color:#4D1185;} 
+
+article > p > a,
+article > p > a:link,
+article > p > a:visited {color:var(--trim-fg);} 
+
+/* Links in unordered lists */
+article > ul > li > a,
+article > ul > li > a:link,
+article > ul > li > a:visited {color:var(--nav-fg);} 
+
+/* Code listings */
+article > p > code{border:1px solid gray;background-color:#FAFBFC;}
+article > pre  {border:1px solid gray;background-color:#FAFBFC;}
+
+
+
+/* SIDEBAR */
+aside > h4 {color:var(--trim-bg);background-color:var(--article-bg)}
+aside > h3 {color:var(--trim-bg);}
+
+/* Bullet color */
+aside ul, aside > ul li, aside > ul > li li, aside > ul > li li li {color:var(--header-fg);}
+/* Link color */
+aside > ul > li > a,
+aside > ul > li > a:link,
+aside > ul > li > a:visited,
+aside > ul > li li > a,
+aside > ul > li li > a:link,
+aside > ul > li li > a:visited,
+aside > ul > li li > a,
+aside > ul > li li li > a:link,
+aside > ul > li li li > a:visited
+ {color:var(--header-fg)}
+
+
+/* FOOTER  */
+footer > table > thead > tr > th {color:var(--trim-fg);background-color:var(--footer-bg);}
+footer > table > tbody > tr > td > a:hover,
+footer > table > tbody > tr > td > a:active
+	{color:var(--header-fg);}
+
+

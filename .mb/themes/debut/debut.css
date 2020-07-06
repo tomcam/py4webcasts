@@ -1,0 +1,209 @@
+table > thead > tr > th  {margin-top:4rem;}
+blockquote {font-style:italic;margin: 2rem 2rem 2rem 2rem;}
+
+/* HEADER */
+/* Unordered lists show horizontally, not vertically, in the header */
+header > p {float:left;} 
+
+header > p > img {float:left;height:var(--branding-height);}
+/*
+ * --------------------------------------------------
+ * If you have more than one item, use an unordered list. 
+ * These styles show the first item with branding applied,
+ * any number of links following, still slightly
+ * larger than body text
+ * --------------------------------------------------
+ */
+
+/* Unordered lists show horizontally, not vertically, in the header */
+header > ul {line-height:var(--header-height);}
+header > ul > li{display:inline;list-style-type:none;font-weight:700;} 
+header > ul > li > a,
+header > ul > li > a:link,
+header > ul > li > a:visited
+	{font-size:1.5rem;text-decoration:none;margin-right:1rem;}
+header > ul > li > a:hover,
+header > ul > li > a:active
+	{text-decoration:underline;}
+
+/*
+ * --------------------------------------------------
+ * Special feature: First item in list has biggest
+ * branding
+ * --------------------------------------------------
+ */
+
+header > ul > li:first-child, header > ul > li:first-child > a {
+	font-size:var(--branding-height);
+	font-weight:900;
+	letter-spacing:0rem;
+	font-family:'Kanit',var(--informal);
+}
+
+
+/* NAV */
+nav > ul > li {display:inline;list-style-type:none;font-size:1.25rem;margin-right:1rem;} 
+nav > ul > li > a,
+nav > ul > li > a:link,
+nav > ul > li > a:visited {display:inline;} 
+/* For accessibility purposes show visual distinction when hovering or active */
+nav > ul > li > a:hover,
+nav > ul > li > a:active {text-decoration:none;} 
+
+/* ARTICLE */
+article > h1 {font-family:var(--informal);font-weight:900;font-size:4.5rem;line-height:1.5;}
+article > h2 {font-size:1.5rem;line-height:1em;margin-top:1em;}
+article > h1 + p + h2, article > h1 > p > img + h2, article > h1 + h2 {font-size:3rem;line-height:1.25em;margin-top:1em;}
+article > h3 {margin-top:1em;}
+article > h4 {font-weight:bold;font-size:1.25em;margin-bottom:0em; } /* Byline */
+
+article {width:var(--max-article-width);}
+
+
+article > p,
+article > ul,
+article > ol,
+article > li,
+article > dd,
+article > dl,
+article > hr {
+	font-size:1.5rem;
+	line-height:2.25rem;
+	margin-bottom:1em;
+}     
+   
+article > p > code, article > code, article > pre, article > pre > code {
+	font-family:var(--code);
+	font-size:1em;
+	overflow:auto;
+	margin-bottom:1em;
+	line-height:1.5em;
+}
+
+/* Code listings */
+article > p > code{font-size:.8em;padding:.125em .25em .125em .25em;border-radius:.128em;}
+article > pre  {padding:.5rem;border-radius:.128em;line-height:1.4em;}
+
+
+article > pre {font-size:1.25rem;}
+
+/* For accessibility purposes show visual distinction when hovering or active */
+article > a:hover,
+article > a:active {text-decoration:none;} 
+
+/* For accessibility purposes show visual distinction when hovering or active */
+article > p > a:hover,
+article > p > a:active {text-decoration:none;} 
+
+
+article >  table {width:var(--max-article-width);margin-top:2rem;margin-bottom:3rem;}
+article > table > thead > tr > th {font-size:1.5rem;}
+article > table > td,th {padding:1rem;}
+article > p > img {width:80%;}
+
+/*
+   --------------------------------------------------
+   Special feature: h2 followed by li with img 
+   displays image to right of text.
+
+   Example markdown:
+ 
+   ## Title over image
+   * ![Describe img](imagename.png)
+     ### Follow with an h3
+     Then put text inder h3 
+   
+   --------------------------------------------------
+ */
+
+
+article > h2 {font-size:2.5rem;font-weight:bold;}
+article > h2 + ul {width:75%;padding:0;margin:0;list-style-type:none;}
+article > h2 + ul li {clear:left;}
+/* Leave some room on the right side of each image */
+article > h2 + ul li > img {width:90%;margin:0%;margin-right:2rem;padding-left:0;float:left;margin-bottom:4rem;margin-top:1.5rem;}
+/* H3 is to the right of the image. */
+article > h2 + ul > li > h3 {font-weight:bold;margin-left:70%;padding-right:25%;padding-top:.5em;width:80%;line-height:1em;}
+/* Paragraph under the H3 */
+article > h2 + ul > li >  p{margin-left:70%;width:65%;padding-right:5%;display:block;line-height:1.5em;margin-top:1em;}
+
+
+/*
+   --------------------------------------------------
+   Special feature: h3 followed by img 
+   displays image to right of text
+
+   Example markdown:
+ 
+   ### Title over image
+   ![Describe img](imagename.png)
+   Body text follows. 
+   
+   --------------------------------------------------
+ */
+
+article > h3 {font-size:1.75em;font-weight:bold;clear:left;margin-bottom:2rem;}
+article > h3 + p > img {width:65%;margin-left:0%;margin-right:0;margin-left:2rem;float:right;margin-bottom:4rem;margin-top:1.5rem;clear:both;}
+article > h4 {clear:left;}
+
+
+/* SIDEBAR */
+aside {padding:2rem;}
+aside {margin: 2rem;}
+aside > h2 {font-weight:700;height:1.5rem;margin-bottom:1em;}
+aside > h3 {font-size:.75em;font-weight:bold;margin-bottom:.5em;margin-top:2em;}
+
+/*
+   --------------------------------------------------
+   Special feature: Sidebar gets up to 3 levels
+   of indentation and special triangle character 
+   for unordered lists. 
+
+   Indent 2 spaces for each new level of markdown
+
+   Example markdown:
+
+    ## Table of contents                                         
+    * [Theme description](/)               
+      * [Strong points](/)                    
+        * [Usage details](/)
+    * [Markdown decribed](/)
+      * [Special features in these theme](/)
+
+  --------------------------------------------------
+ */
+
+aside ul {
+  list-style-type:none;
+  margin-left:0em; /* Distance between left side of bullet and left  margin */
+  text-indent:-3em;
+  padding-left:1em;
+  line-height:1.2em;
+}
+
+aside ul li {margin-left:.5rem;}
+aside ul li:before{
+  /* content: '▶';  */
+  content: var(--sidebar-bullet);
+  float:left;
+  margin:0 1.5em; /* 2nd param is space after bullet char */
+}
+
+/* FOOTER */
+footer {border-top: 1px solid var(--trim-fg);} 
+footer > h2 {text-align:center;}
+footer > table {font-size:calc(80%);}
+/* Give table columns to get some breathing room */
+footer > table > thead > tr > th {padding-right:2rem;} 
+footer > table > thead > tr > th {padding-top:1em;padding-right:2em;padding-bottom:1em;}
+footer > table > tbody > tr > td {padding-right:3em;}
+
+/* Links in main rows (body) of table */
+footer > table > tbody > tr > td > a:link,
+footer > table > tbody > tr > td > a:visited
+	{text-decoration:none;}
+footer > table > tbody > tr > td > a:hover,
+footer > table > tbody > tr > td > a:active
+	{text-decoration:underline;}
+
+

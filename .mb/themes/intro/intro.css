@@ -1,0 +1,177 @@
+html > a, body > a {color:var(--a);}
+h1{ font-size:2.5rem;margin-top:2rem; }
+h2{ font-size:1.5rem;margin-top:1.5rem; }
+h3{ font-size:1rem;margin-top:1.5rem; }
+h4{ font-size:.9rem;margin-top:1rem;}
+h5{ font-family:var(--code);font-size:1rem;font-weight:bold;margin-top:1rem; }
+h6{ font-size:0.9rem; }
+
+table > thead > tr > th  {margin-top:4rem;}
+
+/* HEADER */
+/*
+ * --------------------------------------------------
+ * Special feature: First item in list has biggest
+ * branding
+ * --------------------------------------------------
+ */
+header > ul > li:first-child > a {color:var(--trim-fg);font-size:calc(110%);font-weight:700;padding-right:5rem;padding-left:1rem;}
+
+
+/* Unordered lists show horizontally, not vertically, in the header */
+
+header {width:100%;font-family:var(--informal);font-weight:700;}
+header > ul {margin-left:0;padding-left:0;list-style-type:none;display:inline;}
+header > ul > li{display:inline;padding-right:2.5rem;font-weight:700;} 
+header > ul > li > a,
+header > ul > li > a:link,
+header > ul > li > a:visited
+	{text-decoration:none;}
+header > ul > li > a:hover,
+header > ul > li > a:active
+	{text-decoration:underline;}
+
+
+/* NAV */
+nav > ul > li {display:inline;list-style-type:none;} 
+nav > ul > li > a,
+nav > ul > li > a:link,
+nav > ul > li > a:visited {display:inline;text-decoration:none;margin-right:1em;} 
+/* For accessibility purposes show visual distinction when hovering or active */
+nav > ul > li > a:hover,
+nav > ul > li > a:active {text-decoration:underline;} 
+/*
+ * --------------------------------------------------
+ * An img in the nav takes up the left half of the page. 
+ * An h2 following starts on the right half.
+ * NOTE: If you want standard text following the h2  
+ * you have to use an h6 instead. That's because
+ * if you use p it will end up pushing the img to
+ * the right, because an img is wrapped inside a p.
+ * So use an h6 (which has no semantic value to most 
+ * search engines, which don't go past h3).
+ * 
+ * --------------------------------------------------
+ */
+
+nav > ul > li > a > img {height:1em;line-height:1em;}
+nav > p > img {margin-left:0;width:50%;display:inline;float:left;}
+nav > h2 {font-size:2rem;font-weight:bold;margin-top:2em;margin-bottom:1rem;}
+nav > h2, nav > h3, nav > h4, nav > h5, nav h6 
+  {line-height:1.2em;word-wrap:break-word;white-space:normal;display:block;margin-left:55%;margin-right:10%;}
+
+
+/* ARTICLE */
+article {max-width:var(--max-article-width);font-size:1.4em;}
+article > h1 {font-weight:700;letter-spacing:-1px;line-height:1.2em;}
+article > h2 {font-weight:700;line-height:1em;}
+article > h3 {font-weight:bold;}
+
+/* like news-item */
+article > h2 {clear:both;}
+
+
+/*
+   --------------------------------------------------
+   Special feature: h2 followed by li with img 
+   displays image to left of text.
+
+   Example markdown:
+ 
+   ## This appears over the image on the left. The text itself can be omitted but preserve the ##
+   * ![Describe img](imagename.png)
+     ### This appears to the right of the image
+     This appears to the right of the image,
+     under the h3
+   
+   --------------------------------------------------
+ */
+
+/* Leave some room on the right side of each image */
+article > ul {list-style-type:none;}
+article > ul li > img {width:50%;margin:0%;margin-right:2rem;padding-left:0;float:left;margin-bottom:4rem;margin-top:1.5rem;}
+
+/*
+   --------------------------------------------------
+   Special feature: h4 followed by li with img 
+   displays image to right of text.
+
+   Example markdown:
+ 
+   #### This appears over the image on the left. The text itself can be omitted but you still need the ####
+   * ![Describe img](imagename.png)
+     ##### This appears to the left of the image
+     This appears to the left of the image,
+     under the h4
+   
+   --------------------------------------------------
+ */
+
+
+article > h4 {clear:both;margin-left:50%;}
+article > h4 + ul {list-style-type:none;margin-left:10%;}
+article > h4 + ul li > img {width:55%;float:right;margin-left:2rem;}
+
+/*
+
+article > p > strong {font-weight:bold;}
+article > p,
+  article > ul,
+  article > ol,
+  article > li,
+  article > dl,
+  article > hr {
+    font-family:var(--formal);
+    font-weight:300;
+    line-height:2.25rem;
+    margin-top:1.25em;
+}     
+
+article > ul, article > ol {margin-top:1rem;}
+article > p > code, article > code, article > pre, article > pre > code {
+  font-family:var(--code);
+  font-size:1em;
+  overflow:auto;
+  margin-bottom:1em;
+  line-height:1.5em;
+  max-width:100%;
+} 
+
+article > p > code{font-size:.8em;padding:.125em .25em .125em .25em;border-radius:.128em;}
+article > pre  {padding:.5rem;border-radius:.128em;line-height:1em;}
+
+
+article > table {width:var(--max-article-width);margin-top:2rem;margin-bottom:3rem;}
+article > table > td,th {padding:1rem;}
+article > table > tbody > tr > td {padding-bottom:.5rem;padding-top:.5rem;}
+article > hr {margin-left:0;}
+
+article > blockquote {border-top:4px solid var(--header-fg);border-bottom:4px solid var(--header-fg); font-size:2em;font-style:italic;padding:2rem 1rem 2rem 1rem;margin:2rem;} 
+
+article > blockquote > p {font-family:var(--formal)}
+*/
+/* ASIDE */
+aside {margin: 10% 2rem 2rem 2rem;}
+aside > h2 {padding:1em;text-align:center;font-weight:700;}
+aside > h3 {font-size:.75em;font-weight:bold;margin-bottom:2em;}
+aside > ul {text-align:right;margin-right:1rem;line-height:1.5em;}
+aside > ul > li {list-style-type:none;} 
+aside > ul > li > a,
+aside > ul > li > a:link,
+aside > ul > li > a:visited {text-decoration:none;line-height:2.5rem;font-weight:normal;margin-right:1em;} 
+/* For accessibility purposes show visual distinction when hovering or active */
+aside > ul > li > a:hover,
+aside > ul > li > a:active {font-weight:bold;} 
+
+aside > p {margin-bottom:.25rem;margin-top:0;}
+aside > p > img {margin-top:.75rem;width:100%;padding:0;}
+
+/* FOOTER */
+footer > h2, footer > h2 > a {text-align:center;font-weight:900;float:left;margin-right:2rem;text-decoration:none;}
+footer > table {font-size:calc(80%);}
+/* Give table columns to get some breathing room */
+footer > table > td,th {padding-left:0rem;}
+footer > table > thead > tr > th {padding-top:1em;padding-bottom:1em;}
+footer > table > tbody > tr > td {padding-right:3em;}
+
+

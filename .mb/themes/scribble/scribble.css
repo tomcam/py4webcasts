@@ -1,0 +1,9 @@
+/* Features specific to this theme */
+body {color:var(--fg);background-color:var(--bg);}
+header{color:var(--header-fg);background-color:var(--header-bg);}
+nav {color:var(--nav-fg);background-color:var(--nav-bg);height:var(--nav-height);}
+article {color:var(--article-fg);background-color:var(--article-bg);}
+aside {color:var(--aside-fg);background-color:var(--aside-bg);}
+footer {color:var(--footer-fg);background-color:var(--footer-bg);}
+.paper {color:var(--fg);background-color:var(--bg);}
+

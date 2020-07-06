@@ -1,0 +1,20 @@
+Stylesheets = ["reset.css", "fonts.css", "layout.css", "skin.css", "zack.css"]
+PathName = ""
+
+[Nav]
+
+[Header]
+  HTML = ""
+  File = "header.md"
+
+[Article]
+  HTML = ""
+  File = ""
+
+[Footer]
+  HTML = ""
+  File = "footer.md"
+
+[Sidebar]
+  HTML = ""
+  File = "sidebar.md"

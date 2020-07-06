@@ -1,0 +1,136 @@
+/* IMPORTANT: Downloadable fonts should be imported above this rule  */
+@import url('https://fonts.googleapis.com/css?family=Nova+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap');
+:root 
+{
+
+   /* ******************************/
+    /* COLORS BY SECTION            */
+    /* ******************************/
+    /*
+     * --------------------------------------------------
+     * Palette 
+     *
+     * https://coolors.co/08415c-cc2936-6b818c-f1bf98-eee5e9  
+     *
+     * #CC2936 red  
+     * #08415C teal?  
+     * #EEE5E9 light pinkish gray?  
+     * 
+     * --------------------------------------------------
+  
+	  /* --------------------------------------------------
+	   * Default foreground (text) and background colors  
+		 * Header style
+		 * -------------------------------------------------- */
+		--fg:white;
+		--bg:#EEE5E9;
+
+	  /* --------------------------------------------------
+	   * HEADER default foreground (text) and 
+     * background colors  
+		 * -------------------------------------------------- */
+		--header-fg:white;
+		--header-bg:#CC2936; /* red */
+
+	  /* --------------------------------------------------
+	   * NAVBAR default foreground (text) and 
+     * background colors  
+		 * -------------------------------------------------- */
+		--nav-fg:#CC2936;	
+		--nav-bg:#F6F6F8; /* #F6F6F8 Very light Gray */
+
+	  /* --------------------------------------------------
+	   * ARTICLE default foreground (text) and 
+     * background colors  
+		 * -------------------------------------------------- */
+		--article-fg:black;
+		--article-bg:white;
+				
+	  /* --------------------------------------------------
+	   * SIDEBAR default foreground (text) and 
+     * background colors  
+		 * -------------------------------------------------- */
+		--aside-fg:black;
+		--aside-bg:white;	
+
+	  /* --------------------------------------------------
+	   * FOOTER default foreground (text) and 
+     * background colors  
+		 * -------------------------------------------------- */
+		--footer-fg: var(--header-fg);
+		--footer-bg: var(--header-bg);
+
+ 	/* --------------------------------------------------
+	   * Secondary default foreground (text) and 
+     * background colors. Often unused.
+		 * -------------------------------------------------- */
+		--trim-fg:#CC2936;
+		--trim-bg: blue;	
+		
+
+}
+html,body {font-family:'Roboto Condensed',informal}
+
+header > ul > li > a {
+  color:var(--header-fg);
+}
+header > ul > li:last-child > a {
+  color:var(--header-fg);
+  border:1px solid white;}
+}
+
+header > ul > li:last-child > a:hover {color:var(--header-fg);background-color:var(--header-fg);}
+
+nav > p {background-color:var(--nav-bg); }
+
+nav > p > a {color:var(--nav-fg);}
+
+nav > ul > li {list-style-type:none;} 
+nav > ul > li > a,
+nav > ul > li > a:link,
+nav > ul > li > a:visited {color:var(--nav-fg);} 
+
+article > h2 {color:var(--header-bg);}
+article > h3 {color:var(--header-bg);}
+
+article > h4 {color:gray;} 
+article > h4 > strong {color:black;} 
+
+article > p, 
+  article > ul, 
+  article > ol, 
+  article > li, 
+  article > dd, 
+  article > dl,
+  article > hr {
+    color:var(--article-fg);
+    background-color:var(--article-bg);
+}
+
+article > p > code {background-color:ivory;}
+
+article > p >  a:visited
+	{color:var(--trim-fg);}
+article > p >  a:hover,
+article > p >  a:active
+	{color:var(--trim-bg);background-color:var(--trim-fg);}
+
+article > table > thead > tr > th {color:var(--header-bg);background-color:var(--header-fg);}
+
+aside {background-color:var(--bg);}
+
+aside > h2 {color:var(--header-fg);background-color:var(--bg);}
+
+footer > table > thead > tr > th {color:var(--trim-fg);background-color:var(--footer-bg);}
+
+/* Color of links in main rows (body) of table */
+footer > table > tbody > tr > td > a:link,
+footer > table > tbody > tr > td > a:visited
+	{color:var(--header-fg);}
+footer > table > tbody > tr > td > a:hover,
+footer > table > tbody > tr > td > a:active
+	{color:var(--header-fg);}
+
+
+

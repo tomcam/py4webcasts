@@ -1,0 +1,114 @@
+/* IMPORTANT: Downloadable fonts should be imported above this rule  */
+:root 
+{
+		/* ****************/
+		/* FONT SELECTION */
+		/* ****************/
+		/*
+		 * --------------------------------------------------
+		 * Header text style
+		 * --------------------------------------------------
+		 *
+		 * Font family used for headings (it can easily be
+		 * overridden). Often you want headings h1 through
+		 * h6 to use a font familu that contrasts with the
+		 * body text, so you can set it here.
+		 * Docset adds the styles formal, informal, and code  
+		 * to the existing styles serif, sans-serif, and 
+		 * monospace. This can give better results depending
+		 * on the platform, which is a combination of the
+		 * operating system, browser, and versions of both.
+		 */
+
+		--header-style:var(--informal);
+
+		/* Font style (family) used in body text */
+		--body-style:var(--informal);
+
+
+		/* ****************/
+		/* COLORS         */
+		/* ****************/
+		/*
+		 * Most but not all colors used by a theme appear
+		 * in this CSS file as CSS variables, so that you
+		 * can make big changes to your theme by doing 
+		 * nothing more than altering these values.
+		 * 
+		 * Text colors use fg, meaning foreground, and
+		 * background colors use fg. Sometimes they're
+		 * used to color non-text objects, which is why
+		 * they aren't called -text or -background.
+		 *
+		 * --------------------------------------------------
+		 * Header style
+		 * -------------------------------------------------- 
+		 */
+	
+		/* Default foreground (text) and background colors  */
+		--fg: black;
+		--bg: white;
+
+		/* Default foreground (text) and background colors in article */
+		--article-fg: var(--header-bg);
+		--article-bg: whitesmoke;
+				
+		/* Default foreground (text) and background colors in aside */
+		--aside-fg: var(--fg);
+		--aside-bg: var(--article-bg);
+
+		/* Primary foreground (text) and background colors in header */
+		--header-fg: white;
+		--header-bg: #12343B; /* darkblue; */
+
+		/* Primary foreground (text) and background colors in navbar */
+		--nav-fg: var(--header-fg);
+		--nav-bg: var(--header-bg);
+
+		/* Secondary foreground (text) and background colors for accents. */
+		--trim-fg: gray;
+		--trim-bg: white;
+		
+		/* Primary foreground (text) and background colors in footer */
+		--footer-fg: var(--header-fg);
+		--footer-bg: var(--header-bg);
+
+
+		/* ****************/
+		/* DIMENSIONS      */
+		/* ****************/
+	
+		/* Maximum characters on a line in an article. 
+		 * Has no effect on the width of the column itself. */
+		--max-article-width:75%; 
+
+		/* Widest the sidebar should be */
+		--max-aside-width:10%;    
+
+		/* Header, nav, and footer stretch all the way across
+		 * the screen at 100%. To see gaps (margins) on either side
+		 * reduce that number, then increase --left-gap
+		 * and --right-gap. */
+		--full-page:75%; 
+
+	 	/* When --full-page is 100% these should be at 0.
+		 * When --full-page is less than 100% then these
+		 * two should add up to the difference. */
+		--left-gap:10%;
+		--right-gap:10%;
+
+		/* Starting point from left where text (and by default headers) appears */
+		--left-start:5%;
+
+		/* Adjusts header height and keeps it vertically centered */
+		--header-height:5rem;
+
+		/* Size of the main text in the header. */
+		--branding-height:4rem;
+
+		/* Adjusts navbar height and keeps it vertically centered */
+		--nav-height:4rem;
+
+}
+
+

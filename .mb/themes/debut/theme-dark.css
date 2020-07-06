@@ -1,0 +1,108 @@
+/* IMPORTANT: Downloadable fonts should be imported above this rule  */
+:root 
+{
+
+		/* ****************/
+		/* COLORS         * https://coolors.co/dd7373-3b3561-ead94c-448fa3-d1d1d01 
+		/* ****************/
+		 * 
+		 * Text colors use fg, meaning foreground (usually
+     * that means text color) and
+		 * background colors use fg. 
+		 *
+		 * --------------------------------------------------
+		 * Header style
+		 * --------------------------------------------------
+		 */
+	
+    /* Default foreground (text) and background colors  */
+    --fg: #E8EAEB;
+    --bg: #201D34;
+
+		/* Default foreground (text) and background colors in article */
+		--article-fg: #EAD94C;
+		--article-bg: #201D34;
+				
+		/* Default foreground (text) and background colors in aside */
+		--aside-fg:#E2E2E2;
+		--aside-bg: var(--bg);
+
+		/* Primary foreground (text) and background colors in header */
+		--header-fg: black;
+		--header-bg:#E2E2E2;
+
+		/* 
+		 https://coolors.co/560089-ffa400-009ffd-e6c229-e6dc52
+		 */
+
+		/* Primary foreground (text) and background colors in navbar */
+		--nav-fg:#E2E2E2; /* Gold #EAD94C; Deeper gold: FFA400 */
+		--nav-bg: #221C35; /* Dark purple 221C35   */
+
+		/* Secondary foreground (text) and background colors for accents. */
+		--trim-fg: #56008A; /* #E5E5E5; */
+		--trim-bg: #AACCD5; 
+		
+		/* Primary foreground (text) and background colors in footer */
+		--footer-fg: var(--header-fg);
+		--footer-bg: var(--header-bg);
+/*
+ * --------------------------------------------------
+ * Special feature: Adjustable bullet character for
+ * hanging indents
+ * --------------------------------------------------
+ */
+    --sidebar-bullet: '▶';
+
+
+}
+
+/* HEADER */
+header > ul > li > a,
+header > ul > li > a:link,
+header > ul > li > a:visited
+	{color:var(--trim-fg);}
+header > ul > li > a:hover,
+header > ul > li > a:active
+	{color:var(--trim-fg);}
+
+/* NAVBAR */
+nav > ul > li > a,
+nav > ul > li > a:link,
+nav > ul > li > a:visited {color:var(--nav-fg);} 
+
+/* ARTICLE */
+
+/*
+ * --------------------------------------------------
+ * Special feature: When and only when an h2 follows 
+ * an h1, it's shown much differently than other h2s.
+ * --------------------------------------------------
+ */
+article > h1 + p + h2, article > h1 > p > img + h2, article > h1 + h2 {color:#E2E2E2;}
+article > h4 {color:gray;}
+article > p {color:#E2E2E2;}
+
+
+article > h2 + ul > li > p{color:#E2E2E2;}
+
+
+
+/* SIDEBAR */
+
+aside > h4 {color:var(--trim-bg);background-color:var(--article-bg)}
+aside > h3 {color:var(--trim-bg);}
+/* Bullet color */
+aside ul, aside > ul li, aside > ul > li li, aside > ul > li li li {color:#EAD94C;}
+/* Link color */
+aside > ul > li > a,
+aside > ul > li > a:link,
+aside > ul > li > a:visited,
+aside > ul > li li > a,
+aside > ul > li li > a:link,
+aside > ul > li li > a:visited,
+aside > ul > li li > a,
+aside > ul > li li li > a:link,
+aside > ul > li li li > a:visited
+ {color:#EAD94C;}
+

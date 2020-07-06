@@ -1,0 +1,74 @@
+/* Default (paragraph) text is used for main branding in header */
+header > p {color:var(--header-fg);background-color:var(--header-bg);font-size:var(--branding-height);font-weight:700;display:inline;} 
+
+h1{ font-size:2.5em;margin-top:2rem; }
+h2{ font-size:2em;margin-top:1.5rem; }
+h3{ font-size:1.5em;margin-top:1.5rem; }
+h4{ font-size:.9em;margin-top:1rem;}
+h5{ font-size:.8em; }
+h6{ font-size:0.9em; }
+
+table > thead > tr > th  {margin-top:4rem;}
+blockquote {font-style:italic;margin: 2rem 2rem 2rem 2rem;}
+
+/* HEADER */
+/* Unordered lists show horizontally, not vertically, in the header */
+header > ul > li{display:inline;list-style-type:none;} 
+header > ul > li > a,
+header > ul > li > a:link,
+header > ul > li > a:visited
+	{color:var(--header-fg);text-decoration:none;}
+header > ul > li > a:hover,
+header > ul > li > a:active
+	{color:var(--header-fg);text-decoration:underline;}
+
+
+/* NAV */
+nav > img {display:inline;}
+nav > ul > li {display:inline;list-style-type:none;} 
+nav > ul > li > a,
+nav > ul > li > a:link,
+nav > ul > li > a:visited {display:inline;text-decoration:none;color:var(--nav-fg);} 
+/* For accessibility purposes show visual distinction when hovering or active */
+nav > ul > li > a:hover,
+nav > ul > li > a:active {text-decoration:underline;} 
+
+/* ARTICLE */
+article > h2 {color:var(--fg);font-size:1.5rem;line-height:1.5em;}
+article > h3 {color:var(--fg);}
+article > h4 {font-weight:normal;font-size:1em;color:gray;margin-bottom:1em; } /* Byline */
+article > h4 > strong {font-weight:bold;color:black; } /* Byline */
+article > pre, article > p, article > ul, article > ol, article > li {line-height:1.5em; max-width:var(--max-article-width)}
+
+/* Article tables use colors same as header, but reversed in first row */
+article >  table {width:100%;margin-top:2rem;margin-bottom:3rem;}
+article > table > thead > tr > th {color:var(--header-bg);background-color:var(--header-fg);}
+article > table > td,th {padding:1rem;}
+article > table > tbody > tr > td {padding:1rem;border-bottom:.1px solid gray;}
+
+
+
+/* ASIDE */
+aside {padding:2rem;}
+aside {margin: 2rem;}
+aside > h3 {color:var(--trim-bg);font-size:.75em;font-weight:bold;margin-bottom:2;}
+
+/* FOOTER */
+footer {border-top: 1px solid var(--trim-fg);} 
+footer > h2 {text-align:center;}
+footer > table {font-size:calc(80%);}
+/* Give table columns to get some breathing room */
+footer > table > thead > tr > th {padding-right:2rem;} 
+footer > table > thead > tr > th {color:var(--trim-fg);background-color:var(--footer-bg);}
+footer > table > thead > tr > th {padding-top:1em;padding-right:2em;padding-bottom:1em;}
+footer > table > tbody > tr > td {padding-right:3em;}
+
+/* Color of links in main rows (body) of table */
+footer > table > tbody > tr > td > a:link,
+footer > table > tbody > tr > td > a:visited
+	{color:var(--header-fg);text-decoration:none;}
+footer > table > tbody > tr > td > a:hover,
+footer > table > tbody > tr > td > a:active
+	{color:var(--header-fg);text-decoration:underline;}
+
+

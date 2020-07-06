@@ -1,0 +1,118 @@
+h1{ font-size:3.5em;margin-top:4rem;font-family:serif; }
+h2{ font-size:2em;margin-top:1.5rem; }
+h3{ font-size:1.5em;margin-top:1.5rem; }
+h4{ font-size:.9em;margin-top:1rem;}
+h5{ font-size:.8em; }
+h6{ font-size:0.9em; }
+
+table > thead > tr > th  {margin-top:4rem;}
+blockquote {font-style:italic;margin: 2rem 2rem 2rem 2rem;}
+
+/* HEADER */
+/* Unordered lists show horizontally, not vertically, in the header */
+header {font-family:'Josefin Sans',var(--informal);padding-left:0;width:100%;margin-left:auto;margin-right:auto;}
+
+header > ul > li > a {font-weight:bold;font-size:var(--branding-height);line-height:var(--header-height);}
+header > ul {margin-left:0;padding-left:0;list-style-type:none;display:inline;}
+header > ul > li{display:inline;padding-right:1.5rem;} 
+header > ul > li > a,
+header > ul > li > a:link,
+header > ul > li > a:visited
+  {text-decoration:none;}
+header > ul > li > a:hover,
+header > ul > li > a:active
+	{text-decoration:underline;}
+header {position:absolute;}
+header > p > img {width:100%;display:block;margin:auto;align-content:center;vertical-align:middle;}
+header > p + p {position:absolute;margin:0;top:50%;left:50%;margin-right:-50%;transform:translate(-50%,-50%);font-family:'Josefin Sans',var(--informal);font-size:4rem;letter-spacing:.45em;
+text-shadow:
+		-1px -1px 0 gray,
+		1px -1px 0 gray,
+		-1px 1px 0 gray,
+		1px 1px 0 gray;
+} 
+
+/* NAV */
+nav {margin-top:10%;}
+nav > img {display:inline;}
+nav > ul > li {display:inline;list-style-type:none;} 
+nav > ul > li > a,
+nav > ul > li > a:link,
+nav > ul > li > a:visited {display:inline;text-decoration:none;font-weight:700;margin-right:2rem;} 
+/* For accessibility purposes show visual distinction when hovering or active */
+nav > ul > li > a:hover,
+nav > ul > li > a:active {text-decoration:underline;} 
+
+/* ARTICLE */
+article {margin-top:15%;max-width:var(--max-article-width);}
+article > h1, article > h2, article > h3 {font-family:var(--formal),serif;}
+article > p > img  {display:block;vertical-align:middle;padding-left:0;width:100%;margin:auto;}
+article > h2 {font-size:1.5rem;line-height:1.5em;}
+article > h4 {font-weight:normal;font-size:1em;margin-top:0;margin-bottom:1em; } /* Byline */
+article > h4 > strong {font-weight:bold;} /* Byline */
+article > h4  {vertical-align:left;padding-left:0;width:100%;margin:auto;padding-right:25%;}
+article > p,
+  article > ul,
+  article > ol,
+  article > li,
+  article > dl,
+  article > hr {
+    font-family:var(--formal),serif;
+    font-weight:;
+    font-size:1.5rem;
+    line-height:2.25rem;
+    margin-bottom:2em;
+    max-width:var(--max-article-width);
+}     
+
+article > p > code, article > code, article > pre, article > pre > code {
+  font-family:var(--code);
+  font-size:1em;
+  overflow:auto;
+  margin-bottom:1em;
+  line-height:1.5em;
+  imax-width:var(--max-article-width);
+}    
+article > p {margin-top:2em;margin-bottom:0;}
+
+/* Article tables use colors same as header, but reversed in first row */
+article >  table {width:var(--max-article-width);margin-top:2rem;margin-bottom:3rem;}
+article > table > thead > tr > th {color:var(--header-bg);background-color:var(--header-fg);}
+article > table > td,th {padding:1rem;}
+article > table > tbody > tr > td {padding:1rem;border-bottom:.1px solid gray;}
+/* Color of links in main rows (body) of table */
+article > table > tbody > tr > td > a:link,
+article > table > tbody > tr > td > a:visited
+	{color:var(--a);text-decoration:none;}
+article > table > tbody > tr > td > a:hover,
+article > table > tbody > tr > td > a:active
+	{color:var(--a);text-decoration:underline;}
+
+
+
+
+/* ASIDE */
+aside {padding-top:8rem;padding:2rem;}
+aside {margin: 2rem;}
+aside > h3 {color:var(--trim-bg);font-size:.75em;font-weight:bold;margin-bottom:2;}
+aside > ul > li > a {color:var(--a);}
+
+/* FOOTER */
+footer {margin-top:3rem;padding-top:2rem;padding-bottom:2rem;}
+footer > h2 {text-align:center;}
+footer > table {font-size:calc(80%);}
+/* Give table columns to get some breathing room */
+footer > table > thead > tr > th {padding-right:2rem;} 
+footer > table > thead > tr > th {color:var(--trim-fg);background-color:var(--footer-bg);}
+footer > table > thead > tr > th {padding-top:1em;padding-right:2em;padding-bottom:1em;}
+footer > table > tbody > tr > td {padding-right:3em;}
+
+/* Color of links in main rows (body) of table */
+footer > table > tbody > tr > td > a:link,
+footer > table > tbody > tr > td > a:visited
+	{color:var(--a);text-decoration:none;}
+footer > table > tbody > tr > td > a:hover,
+footer > table > tbody > tr > td > a:active
+	{color:var(--a);text-decoration:underline;}
+
+

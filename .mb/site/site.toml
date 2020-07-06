@@ -1,0 +1,39 @@
+AssetDir = "."
+BaseDir = ""
+Branding = ""
+Ganalytics = ""
+Language = "en"
+Mode = ""
+Name = "/Users/tom/html/py4webcasts"
+Publish = "/Users/tom/html/py4webcasts/.pub"
+Theme = ""
+
+[Author]
+  FullName = ""
+  URL = ""
+  Role = ""
+
+[Company]
+  Name = ""
+  URL = ""
+  HeaderLogo = ""
+
+[MarkdownOptions]
+  HighlightStyle = "github"
+  HeadingIDs = true
+
+[Social]
+  DeviantArt = ""
+  Facebook = ""
+  Github = ""
+  Gitlab = ""
+  Instagram = ""
+  LinkedIn = ""
+  Pinterest = ""
+  Reddit = ""
+  Tumblr = ""
+  Twitter = ""
+  Weibo = ""
+  YouTube = ""
+
+[WebPages]

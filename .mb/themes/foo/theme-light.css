@@ -1,0 +1,114 @@
+/* IMPORTANT: Downloadable fonts should be imported above this rule  */
+:root 
+{
+
+		/* ****************/
+		/* COLORS         */
+		/* ****************/
+		/*
+		 * Most but not all colors used by a theme appear
+		 * in this CSS file as CSS variables, so that you
+		 * can make big changes to your theme by doing 
+		 * nothing more than altering these values.
+		 * 
+		 * Text colors use fg, meaning foreground, and
+		 * background colors use fg. Sometimes they're
+		 * used to color non-text objects, which is why
+		 * they aren't called -text or -background.
+		 *
+		 * --------------------------------------------------
+		 * Header style
+		 * --------------------------------------------------
+		 */
+	
+		/* Default foreground (text) and background colors  */
+		--fg:white;
+		--bg:black;
+
+		/* Default foreground (text) and background colors in article */
+		--article-fg: white;
+		--article-bg: red;
+				
+		/* Default foreground (text) and background colors in aside */
+		--aside-fg: black;
+		--aside-bg: var(--bg);
+
+		/* Primary foreground (text) and background colors in header */
+		--header-fg: darkblue;
+		--header-bg: white;
+
+		/* Primary foreground (text) and background colors in navbar */
+		--nav-fg: black;
+		--nav-bg: lightgray;
+
+		/* Secondary foreground (text) and background colors for accents. */
+		--trim-fg:red; /* cyan: #03DAC6; */
+		--trim-bg: white;
+		
+		/* Primary foreground (text) and background colors in footer */
+		--footer-fg: var(--header-fg);
+		--footer-bg: var(--header-bg);
+}
+
+
+header > ul > li{display:inline;padding-right:1.5rem;} 
+header > ul > li > a,
+header > ul > li > a:link,
+header > ul > li > a:visited
+	{color:var(--header-fg);}
+header > ul > li > a:hover,
+header > ul > li > a:active
+	{color:var(--header-fg);}
+
+
+nav > ul > li > a,
+nav > ul > li > a:link,
+nav > ul > li > a:visited {color:var(--nav-fg);} 
+/* For accessibility purposes show visual distinction when hovering or active */
+nav > ul > li > a:hover,
+nav > ul > li > a:active {text-decoration:underline;} 
+
+
+article > table > thead > tr > th {color:var(--header-bg);background-color:var(--header-fg);}
+
+article > h2 {color:var(--fg);}
+article > h3 {color:var(--fg);}
+article > h4 {color:gray;}
+article > h4 > strong {color:black;} /* Byline */
+article > p > a,
+article > p > a:link,
+article > p > a:visited {color:blue;} 
+article > p > a:hover,
+article > p > a:active {color:blue;} 
+
+article > p > code{border:1px solid gray;background-color:#FAFBFC;}
+article > pre {border:1px solid gray;background-color:#FAFBFC;}
+
+
+
+aside > h2 {color:white;background-color:black;}
+aside > h3 {color:var(--trim-bg);}
+aside > p > strong {color:var(--trim-fg);}
+
+
+
+/*
+aside > ul > li > a,
+aside > ul > li > a:link,
+aside > ul > li > a:visited {} 
+aside > ul > li > a:hover,
+aside > ul > li > a:active {} 
+*/
+
+footer > h2,
+footer > h2 > a,
+footer > h2 > a:link,
+footer > h2 > a:visited {color:var(--fg);} 
+/* For accessibility purposes show visual distinction when hovering or active */
+/*
+footer > h2 > a:hover,
+footer > h2  > a:active {font-weight:bold;} 
+*/
+
+
+

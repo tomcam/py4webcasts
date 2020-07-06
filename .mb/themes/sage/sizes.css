@@ -1,0 +1,43 @@
+:root 
+{
+
+	/* Maximum characters on a line in an article. 
+	 * Has no effect on the width of the column itself. */
+	--max-article-width:75%; 
+
+	/* Widest the sidebar should be */
+	--max-aside-width:15%;    
+
+	/* Header, nav, and footer stretch all the way across
+	 * the screen at 100%. To create a pillar-style theme
+	 * (wth gaps aka margins on either side)
+	 * reduce that number, then increase --left-gap
+	 * and --right-gap. */
+	--full-page:75%; 
+
+	/* Making these larger than 0 and --full-page < 100% creates
+	 * a pillar them, or one that doesn't stretch the header
+	 * and footer all the way across the page.
+	 * When --full-page is 100% these should be at 0.
+	 * When --full-page is less than 100% then these
+	 * two should add up to the difference. */
+	--left-gap:0%;
+	--right-gap:10%;
+
+	--left-start:0%;
+
+	/* Only for Pillar-style themes: Space between the right edge of the article and the right edge of text */
+	--right-end:10%;
+
+	/* Adjusts header height and keeps it vertically centered */
+	--header-height:8rem;
+
+	/* Size of the main text in the header. */
+	--branding-height:4rem;
+
+	/* Adjusts navbar height and keeps it vertically centered */
+	--nav-height:3rem;
+
+}
+
+ 

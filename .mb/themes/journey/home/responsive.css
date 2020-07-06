@@ -1,0 +1,15 @@
+/* RESPONSIVE SIZING */
+@media (max-width: 1024px) {
+	header,nav,article {margin-left:0;margin-right:0;padding-left:0;padding-right:0}
+	article{width:100%;max-width:100%;}
+	aside {display:none}
+	footer {display:none}
+	/* Handle the "What's New" section */
+	article > h2 + ul li {padding-left:1rem;max-width:100%;width:100%;margin-right:0;} 	
+	article > h2 + ul li > img {width:100%;margin-right:0%;display:block;}
+	article > h2 + ul > li >  p {margin-left:0%;width:100%;display:block;}
+	/* Handle the "Featured Post" section */
+	article > h3 + ul li {padding-left:1rem;margin-right:0;padding-right:0;max-width:100%;width:100%;display:block;}
+	article > h3 + ul li > img {width:100%;}
+}
+

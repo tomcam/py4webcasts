@@ -1,0 +1,80 @@
+/* Default (paragraph) text is used for main branding in header */
+html {font-family:var(--formal);}
+header > p {color:var(--header-fg);background-color:var(--header-bg);font-size:var(--branding-height);font-weight:700;display:inline;} 
+
+h1{ font-size:2.5em;margin-top:2rem; }
+h2{ font-size:2em;margin-top:1.5rem; }
+h3{ font-size:1.5em;margin-top:1.5rem; }
+h4{ font-size:.9em;margin-top:1rem;}
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+table > thead > tr > th  {margin-top:4rem;}
+blockquote {font-style:italic;margin: 2rem 2rem 2rem 2rem;}
+
+/* HEADER */
+header > ul {line-height:var(--header-height);padding-left:0;}
+header > ul > li {display:inline;font-size:1.25rem;} 
+header > ul > li > a,
+header > ul > li > a:link,
+header > ul > li > a:visited {text-decoration:none;color:var(--header-fg);} 
+/* For accessibility purposes show visual distinction when hovering or active */
+header > ul > li > a:hover,
+header > ul > li > a:active {text-decoration:underline;} 
+header > ul > li:first-child > a {font-family:serif;color:var(--header-fg);font-size:var(--branding-height);font-weight:700;margin-right:2rem;}
+
+
+/* NAV */
+nav > img {display:inline;}
+nav > ul {padding-left:0;} 
+nav > ul > li {display:inline;font-family:var(--informal);margin-right:.5rem;} 
+nav > ul > li > a,
+nav > ul > li > a:link,
+nav > ul > li > a:visited {text-decoration:none;color:var(--header-fg);} 
+/* For accessibility purposes show visual distinction when hovering or active */
+nav > ul > li > a:hover,
+nav > ul > li > a:active {text-decoration:underline;} 
+/* Display the last time (the date) bigger and bolder */
+nav > ul > li:last-child  {font-size:1.25em;font-weight:bold;} 
+
+/* Add spacing to clickable image links to separate them from other links on the line. */
+nav > ul > li > a > img {margin-right:1rem;margin-left:1rem;}
+
+/* ARTICLE */
+article {margin-bottom:4rem;}
+article {padding-right:0;margin-right:0;}
+article > p > img {width:95%;}
+article > p {margin-top:1em;} 
+article > h1 {font-weight:bold;}
+article > h2 {color:var(--fg);font-size:1.5rem;line-height:1.5em;}
+article > h3 {color:var(--fg);}
+article > h4 {font-family:var(--informal);font-weight:bold;font-size:1em;color:gray;margin-bottom:1em; } /* Byline */
+article > h4 > strong {font-weight:bold;color:black; } /* Byline */
+article > h5 {font-family:var(--informal);}
+article > h5 > strong {color:black;}
+article > pre, article > p, article > ul, article > ol, article > li 
+	{font-size:1.25rem;line-height:1.5em;padding-right:0;margin-right:0;}
+
+article > table > thead > tr > th  {margin-top:4rem;}
+article > table {width:var(--full-page);margin-top:2rem;margin-bottom:3rem;}
+article > table > td,th {padding:1rem;}
+article > table > tbody > tr > td {padding:1rem;}
+
+/* ASIDE */
+aside > p > img {margin-top:1em;}
+aside {padding-left:0;margin-left:0;}
+aside > h3 {color:var(--fg);font-size:1.2rem;font-family:var(--informal);font-weight:bold;margin-bottom:2;}
+
+/* FOOTER */
+footer {border-top: 1px solid var(--trim-fg);} 
+footer > h2 {text-align:center;}
+footer > table {font-size:calc(80%);}
+/* Give table columns to get some breathing room */
+footer > table > thead > tr > th {padding-right:2rem;} 
+footer > table > thead > tr > th {color:var(--trim-fg);background-color:var(--footer-bg);}
+footer > table > thead > tr > th {padding-top:1em;padding-right:2em;padding-bottom:1em;}
+footer > table > tbody > tr > td {padding-right:3em;}
+footer > table > tbody > tr > td > a:link {color:var(--footer-fg);text-decoration:none;}
+footer > table > tbody > tr > td > a:hover{color:var(--footer-fg);text-decoration:underline;}
+
+

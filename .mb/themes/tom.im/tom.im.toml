@@ -1,0 +1,23 @@
+Stylesheets = ["reset.css", "fonts.css", "layout.css", "theme-light.css", "tom.im.css"]
+PathName = ""
+Description = "Spare, clean, text-focused style good for technical blogs where words and code are paramount"
+
+[Nav]
+  HTML = ""
+  File = "nav.md"
+
+[Header]
+  HTML = ""
+  File = "header.md"
+
+[Article]
+  HTML = ""
+  File = ""
+
+[Footer]
+  HTML = ""
+  File = "footer.md"
+
+[Sidebar]
+  HTML = ""
+  File = "sidebar.md"

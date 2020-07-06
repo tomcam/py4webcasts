@@ -1,0 +1,261 @@
+h1{ font-size:2.5em;margin-top:2rem; }
+h2{ font-size:2em;margin-top:1.5rem; }
+h3{ font-size:1.5em;margin-top:1.5rem; }
+h4{ font-size:.9em;margin-top:1rem;}
+h5{ font-size:.8em; }
+h6{ font-size:0.9em; }
+
+table > thead > tr > th  {margin-top:4rem;}
+blockquote {font-style:italic;margin: 2rem 2rem 2rem 2rem;}
+
+/* ****************************/
+/*  HEADER BRANDING AND LINKS */
+/* ****************************/
+
+/*
+ * --------------------------------------------------
+ * Simplest case: Branded name, nothing else
+ * Doesn't act like a link.
+ * --------------------------------------------------
+ */
+header > p {font-size:var(--branding-height);font-weight:900;display:inline;} 
+
+ 
+/*
+ * --------------------------------------------------
+ * If you have more than one item, use an unordered list. 
+ * These styles show the first item with branding applied,
+ * any number of links following, still slightly
+ * larger than body text, and a last link that
+ * looks like a button.
+ * --------------------------------------------------
+ */
+header > ul {line-height:var(--header-height);}
+header > ul {margin-left:0;padding-left:0;list-style-type:none;display:inline;}
+header > ul > li{display:inline;padding-right:1.5rem;font-size:1.25rem;} 
+header > ul > li > a,
+header > ul > li > a:link,
+header > ul > li > a:visited
+	{font-weight:400;text-decoration:none;}
+header > ul > li > a:hover,
+header > ul > li > a:active
+	{text-decoration:underline;}
+
+/*
+ * --------------------------------------------------
+ * Special feature: First item in list has biggest
+ * branding
+ * --------------------------------------------------
+ */
+header > ul > li:first-child > a {font-size:var(--branding-height);font-weight:900;padding-right:1rem;}
+
+/*
+ * --------------------------------------------------
+ * Special feature: Last item in list is styled like 
+ * a button. Just leave omit text after the
+ * bullet character (asterisk) in your Markdown 
+ * if you don't want the effect. (Or just remove
+ * these lines of CSS.)
+ * --------------------------------------------------
+ */
+/* Make the last item look and act like a button */
+header > ul > li:last-child > a {border: 2px solid var(--header-fg);border-radius:.25rem;padding: .25rem;padding: .5rem .75rem;text-decoration: none;text-transform: uppercase;font-weight:bold;}
+
+header > ul > li:last-child > a:hover {cursor: pointer;}
+
+/* ******************************/
+/*  NAVBAR                      */
+/* ******************************/
+
+nav > p > a {font-size:1.25em;margin-right:1em;font-weight:700;}
+nav > p {margin-top:0;line-height:var(--nav-height);}
+nav > img {display:inline;}
+nav > p > a {font-style:normal;}
+
+nav > ul > li {list-style-type:none;} 
+nav > ul > li > a,
+nav > ul > li > a:link,
+nav > ul > li > a:visited {display:inline;text-decoration:none;;} 
+/* For accessibility purposes show visual distinction when hovering or active */
+nav > ul > li > a:hover,
+nav > ul > li > a:active {text-decoration:underline;} 
+
+nav > p > a,
+nav > p > a:link,
+nav > p > a:visited {display:inline;text-decoration:none;;} 
+/* For accessibility purposes show visual distinction when hovering or active */
+nav > p > a:hover,
+nav > p > a:active {text-decoration:underline;} 
+
+
+
+
+
+/* ******************************/
+/*  ARTICLE-MAIN PORTION OF TEXT*/
+/* ******************************/
+
+article > h1,article > h2 {font-weight:900;}
+article > h1 {font-size:4rem;margin-top:0;margin-bottom:3rem;}
+article > h2 {margin-top:4rem;}
+article > h4 {font-weight:normal;font-size:1em;margin-bottom:1rem; } /* Byline */
+article > h4 > strong {font-weight:bold;} /* Byline */
+
+article > p, 
+  article > ul, 
+  article > ol, 
+  article > li, 
+  article > dd, 
+  article > dl,
+  article > hr {
+		font-size:1.5rem;
+		line-height:2.25rem;
+		margin-top:1.5em;
+    padding-right:var(--right-end);
+}
+
+article > ul, article > ol {margin-top:.5em;}
+article > p > strong {font-family:var(--informal);font-weight:700;}
+/* Override font rule for code */
+article > p > code, article > code, article > pre, article > pre > code {
+		font-family:var(--code);
+		font-size:1em;
+		overflow:auto;
+    margin-bottom:1em;
+    line-height:1.5em;
+
+		}
+article > pre { padding-left: 1em;line-height:1.5em;}
+article > p > a,
+article > p > a:link,
+article > p >  a:visited
+	{font-family:var(--informal);text-decoration:underline;}
+article > p >  a:hover,
+article > p >  a:active
+	{text-decoration:none;}
+
+article > img, article > p > img {
+  width:100%;
+  box-shadow: rgb(128,128,128) 1px 1px 3px 0px;
+  display:block;
+}
+
+
+article > table {width:var(--full-page);margin-top:2rem;margin-bottom:3rem;}
+article > table > td,th {padding:1rem;}
+article > table > tbody > tr > td {padding:1rem;}
+
+
+
+article > h2 {margin-top:4rem;clear:left;}
+article > h2 + ul {
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+
+/* Leave some room on the right side of each image */
+article > h2 + ul li > img {
+	width:95%;
+  box-shadow: rgb(128,128,128) 1px 1px 3px 0px;
+  margin-bottom:.75rem;
+}
+
+/* Each li is 1/2 as wide as the container. */
+article > h2 + ul li {
+	font-family:var(--informal);
+	max-width:50%;
+	width:50%;
+	float:left;
+	line-height:1em;
+  font-size:.8em;
+  margin-bottom:2rem;
+  margin-top:2rem;
+}
+
+/* Start a new line after the 2nd column */
+article > h2 + ul li:nth-child(2) {
+	display:block;
+}
+
+
+
+
+
+/* ******************************/
+/*  SIDEBAR (ASIDE TAG)         */
+/* ******************************/
+
+aside {height:100vh;}
+
+aside, aside > p, aside > h2, aside > h3, aside > h4 {margin-left:0;padding-left:1rem;padding-right:1rem;} 
+aside > p {margin-bottom:1rem;font-size:.8rem;}
+aside > h2 {margin:0;padding:1rem;;font-size:1.75rem;font-weight:bold;white-space:nowrap;}
+aside > h3 {font-size:1em;font-weight:bold;margin-bottom:1rem;}
+aside > h5 {text-align:center;font-weight:bold;margin-left:0;padding-left:0;margin-top:2rem;margin-bottom:1rem;}
+aside > h6  {font-weight:normal;font-style:italic;}
+
+/*
+ * --------------------------------------------------
+ * Special feature: Unordered list in the sidebar
+ * appears as up to 3 separate outline levels. Just
+ * indent bullets 2 spaces for each level.
+ * --------------------------------------------------
+ */
+aside {margin-left:4rem;}
+aside ul, aside > ul li, aside > ul > li li, aside > ul > li li li
+{
+  font-weight:300;
+  list-style:none;
+  margin-left:0;
+  padding-left:0;
+}
+aside > ul > li > a,
+aside > ul > li > a:link,
+aside > ul > li > a:visited,
+aside > ul > li li > a,
+aside > ul > li li > a:link,
+aside > ul > li li > a:visited,
+aside > ul > li li > a,
+aside > ul > li li li > a:link,
+aside > ul > li li li > a:visited
+{
+  text-decoration-style:dotted;
+  line-height:1.75em;
+}
+
+
+/* List order goes up to 3 levels visually but they don't show by
+ * indentation--they have been flatted horizontally to maximize space
+ * on the sidebar. Show top level as bold. Level 2 is non-bold. 
+ * Level 3 shows with a right-pointing triangle. */
+aside > ul li {font-weight:bold;}
+/* Nothing needs be done for level 2. This is for level 3: */
+aside > ul > li > ul > li > ul > li:before  {
+	content: '▸';
+	margin-right:.5em;
+
+}  
+
+
+/* ******************************/
+/*  FOOTER                      */
+/* ******************************/
+
+/* FOOTER */
+footer {border-top: 1px solid var(--trim-fg);padding-bottom:1rem;} 
+footer > h2 {text-align:center;}
+footer > table {font-size:calc(80%);}
+/* Give table columns to get some breathing room */
+footer > table > thead > tr > th {padding-right:2rem;} 
+footer > table > thead > tr > th {padding-top:1em;padding-right:2em;padding-bottom:1em;}
+footer > table > tbody > tr > td {padding-right:3em;}
+
+footer > table > tbody > tr > td > a:link,
+footer > table > tbody > tr > td > a:visited
+	{text-decoration:none;}
+footer > table > tbody > tr > td > a:hover,
+footer > table > tbody > tr > td > a:active
+	{text-decoration:underline;}
+
+

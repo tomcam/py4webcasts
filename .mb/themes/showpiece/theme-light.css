@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+/* IMPORTANT: Downloadable fonts should be imported above this rule  */
+:root 
+{
+
+		/* ****************/
+		/* COLORS         */
+		/* ****************/
+
+		/* Default foreground (text) and background colors  */
+		--fg: black;
+		--bg: white;
+
+		/* Default foreground (text) and background colors in article */
+		--article-fg: black;
+		--article-bg: white;
+				
+		/* Default foreground (text) and background colors in aside */
+		--aside-fg: black;
+		--aside-bg: white;
+
+		/* Primary foreground (text) and background colors in header */
+		--header-fg: black;
+		--header-bg: white; 
+
+		/* Primary foreground (text) and background colors in navbar */
+		--nav-fg: white;
+		--nav-bg: var(--header-bg);
+
+		/* Secondary foreground (text) and background colors for accents. */
+		--trim-fg: darkred; 
+		--trim-bg: white;
+		
+		/* Primary foreground (text) and background colors in footer */
+		--footer-fg: var(--header-fg);
+		--footer-bg: var(--header-bg);
+
+
+		/* ****************/
+		/* DIMENSIONS      */
+		/* ****************/
+	
+		/* Maximum characters on a line in an article. 
+		 * Has no effect on the width of the column itself. */
+		 --max-article-width: 80%; 
+
+		/* The maximum number of characters the aside column should be */
+		--max-aside-width: 10%;   
+
+		/* Header, nav, and footer stretch all the way across
+		 * the screen at 100%. To see gaps (margins) on either side
+		 * reduce that number, then increase --left-gap
+		 * and --right-gap. */
+		--full-page:60%; 
+
+		/* Margin/background visible surrounding article. 
+		 * When --full-page is 100% these should be at 0.
+		 * When --full-page is less than 100% then these
+		 * two should add up to the difference. */
+		--left-gap:20%;
+		--right-gap:20%;
+
+		/* Starting point from left where text (and by default headers) appears */
+		--left-start:0%;
+
+		/* Adjusts header height and keeps it vertically centered */
+		--header-height: 2rem;
+
+		--branding-height:1.25rem;
+
+		/* Adjusts navbar height and keeps it vertically centered */
+		--nav-height: 2rem;
+
+}

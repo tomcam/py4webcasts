@@ -1,0 +1,60 @@
+/* STANDARD LAYOUT */
+html {color:var(--fg);background-color:var(--bg);}
+html,body,nav,header,article,footer{float:left;height:auto;clear:both;display:block;max-width:100%;width:100%;overflow:auto;}
+
+/*
+#### ![DNA logo](https://icongr.am/clarity/helix.svg?size=48&color=448FA3) 
+*/ 
+
+
+/* INDENT LISTS TO 3 LEVELS */
+li li {margin-left:1rem;}
+li li li {margin-left:1rem;}
+
+
+/* DEFINITION LISTS */
+dt {font-weight:bold;}
+dd {margin-bottom:1em;}
+
+
+/* HEADER */
+header {width:var(--full-page);}
+header {height:var(--header-height);line-height:var(--header-height);}
+header {margin-left:var(--left-gap);margin-right:var(--right-gap);}
+header {padding-left:var(--left-start);}
+header {color:var(--header-fg);background-color:var(--header-bg);overflow:hidden;}
+/* Prevent word wrap from occurring; it can look bad on smaller screens. */
+header {white-space:nowrap;}
+
+
+/* NAV */
+nav {width:var(--full-page);}
+nav {height:var(--nav-height);line-height:var(--nav-height);}
+nav {margin-left:var(--left-gap);margin-right:var(--right-gap);}
+nav {padding-left:var(--left-start);}
+nav {color:var(--nav-fg); background-color:var(--nav-bg); }
+nav {white-space:nowrap;}
+
+
+/* ARTICLE */
+article {margin-left:var(--left-gap);margin-right:var(--right-gap);}
+article {padding-left:var(--left-start);}
+article {max-width:var(--max-article-width);}
+article {color:var(--article-fg);background-color:var(--article-bg);} 
+/* float and clear left means a right sidebar,and vice-versa */
+article {clear:left;}
+
+
+/* ASIDE */
+aside {border-bottom:none;}
+aside {width:var(--max-aside-width);}
+aside {color:var(--aside-fg);background-color:var(--aside-bg);}
+
+
+/* FOOTER */
+footer {width:var(--full-page);}
+footer {margin-left:var(--left-gap);margin-right:var(--right-gap);}
+footer {padding-left:var(--left-start);}
+footer {color:var(--footer-fg);background-color:var(--footer-bg);}
+
+

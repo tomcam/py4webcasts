@@ -1,0 +1,175 @@
+h1{ font-size:2.5em;margin-top:2rem; }
+h2{ font-size:2em;margin-top:1.5rem; }
+h3{ font-size:1.5em;margin-top:1.5rem; }
+h4{ font-size:.9em;margin-top:1rem;}
+h5{ font-size:.8em; }
+h6{ font-size:0.9em; }
+
+table > thead > tr > th  {margin-top:4rem;}
+blockquote {font-style:italic;margin: 2rem 2rem 2rem 2rem;}
+
+/* ****************************/
+/*  HEADER BRANDING AND LINKS */
+/* ****************************/
+
+/*
+ * --------------------------------------------------
+ * Simplest case: Branded name, nothing else
+ * Doesn't act like a link.
+ * --------------------------------------------------
+ */
+header {font-family:'Nova Mono',var(--informal);}
+header > p {font-size:var(--branding-height);font-weight:700;display:inline;} 
+
+ 
+/*
+ * --------------------------------------------------
+ * If you have more than one item, use an unordered list. 
+ * These styles show the first item with branding applied,
+ * any number of links following, still slightly
+ * larger than body text, and a last link that
+ * looks like a button.
+ * --------------------------------------------------
+ */
+header > ul {line-height:var(--header-height);font-size:1rem;}
+header > ul {margin-left:0;padding-left:0;list-style-type:none;}
+header > ul > li{display:inline;margin-right:.5rem;} 
+header > ul > li > a,
+header > ul > li > a:link,
+header > ul > li > a:visited
+	{text-decoration:none;}
+header > ul > li > a:hover,
+header > ul > li > a:active
+	{text-decoration:underline;}
+
+/*
+ * --------------------------------------------------
+ * Special feature: First item in list has biggest
+ * branding
+ * --------------------------------------------------
+ */
+header > ul > li:first-child > a {font-size:var(--branding-height);font-weight:700;}
+
+/*
+ * --------------------------------------------------
+ * Special feature: Last item in list is styled like 
+ * a button. Just leave omit text after the
+ * bullet character (asterisk) in your Markdown 
+ * if you don't want the effect. (Or just remove
+ * these lines of CSS.)
+ * --------------------------------------------------
+ */
+/* Make the last item look and act like a button */
+header > ul > li:last-child > a {border-radius:.25rem;padding: .25em .375em;text-decoration: none;text-transform: uppercase;font-weight:bold;}
+header > ul > li:last-child > a:hover,
+  header > ul > li:last-child > a:active {
+  cursor: pointer;
+}
+
+/* ******************************/
+/*  NAVBAR                      */
+/* ******************************/
+
+nav > h1, nav > h2, nav > h3 {font-family:'Nova Mono',var(--informal);}
+nav > p {margin-top:0;line-height:var(--nav-height);}
+nav > img {display:inline;}
+nav > p > a {margin-right:1rem;}
+
+nav > ul > li {list-style-type:none;} 
+
+nav > p > a,
+nav > p > a:link,
+nav > p > a:visited {font-family:'Nova Mono',var(--informal);display:inline;} 
+/* For accessibility purposes show visual distinction when hovering or active */
+nav > p > a:hover,
+nav > p > a:active {text-decoration:none;} 
+
+
+
+
+/* ******************************/
+/*  ARTICLE-MAIN PORTION OF TEXT*/
+/* ******************************/
+article > h1, article > h2, article > h3 {font-family:'Nova Mono',var(--informal);}
+article {margin-top:1em;margin-bottom:2em;padding-right:5%;}
+article > h1,article > h2 {font-weight:700;}
+article > h2 {margin-top:4rem;}
+article > h4 {font-weight:normal;font-size:1em;margin-bottom:1em; } /* Byline */
+article > h4 > strong {font-weight:bold;} /* Byline */
+
+article > p, 
+  article > ul, 
+  article > ol, 
+  article > li, 
+  article > dd, 
+  article > dl,
+  article > hr {
+	  font-family:'Roboto Condensed',var(--informal);
+		font-size:1.5rem;
+		line-height:2.25rem;
+		margin-bottom:1em;
+}
+article > p > strong {font-family:'Roboto Condensed',var(--informal);font-weight:700;}
+/* Override font rule for code */
+article > p > code, article > code, article > pre, article > pre > code {
+		font-family:var(--code);
+		overflow:auto;
+    margin-top:0;
+    margin-bottom:1em;
+    line-height:1.5em;
+		}
+article > pre { padding-left: 1em;font-size:1.25rem;}
+article > p > code {padding:.125em .25em .125em .25em;border:1px solid gray;border-radius:.125em;}
+article > p > a,
+article > p > a:link,
+article > p >  a:visited
+	{font-family:'Roboto Condensed',var(--informal);font-weight:bold;text-decoration:underline;}
+article > p >  a:hover,
+article > p >  a:active
+	{text-decoration:underline;}
+
+
+article > table {width:var(--full-page);margin-top:2rem;margin-bottom:3rem;}
+article > table > td,th {padding:1rem;}
+article > table > tbody > tr > td {padding:1rem;border-bottom:.1px solid gray;}
+
+article > ul > li:before > input[type="text"]:disabled {color:red;} /* list-style-type:none;*/ 
+article > ul > li > input[type="text"]:disabled {color:red;} 
+article > ul > li > input[type="text"] {color:blue;} 
+
+article > img, article > p > img {width:100%;}
+
+/* ******************************/
+/*  SIDEBAR (ASIDE TAG)         */
+/* ******************************/
+
+aside {margin-top:4rem;margin-left:1em;}
+aside > h2 {padding-left:1rem;margin-bottom:1rem;font-family:'Nova Mono',var(--informal);}
+aside > h2 {margin-bottom:1rem;}
+
+aside {padding-right:1em;}
+aside > p > img, aside > img {float:left;}
+
+
+/* ******************************/
+/*  FOOTER                      */
+/* ******************************/
+
+/* FOOTER */
+footer {border-top: 1px solid var(--trim-fg);padding-bottom:1rem;} 
+footer > h2 {text-align:center;}
+footer > table {font-size:calc(80%);}
+/* Give table columns to get some breathing room */
+footer > table > thead > tr > th {padding-right:2rem;} 
+footer > table > thead > tr > th {padding-top:1em;padding-right:2em;padding-bottom:1em;}
+footer > table > tbody > tr > td {padding-right:3em;}
+
+/* Links in main rows (body) of table */
+footer > table > tbody > tr > td > a:link,
+footer > table > tbody > tr > td > a:visited
+	{text-decoration:none;}
+footer > table > tbody > tr > td > a:hover,
+footer > table > tbody > tr > td > a:active
+	{text-decoration:underline;}
+
+

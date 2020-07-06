@@ -1,0 +1,23 @@
+stylesheets = [ "sizes.css", "theme-light.css", "zack.css", "responsive.css"  ]
+rootstylesheets = [ "reset.css","fonts.css","layout.css" ]
+PathName = ""
+
+[Nav]
+  HTML = ""
+  File = "nav.md"
+
+[Header]
+  HTML = ""
+  File = "header.md"
+
+[Article]
+  HTML = ""
+  File = ""
+
+[Footer]
+  HTML = ""
+  File = "footer.md"
+
+[Sidebar]
+  HTML = ""
+  File = "sidebar.md"

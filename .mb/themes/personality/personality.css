@@ -1,0 +1,76 @@
+h1{ font-size:2.5em;margin-top:2rem; }
+h2{ font-size:2em;margin-top:1.5rem; }
+h3{ font-size:1.5em;margin-top:1.5rem; }
+h4{ font-size:.9em;margin-top:1rem;}
+h5{ font-size:.8em; }
+h6{ font-size:0.9em; }
+
+table > thead > tr > th  {margin-top:4rem;}
+blockquote {font-style:italic;margin: 2rem 2rem 2rem 2rem;}
+
+/* HEADER */
+header > h4 {color:var(--header-fg);font-size:1rem;font-weight:400;display:inline;} 
+header > h4 > a:link,header > h4 > a:visited, header > h4 > a:focus, header > h4 > a:hover, header > h4 > a:active
+	{padding:.5rem 1rem;color:var(--header-bg);background-color:var(--header-fg);cursor:pointer;text-decoration:none;}
+header > h4 > a:hover{text-decoration:underline;}
+
+/* NAV */
+nav {padding:0;width:100%;margin-left:auto;margin-right:auto;}
+nav, nav > ul {text-align:center;font-weight:100;}
+nav, nav > ul {color:var(--nav-fg);background-color:var(--nav-bg);font-size:var(--branding-height);}
+nav > ul > li {display:inline;padding-left:1em;} 
+nav > ul > li > a,
+nav > ul > li > a:link,
+nav > ul > li > a:visited {margin:0;padding:0;text-decoration:none;color:var(--nav-fg);background-color:var(--nav-bg);} 
+nav > ul > li > a:hover,
+nav > ul > li > a:active {text-decoration:underline;} 
+
+
+/* ARTICLE */
+article > h1, article > h2, article > h3 {font-weight:100;}
+article > h2 {margin-top:4rem;}
+article > h2 {color:var(--trim-bg);}
+
+article > h4 {font-weight:normal;font-size:1em;color:gray;margin-bottom:1em; } /* Byline */
+article > h4 > strong {font-weight:bold;color:black; } /* Byline */
+article > pre, article > p, article > ul, article > ol, article > li {font-size:1.25rem;font-weight:100;margin-bottom:1.5em;line-height:1.75em;}
+article > pre {font-size:1rem;}
+/* Article tables use colors same as header, but reversed in first row */
+article >  table {width:100%;margin-top:2rem;margin-bottom:3rem;}
+article > table > thead > tr > th {color:var(--header-bg);background-color:var(--header-fg);}
+article > table > td,th {padding:1rem;}
+article > table > tbody > tr > td {padding:1rem;border-bottom:.1px solid gray;}
+
+
+
+/* ASIDE */
+aside, aside > p, aside > h2, aside > h3, aside > h4 {margin-left:0} 
+aside > h2 {text-align:center;font-size:1.75rem;color:var(--trim-fg);}
+aside > h4 {color:var(--header-bg);background-color:var(--header-fg)}
+aside > p {font-weight:100;line-height:1.5em;}
+aside > p > strong {font-weight:100;color:var(--nav-fg);background-color:var(--nav-bg);}
+
+/* FOOTER */
+footer {padding-top:2rem;padding-bottom:2rem;} 
+
+/* Center the contents */
+footer {font-weight:100;padding-left:0;padding-right:0;text-align:center;width:100%;margin-left:auto;margin-right:auto;}
+
+
+footer > h2 {text-align:center;}
+footer > table {font-size:calc(80%);}
+/* Give table columns to get some breathing room */
+footer > table > thead > tr > th {padding-right:2rem;} 
+footer > table > thead > tr > th {color:var(--trim-fg);background-color:var(--footer-bg);}
+footer > table > thead > tr > th {padding-top:1em;padding-right:2em;padding-bottom:1em;}
+footer > table > tbody > tr > td {padding-right:3em;}
+
+/* Color of links in main rows (body) of table */
+footer > p > a:link,
+footer > p > a:visited
+	{color:var(--nav-fg);text-decoration:none;}
+footer > p > a:hover,
+footer > p > a:active
+	{color:var(--nav-fg);text-decoration:underline;}
+
+

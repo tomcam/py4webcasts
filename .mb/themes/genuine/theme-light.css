@@ -1,0 +1,115 @@
+/* IMPORTANT: Downloadable fonts should be imported above this rule  */
+:root 
+{
+
+	/* ****************/
+	/* COLORS         */
+	/* ****************/
+	/*
+	 * Most but not all colors used by a theme appear
+	 * in this CSS file as CSS variables, so that you
+	 * can make big changes to your theme by doing 
+	 * nothing more than altering these values.
+	 * 
+	 * Text colors use fg, meaning foreground, and
+	 * background colors use fg. Sometimes they're
+	 * used to color non-text objects, which is why
+	 * they aren't called -text or -background.
+	 *
+	 * --------------------------------------------------
+	 * Header style
+	 * --------------------------------------------------
+	 */
+
+	/* Default foreground (text) and background colors  */
+	--fg: black;
+	--bg: whitesmoke;
+
+	/* Default foreground (text) and background colors in article */
+	--article-fg: var(--fg);
+	--article-bg: white;
+			
+	/* Default foreground (text) and background colors in aside */
+	--aside-fg: var(--fg);
+	--aside-bg: white;
+
+	/* Primary foreground (text) and background colors in header */
+	--header-fg: darkblue;
+	--header-bg: white;
+
+	/* Primary foreground (text) and background colors in navbar */
+	--nav-fg:black;
+	--nav-bg: var(--header-fg);
+
+	/* Secondary foreground (text) and background colors for accents. */
+	--trim-fg: red;
+	--trim-bg: white;
+	
+	/* Primary foreground (text) and background colors in footer */
+	--footer-fg: var(--header-fg);
+	--footer-bg: var(--header-bg);
+
+}
+
+/* HEADER colors */
+header > p {color:var(--header-fg);background-color:var(--header-bg);} 
+
+header > ul > li > a,
+header > ul > li > a:link,
+header > ul > li > a:visited
+	{color:var(--header-fg);}
+header > ul > li > a:hover,
+header > ul > li > a:active
+	{color:var(--header-fg);}
+
+header > ul > li:first-child > a {color:var(--header-fg);}
+header > ul > li:last-child > a {border: 2px solid var(--header-fg);color:var(--header-fg);}
+header > ul > li:last-child > a:hover {color: var(--header-bg);background-color: var(--header-fg);}
+
+/* NAVBAR */
+nav > p {background-color:var(--nav-bg); }
+nav > ul > li > a,
+nav > ul > li > a:link,
+nav > ul > li > a:visited {color:var(--nav-fg);} 
+
+nav > p > a,
+nav > p > a:link,
+nav > p > a:visited {color:var(--nav-fg);} 
+
+
+/* ARTICLE */
+article > p > a,
+article > p > a:link,
+article > p >  a:visited
+	{color:var(--trim-fg);}
+article > p >  a:hover,
+article > p >  a:active
+	{color:var(--trim-bg);background-color:var(--trim-fg);}
+
+
+article > h2 {color:darkblue;font-weight:light;}
+article > h3 {color:var(--fg);}
+article > h4 {color:gray;} 
+article > h4 > strong {color:black; } 
+
+article > table > thead > tr > th {color:var(--header-bg);background-color:var(--header-fg);}
+article > table > tbody > tr > td {border-bottom:.1px solid gray;}
+
+/* SIDEBAR */
+
+aside > h2 {color:black;background-color:var(--article-bg);}
+aside > h3 {color:var(--trim-fg);}
+aside > h4 {color:var(--header-bg);background-color:var(--header-fg)}
+aside > h3 > del {color:var(--header-bg);} 
+aside > h5 {color:red;}
+/* FOOTER */
+footer > table > thead > tr > th {color:var(--trim-fg);background-color:var(--footer-bg);}
+/* Color of links in main rows (body) of table */
+footer > table > tbody > tr > td > a:link,
+footer > table > tbody > tr > td > a:visited
+	{color:var(--header-fg);}
+footer > table > tbody > tr > td > a:hover,
+footer > table > tbody > tr > td > a:active
+	{color:var(--header-fg);}
+
+

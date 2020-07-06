@@ -1,0 +1,337 @@
+html,body{font-family:var(--informal)};
+h1{ font-size:2.5em;margin-top:2rem; }
+h2{ font-size:2em;margin-top:1.5rem; }
+h3{ font-size:1.5em;margin-top:1.5rem;margin-bottom:1em; }
+h4{ font-size:.9em;margin-top:1rem;}
+h5{ font-size:.8em; }
+h6{ font-size:0.9em; }
+
+table > thead > tr > th  {margin-top:4rem;}
+blockquote {font-style:italic;margin:2rem 2rem 2rem 2rem;}
+
+/* ****************************/
+/*  HEADER BRANDING AND LINKS */
+/* ****************************/
+
+ 
+/*
+ * --------------------------------------------------
+ * If you have more than one item, use an unordered list. 
+ * These styles show the first item with branding applied,
+ * any number of links following, still slightly
+ * larger than body text, and a last link that
+ * looks like a button.
+ * --------------------------------------------------
+ */
+
+/* Unordered lists show horizontally, not vertically, in the header */
+header > ul {line-height:var(--header-height);}
+header > ul {margin-left:0;padding-left:0;list-style-type:none;display:inline;}
+header > ul > li{display:inline;} 
+header > ul > li > a {
+	font-family:'Heebo',var(--informal);
+	font-size:1.5rem;
+	padding-right:.25em;	
+	text-decoration:none;
+	margin-right:2rem;
+}
+/*
+ * --------------------------------------------------
+ * Special feature: First item in list has biggest
+ * branding
+ * --------------------------------------------------
+ */
+
+
+header > ul > li:first-child > a {font-size:var(--branding-height);font-weight:700;letter-spacing:-.2rem;padding-right:.5em;}
+
+/*
+ * --------------------------------------------------
+ * Special feature: Unicode character rotated at 45
+ * degrees in its own color (if desired). You can
+ * eliminate this by deleting the content item
+ * between single quotes.
+ * Thank you, methodofaction! 
+ * https://stackoverflow.com/questions/9779919/css-rotate-a-pseudo-after-or-before-content 
+ * --------------------------------------------------
+ */
+
+/* ⣠ ▦ ␥ ▛ ◍ ☶ ⚙ */
+header > ul:before  {
+ 	content:'☶';
+  color:red;
+	text-decoration:none;
+	font-size:4rem;
+	padding-bottom:6rem;
+	margin-right:.1em;
+	display:inline-block;
+ /* Big 'ol gear
+ 	content:'⚙';
+  color:red;
+	text-decoration:none;
+	font-size:6rem;
+	padding-bottom:6rem;
+	margin-right:.1em;
+	display:inline-block;
+  */
+ /* Good. Like a stack of books almost 
+	content:'☶';
+  color:red;
+	text-decoration:none;
+	font-size:4rem;
+	padding-bottom:6rem;
+	margin-right:.1em;
+	display:inline-block;
+  */
+
+/* REALLY good. So good I may save it for a paid theme 
+	content:'⣠';
+	text-decoration:none;
+	font-size:8rem;
+	padding-bottom:4rem;
+	margin-right:0em;
+	display:inline-block;
+	-moz-transform: rotate(215deg);
+	-o-transform: rotate(215deg);
+	-ms-transform: rotate(215deg);
+	transform:rotate(135deg);
+	display:inline-block;
+
+
+*/
+	/*
+	transform:rotate(270deg);
+	margin-right:.25rem;
+	display:inline-block;
+	-moz-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	 transform: rotate(270deg);
+	 */
+
+/*
+ 
+	content:'⣠';
+	text-decoration:none;
+	transform:rotate(45deg);
+	margin-right:.25rem;
+	font-size:3rem;
+	display:inline-block;
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	 transform: rotate(45deg);
+*/ 
+
+}
+
+
+/* ******************************/
+/*  NAVBAR                      */
+/* ******************************/
+nav > p > a {font-size:1em;margin-right:1em;font-weight:700;}
+nav > p {margin-top:0;line-height:var(--nav-height);}
+
+
+nav > p > a{font-family:"Roboto",var(--informal);font-weight:300;}
+
+nav > p > a,
+nav > p > a:link,
+nav > p > a:visited
+	{font-weight:bold;text-decoration:none;}
+nav > p >  a:hover,
+nav > p >  a:active
+	{text-decoration:underline;}
+
+
+
+/* ******************************/
+/*  ARTICLE-MAIN PORTION OF TEXT*/
+/* ******************************/
+
+article > h1 {font-family:'Heebo',var(--informal);font-weight:bold;letter-spacing:-.1rem;font-size:4rem;margin-top:4rem;margin-bottom:1rem;}
+article > h2 {margin-top:2em;}
+article > h4 {font-weight:normal;font-size:1em;margin-bottom:1em; } /* Byline */
+article > h4 > strong {font-weight:bold;} /* Byline */
+article > hr {margin-top:2rem;margin-bottom:2rem;}
+article > pre, article > p, article > ul, article > ol, article > li, article > dd, article > dl {
+    font-family:"Heebo",var(--informal); 
+    /* font-family:"Arimo";  */
+    font-weight:300;
+		font-size:1.25rem;
+		line-height:2.0rem;
+		margin-top:1em;
+}
+article > p > strong {font-family:var(--informal);font-weight:700;}
+/* Override font rule for code */
+article > code, article > pre, article > pre > code {
+		font-family:var(--code);
+		font-size:1em;
+		overflow:auto;
+    line-height:1.5em;
+		}
+article > p > code{font-size:.8em;padding:.125em .25em .125em .25em;border:1px solid gray;background-color:#FAFBFC;border-radius:.128em;}
+
+article > pre  {padding:.5rem;border:1px solid gray;background-color:#FAFBFC;border-radius:.128em;line-height:1em;}
+
+
+article > hr {margin-right:var(--right-gap);}
+article > p > a,
+article > p > a:link,
+article > p >  a:visited
+	{font-weight:bold;color:var(--trim-fg);text-decoration:underline;}
+article > p >  a:hover,
+article > p >  a:active
+	{text-decoration:underline;color:var(--trim-bg);background-color:var(--trim-fg);}
+
+/* Give screenshots a bit of a drop shadow */
+article > img, article > p > img {
+  width:80%;
+  box-shadow: rgb(128,128,128) 1px 1px 2px 0px;
+  border:1px solid rgb(128,128,128);
+  display:block;
+}
+
+/*
+ * --------------------------------------------------
+ * Special feature: H2 followed by ul with
+ * 2 list items that link to images shows the 
+ * images side to side. 
+ * --------------------------------------------------
+ */
+
+
+article > h2 {margin-top:4rem;clear:left;}
+article > h2 + ul {
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+
+/* Leave some room on the right side of each image */
+article > h2 + ul li > img {
+	width:98%;
+  border:1px solid rgb(128,128,128);
+  box-shadow: rgb(128,128,128) 1px 1px 3px 0px;
+  margin-bottom:.75rem;
+}
+
+/* Each li is 1/2 as wide as the container. */
+article > h2 + ul li {
+	font-family:var(--informal);
+	max-width:50%;
+	width:50%;
+	float:left;
+	line-height:1em;
+  font-size:.8em;
+  margin-bottom:2rem;
+  margin-top:2rem;
+}
+
+/* Start a new line after the 2nd column */
+article > h2 + ul li:nth-child(2) {
+	display:block;
+}
+
+
+
+/* ******************************/
+/*  SIDEBAR (ASIDE TAG)         */
+/* ******************************/
+
+aside {font-size:1.25em;margin-top:rem;}
+aside > p, aside > h2, aside > h3, aside > h4 {margin-left:0;padding-left:1rem;padding-right:1rem;} 
+aside > h2 {margin-top: 1em;margin-bottom:.5em}
+aside > h3 {color:var(--trim-fg);}
+aside > h4 {color:var(--header-bg);background-color:var(--header-fg)}
+aside > p {margin-top:1rem;margin-bottom:1rem;}
+
+/* Main navigation is the sidebar. It goes 3 levels deep. */
+aside ul, aside > ul li, aside > ul > li li, aside > ul > li li li
+{
+  font-family:"Heebo",var(--informal);
+  font-weight:300;
+  list-style:none;
+  padding-left:0;
+}
+aside > ul > li > a,
+aside > ul > li > a:link,
+aside > ul > li > a:visited,
+aside > ul > li li > a,
+aside > ul > li li > a:link,
+aside > ul > li li > a:visited,
+aside > ul > li li > a,
+aside > ul > li li li > a:link,
+aside > ul > li li li > a:visited
+{
+  text-decoration-style:dotted;
+  text-decoration-thickness:.1rem;
+  text-underline-offset:.2rem;
+  line-height:1.75em;
+}
+
+
+/* Put extra line under 1st level 2
+aside > ul  li:first-child {margin-bottom:1rem;}
+*/
+
+/* Put extra line under last level 2 */
+aside > ul  li:last-child {margin-bottom:2rem;}
+
+/* Vertical space after L1
+aside > ul  li {margin-top:1rem;}
+*/
+aside > ul  li:first-child {margin-top:1rem;}
+
+/* Put extra space before 1st L1
+aside > ul > li:first-child {margin-top:4rem;}
+*/
+
+/* Color the L3 bullets: aside > ul  li + li {color:red;} */
+
+/* List order goes up to 3 levels visually but they don't show by
+ * indentation--they have been flatted horizontally to maximize space
+ * on the sidebar. Show top level as bold. Level 2 is non-bold. 
+ * Level 3 shows with a right-pointing triangle. */
+aside > ul li {font-weight:bold;}
+/* Nothing needs be done for level 2. This is for level 3: */
+aside > ul > li > ul > li > ul > li:before  {
+	content: '▸';
+	margin-right:.125em;
+
+}  
+
+/* Remove verticla space after 1st L3 
+aside > ul > li > ul > li > ul > li:first-child{
+	margin-top:0;
+}
+ */
+
+
+aside > img, aside > p > img {
+  width:50%;
+  box-shadow: rgb(128,128,128) 1px 1px 2px 0px;
+  border:1px solid rgb(128,128,128);
+}
+/* ******************************/
+/*  FOOTER                      */
+/* ******************************/
+
+/* FOOTER */
+footer > h2 {text-align:center;}
+footer > table {font-size:calc(80%);}
+/* Give table columns to get some breathing room */
+footer > table > thead > tr > th {padding-right:2rem;} 
+footer > table > thead > tr > th {color:var(--trim-fg);background-color:var(--footer-bg);}
+footer > table > thead > tr > th {padding-top:1em;padding-right:2em;padding-bottom:1em;}
+footer > table > tbody > tr > td {padding-right:3em;}
+
+footer > table > tbody > tr > td > a,
+footer > table > tbody > tr > td > a:link,
+footer > table > tbody > tr > td > a:visited
+	{color:var(--header-fg);text-decoration:none;}
+footer > table > tbody > tr > td > a:hover,
+footer > table > tbody > tr > td > a:active
+	{color:var(--header-fg);text-decoration:underline;}
+
+

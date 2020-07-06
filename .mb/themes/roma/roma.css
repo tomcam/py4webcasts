@@ -1,0 +1,103 @@
+h1{ font-size:2.5em;margin-top:2rem; }
+h2{ font-size:1.75em;margin-top:1.5rem; }
+h3{ font-size:1.5em;margin-top:1.5rem; }
+h4{ font-size:.9em;margin-top:1rem;}
+h5{ font-size:.8em; }
+h6{ font-size:0.9em; }
+
+table > thead > tr > th  {margin-top:4rem;}
+blockquote {font-style:italic;border-left:2px solid var(--trim-fg);}
+
+/* ****************************/
+/*  HEADER BRANDING AND LINKS */
+/* ****************************/
+
+header {font-family: 'Titillium Web',informal;text-align:center;font-size:2rem;}
+header {margin-top:3rem;margin-bottom:3rem;}
+/* Center the header */
+header {padding-left:0;width:100%;margin-left:auto;margin-right:auto;}
+
+/*
+ * --------------------------------------------------
+ * If you have more than one item, use an unordered list. 
+ * These styles show the first item with branding applied,
+ * any number of links following, still slightly
+ * larger than body text, and a last link that
+ * looks like a button.
+ * --------------------------------------------------
+ */
+header > ul {line-height:var(--header-height);}
+header > ul > li{display:inline;} 
+header > ul > li > a {text-decoration:none;color:var(--header-fg);margin-right:auto;margin-left:auto;} 
+/* For accessibility purposes show visual distinction when hovering */
+header > ul > li > a:hover, header > ul > li > a:hover {text-decoration:underline;} 
+
+
+/* ******************************/
+/*  NAVBAR                      */
+/* ******************************/
+/* Center the navbar */
+nav > p > a {font-size:1em;margin-right:1em;font-weight:light;}
+nav {padding-left:0;width:100%;margin-left:auto;margin-right:auto;}
+nav > p {margin-top:0;line-height:var(--nav-height);}
+nav > p {background-color:var(--nav-bg); }
+nav > img {display:inline;}
+nav > p > a {color:var(--nav-fg);font-style:normal;}
+nav {font-family: 'Titillium Web',informal;font-weight:light;text-transform:uppercase;}
+nav > ul > li{display:inline;} 
+nav > ul > li > a {color:green;text-decoration:none;color:var(--header-fg);}
+nav > li > a:active,nav > li > a:hover{text-decoration:underline;color:var(--trim-fg);}
+
+
+
+/* ******************************/
+/*  ARTICLE-MAIN PORTION OF TEXT*/
+/* ******************************/
+article {text-align:center;}
+article > h1,article > h2,article > h3, article > h4
+	{font-family: 'Titillium Web',informal;font-weight:light;text-transform:uppercase;
+	margin-left:var(--left-gap);margin-right:var(--right-gap);}
+article > p, article > ul, article > article > ol, article > blockquote, article > blockquote > p, article > hr
+{text-align:left;margin-left:var(--left-gap);margin-right:var(--right-gap);
+font-family:var(--formal);font-size:1.25rem;}
+article > p {text-align:justify;}
+article > ul {margin-bottom:3rem;}
+article > h2 {margin-top:4rem;}
+article > h2 {color:var(--trim-fg);}
+article > h3 {color:var(--trim-fg);}
+article > h4 {font-weight:bold;font-size:1em;color:gray;margin-bottom:1em; } /* Category */ 
+article > h4 > strong {font-weight:bold;color:black; } /* Byline */
+article > pre, article > p, article > ul, article > ol, article > li {line-height:1.5em;}
+article > pre > code {font-family:var(--code);overflow:auto;}
+article > code, article > pre{font-size:1em;}
+article > hr {margin-right:var(--right-gap);}
+article > blockquote > p {color:darkgray;margin:3rem 2rem 3rem 2rem;}
+article > hr {margin-top:5rem;margin-bottom:5rem;width:400px;border:1px solid var(--trim-fg);}
+article > p > img {padding-left:0;width:100%;margin-left:auto;margin-right:auto;}
+
+/* ******************************/
+/*  SIDEBAR (ASIDE TAG) NOT USED*/
+/* ******************************/
+
+
+/* ******************************/
+/*  FOOTER                      */
+/* ******************************/
+
+/* FOOTER */
+
+/* Center the footer & table within it */
+footer, footer > table {padding-left:0;width:100%;margin-left:auto;margin-right:auto;}
+footer > h2 {font-size:1rem;text-align:center;font-family: 'Titillium Web',informal;text-transform:uppercase;} 
+footer{margin-top:4rem;margin-bottom:2rem;}
+footer > table {font-size:calc(80%);width:var(--max-article-width);padding-top:4rem;}
+
+/* Color of links in main rows (body) of table */
+footer > table > tbody > tr > td > a:link,
+footer > table > tbody > tr > td > a:visited
+	{color:var(--header-fg);text-decoration:none;}
+footer > table > tbody > tr > td > a:hover,
+footer > table > tbody > tr > td > a:active
+	{color:var(--header-fg);text-decoration:underline;}
+
+

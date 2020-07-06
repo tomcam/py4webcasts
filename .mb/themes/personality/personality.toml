@@ -1,0 +1,28 @@
+stylesheets = [ "sizes.css", "theme-light.css", "personality.css", "responsive.css"  ]
+rootstylesheets = [ "reset.css","fonts.css","layout.css" ]
+
+PathName = ""
+
+[Supported]
+  dark="no"
+  left_sidebar="no"
+
+[Nav]
+  HTML = ""
+  File = "nav.md"
+
+[Header]
+  HTML = ""
+  File = "header.md"
+
+[Article]
+  HTML = ""
+  File = ""
+
+[Footer]
+  HTML = ""
+  File = "footer.md"
+
+[Sidebar]
+  HTML = ""
+  File = "sidebar.md"
