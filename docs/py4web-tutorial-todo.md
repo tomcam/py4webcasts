@@ -43,7 +43,7 @@ This lesson assumes your system contains:
 
 ## What you'll create in this lesson
 
-![Screen shot of the todo app created in this lesson](/assets/img/py4web-todo-app-index-1280x512.png)
+![Screen shot of the todo app created in this lesson](assets/img/py4web-todo-app-index-1280x512.png)
 
 ## Create the database model
 
