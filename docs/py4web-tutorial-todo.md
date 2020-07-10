@@ -47,7 +47,7 @@ This lesson assumes your system contains:
 
 ## Create the database model
 
-py4web uses a database access abstraction layer (DAL) package called [PyDal](glossary.html#pydal). It's a portable, ridiculously comprehensive, yet lightweight means of using databases from SQLite to MongoDB to PostgreSQL and many more. SQLite is included with web2py so you can publish a database-backed web app with zero configuration at all.
+py4web uses a database access abstraction layer (DAL) package called [PyDal](glossary.md#pydal). It's a portable, ridiculously comprehensive, yet lightweight means of using databases from SQLite to MongoDB to PostgreSQL and many more. SQLite is included with web2py so you can publish a database-backed web app with zero configuration at all.
 
 What makes PyDal more compelling than other DALs is that it is packed with features that control how data is validated going in through forms, or going in through database import, or how it is displayed. PyDal supports many, many different databases but lets you do virtually everything you need in Pythoh. You may never have to drop into SQL at all.
 
