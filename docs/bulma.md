@@ -38,7 +38,7 @@ Here's what that table looks like with some sample data, using Bulma's default s
 The quickest way to restore formatting to an HTML document that uses Bulma is to wrap your page's client area in a `div` using Bulma's [content class](https://bulma.io/documentation/overview/classes/), which applies a smart set of defaults to the HTML that works well for prototyping:
 
 
-```html{1,11}
+```html
 [[extend 'layout.html']]
 <div class="content">
     <h1>Tasks</h1>
