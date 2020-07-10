@@ -6,17 +6,17 @@ a brief review of how you can use it with py4web.
 
 ## Things py4web already did for you
 
-The Bulma documentation describes a [starter template](https://bulma.io/documentation/overview/start/) but you can disregad that because the default [layout.html](layout-html.md) already includes what's necessary, such as the stylesheet itself, the ][viewport metatag](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag), and other boilerplate, so you can just dive right in and use Bulma's features.
+The Bulma documentation describes a [starter template](https://bulma.io/documentation/overview/start/) but you can disregad that because the default [layout.html](layout-html.md) already includes what's necessary, such as the stylesheet itself, the [viewport metatag](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag), and other boilerplate, so you can just dive right in and use Bulma's features.
 
 ## Bulma starts out by "unformatting" CSS elements
 
 Bulma is a set of CSS classes that at first appears to do exactly
-the wrong them when you include `bulma.css`: it removes most formatting from
+the wrong thing when you include `bulma.css`: it removes most formatting from
 HTML elements. You then apply classes to the HTML elements, even when it seems unnecessary. For example, as shown below, a `<table>` element doesn't look that tabular until you apply the Bulma `table` class to it.
 
 ## Example: view using Bulma defaults
 
-Here's the source code for a table generated from data, using Bulma (which has already been included via [laout.html](layout-html.md):
+Here's the source code for a table generated from data, using Bulma (which has already been included via [layout.html](layout-html.md):
 
 ```html
 [[extend 'layout.html']]
@@ -35,10 +35,10 @@ Here's what that table looks like with some sample data, using Bulma's default s
 
 ## Shortcut: use the content class
 
-The quickest way to restore formatting to an HTML document that uses Bulma is to wrap your page's client area in a `div` using Bulma's [content class](https://bulma.io/documentation/overview/classes/):
+The quickest way to restore formatting to an HTML document that uses Bulma is to wrap your page's client area in a `div` using Bulma's [content class](https://bulma.io/documentation/overview/classes/), which applies a smart set of defaults to the HTML that works well for prototyping:
 
 
-```html
+```html{1,11}
 [[extend 'layout.html']]
 <div class="content">
     <h1>Tasks</h1>
