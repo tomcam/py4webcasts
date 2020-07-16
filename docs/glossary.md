@@ -1,6 +1,7 @@
 # py4web glossary
 
-{{- /*
+{{- /* */ -}}
+
 # TODO: Unfinished
 * #action
 * #mvc
@@ -12,7 +13,6 @@
 * create-model
 * create-view
 * create-controller
-*/ -}}
 
 
 ## action
