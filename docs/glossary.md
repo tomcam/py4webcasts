@@ -16,7 +16,7 @@
 ## action
 
 ## DAL
-DAL stands for Database Abstraction Layer (DAL). A DAL lets you manipulate databses, queries, and tables using Python instead of, say SQL. A DAL differents from an [ORM](#orm) in that it doesn't use an extensive object model. Practically that means it's lightweight, faster, and requires less overhead to both to write and to execute.
+DAL stands for Database Abstraction Layer (DAL). A DAL lets you manipulate databses, queries, and tables using Python instead of, say SQL. A DAL differents from an [ORM](#orm) in that it doesn't use an extensive object model. In practice that means it's lightweight, faster, and requires less overhead to both to write and to execute.
 
 By default py4web uses a package called [PyDal](https://github.com/web2py/pydal) for its DAL, though you aren't required to use PyDal.
 
@@ -28,9 +28,16 @@ An Object Relational Mapper. An ORM lets you manipulate databases, queries, and 
 
 ## PyDAL
 The database abstraction later, or [DAL](#dal), that py4web uses by default.
-PyDAL is a portable, ridiculously comprehensive, yet lightweight means of using databases from SQLite to MongoDB to PostgreSQL and many more. SQLite is included with web2py so you can publish a database-backed web app with zero configuration at all. PyDAL is used in other frameworks such as [web2py](https://web2py.com) and has been refined for about 15 years at the time of writing. 
+PyDAL is a portable, ridiculously comprehensive, yet lightweight means of using databases from SQLite to MongoDB to PostgreSQL and many more. Its
+light abstraction layer allows SQL-like operations over all database types for which PyDAL has drivers. 
+SQLite is included with web2py so you can publish a database-backed web app with zero configuration at all. 
+PyDAL is used in other frameworks such as [web2py](https://web2py.com) and has been refined for about 15 years at the time of writing. 
+
+### Example
 
 PyDAL lets you describe not just the database tables, but also constraints in both data entry and data storage. Here's an example of PyDAL in action:
+
+##### file models.py
 
 ```python
 db.define_table('task',
@@ -39,7 +46,7 @@ db.define_table('task',
     Field('priority','integer',default=2,requires=IS_IN_SET([1,2,3]))
 ```
 
-This example:
+This simple but complete, executable example:
 * Creates the database table named `task` (no manual `CREATE TABLE` statement needed)
 * Adds the database field (also known as a column) `title`, with a maximum 80 characters. [notnull](#notnull) specifieds that this field cannot be left empty.
 * Adds the field `description` with the freeform `text` type, which means the text entered can be of essentially unlimited length
