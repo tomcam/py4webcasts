@@ -30,6 +30,7 @@ or as constraints for records to be accepted into the table at the database leve
 ## length
 
 `length` is a parameter passed to the [Field](#field) constructor restricting the size of a field. [It applies only to](https://py4web.com/_documentation/static/index.html#chapter-05) fields of type `string`, `uploadfield`, and `authorize`.
+See [PyDAL](#pydal) for example code.
 
 ## ORM
 An Object Relational Mapper. An ORM lets you manipulate databases, queries, and tables using Python instead of, say, SQL. An ORM is object-oriented abstraction over database access, and is familiar to uses of legacy languages such as Java. ORMs tend to include many class libraries over and above the normal SQL access. That makes them somewhat harder to learn, and slower to execute, than DALs like [PyDAL](#pydal). [SQLAlchemy](https://www.sqlalchemy.org/) is a popular Python ORM.
@@ -65,12 +66,15 @@ This simple, but complete, executable example:
 
 You can use other DALs with py4web. PyDAL stands alone and is simply a Python package that happens to be bundled with py4web.
 
+## required
+
+`required` is a [validator](#validator) passed to the [Field](#field) constructor when defining a table. 
+It prevents inserts at that DAL level unless a value for the field is specified.
+
 ## requires
 
-`requires` is a [validator](#validator) passed to the [Field](#field) function when defining a table in [PyDAL](#pydal). It controls data entry
+`requires` is a [validator](#validator) passed to the [Field](#field) constructor when defining a table in [PyDAL](#pydal). It controls data entry
 at the [form level](https://py4web.com/_documentation/static/index.html#chapter-05#field-constructor).
-
-## required
 
 ## template
 
