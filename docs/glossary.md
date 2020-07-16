@@ -2,16 +2,17 @@
 
 [//]: # "TODO: Unfinished"
 [//]: # "action"
+[//]: # "create-model"
+[//]: # "create-controller"
+[//]: # "create-view"
 [//]: # "mvc"
 [//]: # "Field"
-[//]: # "requires"
 [//]: # "required"
-[//]: # "[templates directory](#templates-directory)"
+[//]: # "requires"
 [//]: # "#template"
+[//]: # "[templates directory](#templates-directory)"
+[//]: # "validator"
 [//]: # "view"
-[//]: # "create-model"
-[//]: # "create-view"
-[//]: # "create-controller"
 
 
 ## action
@@ -82,6 +83,8 @@ A py4web **template** is actually the view portion of the [model/view/controller
 
 
 ## validator
+
+Validators are constraints on data entry. They can occur at the form, DAL, or database level.
 
 ```python
 db.define_table('task',
