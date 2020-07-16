@@ -4,6 +4,14 @@
 You aren't restricted to Bulma but since it's built in you might want
 a brief review of how you can use it with py4web.
 
+## Quick references
+
+* [Typography](https://bulma.io/documentation/helpers/typography-helpers/)
+* [Color](https://bulma.io/documentation/helpers/color-helpers/)
+* [Spacing](https://bulma.io/documentation/helpers/spacing-helpers/)
+* [Visibility](https://bulma.io/documentation/helpers/visibility-helpers/): showing and hiding content
+* [Other](https://bulma.io/documentation/helpers/other-helpers/): 
+
 ## Things py4web already did for you
 
 The Bulma documentation describes a [starter template](https://bulma.io/documentation/overview/start/) but you can disregad that because the default [layout.html](layout-html.md) already includes what's necessary, such as the stylesheet itself, the [viewport metatag](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag), and other boilerplate, so you can just dive right in and use Bulma's features.
