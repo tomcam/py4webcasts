@@ -6,6 +6,8 @@ a brief review of how you can use it with py4web.
 
 ## Quick references
 
+* [Hero](https://bulma.io/documentation/layout/hero/)
+* [Section](https://bulma.io/documentation/layout/section/)
 * [Typography](https://bulma.io/documentation/helpers/typography-helpers/)
 * [Color](https://bulma.io/documentation/helpers/color-helpers/)
 * [Spacing](https://bulma.io/documentation/helpers/spacing-helpers/)
