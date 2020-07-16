@@ -13,7 +13,7 @@ a brief review of how you can use it with py4web.
 * [Spacing](https://bulma.io/documentation/helpers/spacing-helpers/)
 * [Visibility](https://bulma.io/documentation/helpers/visibility-helpers/): showing and hiding content
 * [Other](https://bulma.io/documentation/helpers/other-helpers/): 
-* GitHub source [CSS source](https://github.com/jgthms/bulma/blob/master/css/bulma.css) [home page](https://github.com/jgthms/bulma)
+* GitHub source [CSS source](https://github.com/jgthms/bulma/blob/master/css/bulma.css), [home page](https://github.com/jgthms/bulma)
 
 ## Things py4web already did for you
 
