@@ -2,6 +2,7 @@
 
 * Py4web tutorial: [Create a todo list app](py4web-tutorial-todo.md) in 75 lines
 * [How to upgrade PyDal](how-upgrade-pydal.md)
+* [Glossary](glossary.md)
 
 ## Resources
 * py4web [Site](https://py4web.com/)
