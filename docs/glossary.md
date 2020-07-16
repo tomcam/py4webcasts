@@ -1,15 +1,19 @@
 # py4web glossary
 
+{{- /*
 # TODO: Unfinished
 * #action
 * #mvc
 * requires
+* required
 * [templates directory](#templates-directory)
 * #template
 * view
 * create-model
 * create-view
 * create-controller
+*/ -}}
+
 
 ## action
 
@@ -34,20 +38,20 @@ PyDAL lets you describe not just the database tables, but also constraints in bo
 db.define_table('task',
     Field('title',length=80,notnull=True),
     Field('description','text'),
-    Field('priority','integer',default=2,requires=IS_IN_SET([1,2,3])),
-    Field('created_on', 'datetime', default=datetime.now),
-    Field('created_by','reference auth_user',default=Auth.get_user))
+    Field('priority','integer',default=2,requires=IS_IN_SET([1,2,3]))
 ```
 
 This example:
 * Creates the database table named `task` (no manual `CREATE TABLE` statement needed)
 * Adds the database field (also known as a column) `title`, with a maximum 80 characters. [notnull](#notnull) specifieds that this field cannot be left empty.
 * Adds the field `description` with the freeform `text` type, which means the text entered can be of essentially unlimited length
-* Adds the `priority` field with an integer data type. Its
+* Adds the `priority` field with an integer data type. Its [requires](#requires) parameter enforces at a form, not database, level that only integral values 1 through 3 (expressed as a Python [set object](https://docs.python.org/3/library/stdtypes.html#set)) are allowed.
 
 You can use other DALs with py4web. PyDAL stands alone and is simply a Python package that happens to be bundled with py4web.
 
 ## requires
+
+## required
 
 ## template
 
