@@ -1,16 +1,16 @@
 # py4web glossary
 
-[//]: # # TODO: Unfinished
-[//]: # * #action
-[//]: # * #mvc
-[//]: # * requires
-[//]: # * required
-[//]: # * [templates directory](#templates-directory)
-[//]: # * #template
-[//]: # * view
-[//]: # * create-model
-[//]: # * create-view
-[//]: # * create-controller
+[//]: # "TODO: Unfinished"
+[//]: # "* #action"
+[//]: # "* #mvc"
+[//]: # "* requires"
+[//]: # "* required"
+[//]: # "* [templates directory](#templates-directory)"
+[//]: # "* #template"
+[//]: # "* view"
+[//]: # "* create-model"
+[//]: # "* create-view"
+[//]: # "* create-controller"
 
 
 ## action
