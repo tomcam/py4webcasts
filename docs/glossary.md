@@ -20,14 +20,14 @@
 
 ## action
 
-An action is a public function in a controller file that responds to an HTTP request. 
+An action is a public function in a controller file that processes an HTTP request. 
 In py4web the action returns either a string or a dictionary. The py4web `@action` [decorator](#decorator)
 routes HTTP requests.
 
-## @action Examples:
+### @action Examples:
 
-* The action named `@action('index')` would respond to the HTTP request `myapp/index`
-* The action named `@action('view/<id>'` would respond to HTTP requests like `myapp/view/2022` to
+* The action named `@action('index')` would process the HTTP request `myapp/index`
+* The action named `@action('view/<id>'` would process HTTP requests like `myapp/view/2022` to
 call a function named `view` on the record whose ID is 2022
 * The action named `@action('edit/<id>',method=['GET','POST'])` would work on an edit form, 
 so `myapp/edit/2022` could show the contents of the record whose ID is 2022 (the `GET` request),
