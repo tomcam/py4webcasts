@@ -26,12 +26,12 @@ routes HTTP requests.
 
 ### @action Examples:
 
-* The action named `@action('index')` would process the HTTP request `myapp/index`
+* The action named `@action('index')` would process the HTTP request `myapp/index`, 
+calling the controller function `index`.
 * The action named `@action('view/<id>'` would process HTTP requests like `myapp/view/2022` to
-call a function named `view` on the record whose ID is 2022
-* The action named `@action('edit/<id>',method=['GET','POST'])` would work on an edit form, 
-so `myapp/edit/2022` could show the contents of the record whose ID is 2022 (the `GET` request),
-and post back any changes to it (the `EDIT` request)
+call a controller function named `view` on the record whose ID is 2022
+* The action named `@action('edit/<id>',method=['GET','POST'])` would work on an edit form,
+so `myapp/edit/2022` would call the controller function named `edit`. It could, for example, display the contents of the record whose ID is 2022 (the `GET` request) in form, and post back any changes to it (the `EDIT` request)
 
 ## DAL
 
