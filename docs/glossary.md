@@ -2,13 +2,13 @@
 
 [//]: # "TODO: Unfinished"
 [//]: # "Consider define_table insert, truncate, drop, import_from_csv_file http://www.web2py.com/books/default/chapter/29/06/the-database-abstraction-layer#The-DAL-A-quick-tour"
-[//]: # "action"
+[//]: # "action (have an expert check my definition)"
 [//]: # "controller"
 [//]: # "create-model"
 [//]: # "create-controller"
 [//]: # "create-view"
 [//]: # "decorator"
-[//]: # "fixture"
+[//]: # "fixture (have an expert check my definition)"
 [//]: # "mvc"
 [//]: # "IS_IN_SET"
 [//]: # "Field"
@@ -16,9 +16,10 @@
 [//]: # "requires"
 [//]: # "#template"
 [//]: # "[templates directory](#templates-directory)"
+[//]: # "uses (have an expert check my definition)"
 [//]: # "validator"
 [//]: # "view"
-[//]: # "yatl"
+[//]: # "yatl-add example?"
 
 
 ## action
@@ -93,7 +94,11 @@ Optional parameters also allow validation rules used for entering data in at the
 and as constraints for records to be accepted into the table at the database level.
 
 ## fixture
-See also the [py4web documentation](https://py4web.com/_documentation/static/index.html#chapter-04)
+A py4web fixture is a form of middleware applied at the level of an [action](#action) (controller function).
+The advantage to this approach is that 
+
+### See also 
+* py4web [Fixture documentation](https://py4web.com/_documentation/static/index.html#chapter-04)
 
 ## IS_IN_SET
 
@@ -169,13 +174,12 @@ You can use other DALs with py4web. PyDAL stands alone and is simply a Python pa
 It prevents records from being saved at the database (technicallly, DAL) level unless a value for the field is specified.
 
 ## requires
-
 `requires` is a [validator](#validator) passed to the [Field](#field) constructor when defining a table in [PyDAL](#pydal). It controls data entry
 at the [form level](https://py4web.com/_documentation/static/index.html#chapter-05#field-constructor), preventing any attempt to save a record interactively until the validator's requirements are met. The record insert (save) is then called at the DAL level, which means a [required](#required) validator may also prevent the record insertion.
 
 ## template
 
-A py4web **template** is actually the view portion of the [model/view/controller](#mvc) paradigm. The py4web [templates directory](#templates-directory)
+A py4web **template** is actually the view portion of the [model/view/controller](#mvc) paradigm. It's an HTML file with embedded Python code. Py4web looks for its templates, also known as views, in the [templates directory](#templates-directory).
 
 ## templates directory
 
@@ -190,22 +194,23 @@ db.define_table('task',
 ```
 
 ## view
-
 An HTML file with Python interplolated using Used interchangeably with [template](#template)
 Unfortunately Django web framework confuses "view" with template, so py4web sometimes applies
 the same usage.
 
 ## YATL
-
 One of the most important functions of py4web is the ability to add pure Python code to an HTML file.
 YATL, which stands for Yet Another Template Language, preprocesses the HTML file and 
 delimits Python code (using `[[` and `]]` by default but the delimiters can be changed).
 
 ### See also
 * [YATL template language](https://py4web.com/_documentation/static/index.html#chapter-07)
-
-### See also
 * [template](#template)
 * [MVC](#mvc)
 
 
+## uses
+
+### See also
+* py4web [Fixtures](https://py4web.com/_documentation/static/index.html#chapter-04) documentation
+* [core.py](https://github.com/web2py/py4web/blob/master/py4web/core.py) py4web source code
