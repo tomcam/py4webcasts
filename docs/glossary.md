@@ -43,6 +43,19 @@ py4web makes controllers that use the [action](#action) decorator visible as HTT
 to Python code. Often controller functions interact with the [model](#model) layer to make database queries
 or process forms, then produce dictionaries that get passed to the [view](#view) layer.
 
+Here's an example of a brief but complete controller function. The `@action('new')` decorator routes the path
+`myapp/new` (for example) to the Python function named `new()`, which creates a form from the database table
+named `task`.
+
+##### file controllers.py
+```python
+@action('new')
+@action.uses(auth, 'new.html')
+def new():
+    form=Form(db.task)
+    return dict(form=form)
+```
+
 See also [MVC](#mvc)
 
 ## DAL
@@ -55,7 +68,7 @@ By default py4web uses [PyDal](#pydal) for its DAL, though you can use any Pytho
 
 In Python, a decorator is a function that wraps another function. 
 By convention Python decorators begin with the `@` character.
-In py4web, decorators are most ofen used for [actions](#action), which give the developer a simplified, intuitive
+In py4web, decorators are most often used for [actions](#action), which give the developer a simplified, intuitive
 way to create routes to your application such as `myapp/edit`.
 
 See also [Python Wiki](https://wiki.python.org/moin/PythonDecorators), Real Python [Primer on Python Decorators](https://realpython.com/primer-on-python-decorators/)
