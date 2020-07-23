@@ -10,7 +10,7 @@
   - Installing web2py from source
 * Very soon there will be a number of mini-lessons to do things like create a view, create a controller, and create a model. They'll be little refreshers to people who aren't too used to the py4web way of doing things. They'll show how to do it on Windows, Mac, and maybe Linux.
 
-* Feel free to file [issues](https://github.com/tomcam/py4webcasts/issues) on anything, especially anything you think should be in the [glossary](https://github.com/tomcam/py4webcasts/blob/master/glossary.md)
+* Feel free to file [issues](https://github.com/tomcam/py4webcasts/issues) on anything, especially anything you think should be in the [glossary](glossary.md)
 * Don't worry about being mean. My goal is to get as many people as possible to use py4web.
 * Questions
   - Should I do a super introductory one that shows a rudimentary controller and view, a "hello world" kind of thing?
