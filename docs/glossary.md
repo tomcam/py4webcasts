@@ -53,8 +53,8 @@ Python functions or parameters. Often controller functions interact with the [mo
 or process forms, then produce dictionaries that get passed to the [view](#view) layer.
 
 Here's an example of a brief but complete controller function. The `@action('new')` decorator routes the path
-`myapp/new` (for example) to the Python function named `new()`, which creates a default form that uses the database table
-named `task` to determine the field names, types, and [validation](#validator) rules.
+`myapp/new` (for example) to the Python function named `new()`, which creates a default form that uses the schema 
+and [validators](#validator) for the database table `task` to determine the field names, types, and layout.
 
 ##### file controllers.py
 ```python
