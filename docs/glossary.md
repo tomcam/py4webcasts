@@ -10,6 +10,7 @@
 [//]: # "decorator"
 [//]: # "fixture"
 [//]: # "mvc"
+[//]: # "IS_IN_SET"
 [//]: # "Field"
 [//]: # "required"
 [//]: # "requires"
@@ -17,13 +18,14 @@
 [//]: # "[templates directory](#templates-directory)"
 [//]: # "validator"
 [//]: # "view"
+[//]: # "yatl"
 
 
 ## action
 
-An action is a public function in a controller file that processes an HTTP request. 
+An action is a public function in a [controller](#controller) file that processes an HTTP request. 
 In py4web the action returns either a string or a dictionary. The py4web `@action` [decorator](#decorator)
-routes HTTP requests.
+routes HTTP requests, mapping them to controller functions.
 
 ### @action Examples:
 
@@ -36,7 +38,10 @@ so `myapp/edit/2022` would call the controller function named `edit`. It could, 
 
 ## controller
 
-Controllers are Python functions that handle the program's business logic, also known as the application workflow.
+Controller functions are Python code that handle the program's business logic, also known as the application workflow.
+py4web makes controllers that use the [action](#action) decorator visible as HTTP requests, mapping the requests
+to Python code. Often controller functions interact with the [model](#model) layer to make database queries
+or process forms, then produce dictionaries that get passed to the [view](#view) layer.
 
 See also [MVC](#mvc)
 
@@ -75,25 +80,42 @@ Optional parameters also allow validation rules used for entering data in at the
 and as constraints for records to be accepted into the table at the database level.
 
 ## fixture
-
 See also the [py4web documentation](https://py4web.com/_documentation/static/index.html#chapter-04)
 
-## length
+## IS_IN_SET
 
+`IS_IN_SET` is a py4web [validator](#validator) 
+
+## model
+In py4web, the model is the database layer of a py4web app, represented as code using [PyDAL](#pydal).
+[MVC applications](#mvc) separate database access logic (the model) from display logic (the [view](#view)),
+and application flow (the [controller](#controller)). [PyDAL example](#pydal-example) shows typical
+PyDAL model code defining a database table.
+
+## length
 `length` is a parameter passed to the [Field](#field) constructor restricting the size of a field. [It applies only to](https://py4web.com/_documentation/static/index.html#chapter-05) fields of type `string`, `uploadfield`, and `authorize`.
 See the [PyDAL example](#pydal-example) for a typical use of `length`.
 
 <a id="mvc"></a>
-## MVC or Model/View/Controller
+## MVC or Model/View/Controller paradigm
 
-Model/View/Controller or MVC describes web frameworks like py4web, and connotes how the database layer (model),
-display logic (view), and application logic (controller) are separated. That separation is particularly clean
-and pronounced in py4web.
+The Model/View/Controller or MVC paradigm describes web frameworks like py4web. 
+An MVC represents an application's separation of concerns into the database layer (model),
+display logic (also known as a [view](#view) or [template](#template)), and application logic ([controller](#controller)). 
+That separation is particularly clean and pronounced in py4web, which uses standard Python modules, framework
+conventions, and file structure to enforce isolation. 
+
+Py4web's model database layer uses [PyDAL](#pydal) 
+by default, but could use another DAL if needed. Its view layer is provided by the [YATL](#yatl)
+template language, which allows you to mix pure Python with HTML code to display data, and the
+business logic is found in the Python file `controllers.py`, which manages HTTP requests and routing. 
+
 
 ## NoSQL
-
 [PyDAL](#pydal) lets you create, query, and manipulate database tables identically, whether they're
-SQL-based, like the built-in support for [SQLite](https://www.sqlite.org/index.html) or non-SQL (aka [NoSQL](https://en.wikipedia.org/wiki/NoSQL))databases supported by PyDAL, such as [MongoDB](https://www.mongodb.com). 
+SQL-based, like the built-in support for [SQLite](https://www.sqlite.org/index.html) or non-SQL (aka [NoSQL](https://en.wikipedia.org/wiki/NoSQL))databases supported by PyDAL, such as [MongoDB](https://www.mongodb.com).
+For example, the vaguely SQL-like [PyDAL code shown here](#pydal_example) would work on any PyDAL-supported database manager,
+SQL-based or not.
 
 
 ## ORM
@@ -111,11 +133,9 @@ SQLite is included with web2py so you can publish a database-backed web app with
 PyDAL is used in other frameworks such as [web2py](https://web2py.com) and has been refined for about 15 years at the time of writing. 
 
 ### PyDAL Example
-
 PyDAL lets you describe not just the database tables, but also constraints in both data entry and data storage. Here's an example of PyDAL in action:
 
 ##### file models.py
-
 ```python
 db.define_table('task',
     Field('title',length=80,notnull=True),
@@ -124,7 +144,7 @@ db.define_table('task',
 ```
 
 This simple, but complete, executable example:
-* Creates the database table named `task` (no manual `CREATE TABLE` statement needed)
+* Creates the database table named `task` (no manual `CREATE TABLE`-style statement needed)
 * Defines the database field (also known as a column) `title`, with a maximum 80 characters. [notnull](#notnull) specifieds that this field cannot be left empty.
 * Defines the field `description` with the freeform `text` type, which means the text entered can be of essentially unlimited length
 * Defines the `priority` field with an integer data type. Its [requires](#requires) parameter enforces at a form, not database, level that only integral values 1 through 3 (expressed as a Python [set object](https://docs.python.org/3/library/stdtypes.html#set)) are allowed.
@@ -132,18 +152,19 @@ This simple, but complete, executable example:
 You can use other DALs with py4web. PyDAL stands alone and is simply a Python package that happens to be bundled with py4web.
 
 ## required
-
-`required` is a [validator](#validator) passed to the [Field](#field) constructor when defining a table. 
-It prevents inserts at that DAL level unless a value for the field is specified.
+`required` is a [validator](#validator) passed to the [Field](#field) constructor when defining a table in [PyDAL](#pydal). 
+It prevents records from being saved at the database (technicallly, DAL) level unless a value for the field is specified.
 
 ## requires
 
 `requires` is a [validator](#validator) passed to the [Field](#field) constructor when defining a table in [PyDAL](#pydal). It controls data entry
-at the [form level](https://py4web.com/_documentation/static/index.html#chapter-05#field-constructor).
+at the [form level](https://py4web.com/_documentation/static/index.html#chapter-05#field-constructor), preventing any attempt to save a record interactively until the validator's requirements are met. The record insert (save) is then called at the DAL level, which means a [required](#required) validator may also prevent the record insertion.
 
 ## template
 
 A py4web **template** is actually the view portion of the [model/view/controller](#mvc) paradigm. The py4web [templates directory](#templates-directory)
+
+## templates directory
 
 ## validator
 
@@ -157,5 +178,21 @@ db.define_table('task',
 
 ## view
 
-The term "view" has
+An HTML file with Python interplolated using Used interchangeably with [template](#template)
+Unfortunately Django web framework confuses "view" with template, so py4web sometimes applies
+the same usage.
+
+## YATL
+
+One of the most important functions of py4web is the ability to add pure Python code to an HTML file.
+YATL, which stands for Yet Another Template Language, preprocesses the HTML file and 
+delimits Python code (using `[[` and `]]` by default but the delimiters can be changed).
+
+### See also
+* [YATL template language](https://py4web.com/_documentation/static/index.html#chapter-07)
+
+### See also
+* [template](#template)
+* [MVC](#mvc)
+
 
