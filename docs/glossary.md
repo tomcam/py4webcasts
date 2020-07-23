@@ -8,6 +8,7 @@
 [//]: # "create-controller"
 [//]: # "create-view"
 [//]: # "decorator"
+[//]: # "dict()"
 [//]: # "fixture (have an expert check my definition)"
 [//]: # "mvc"
 [//]: # "IS_IN_SET"
@@ -15,6 +16,7 @@
 [//]: # "required"
 [//]: # "requires"
 [//]: # "#template"
+[//]: # "Template object"
 [//]: # "[templates directory](#templates-directory)"
 [//]: # "uses (have an expert check my definition)"
 [//]: # "validator"
@@ -24,9 +26,15 @@
 
 ## action
 
-An action is a public function in a [controller](#controller) file that processes an HTTP request. 
-In py4web the action returns either a string or a dictionary. The py4web `@action` [decorator](#decorator)
-routes HTTP requests, mapping them to controller functions.
+An action is a public function in a [controller](#controller) file that processes an HTTP request and
+maps it to Python code in the controller. 
+In py4web the action returns either a string or a Python dictionary object.
+The py4web `@action` [decorator](#decorator) maps HTTP requests to controller functions, often applying
+function-level [fixtures](#fixture) to the code that alter its results or add features such as
+saving session data.
+Often the dictionary object returned by the action is applied to a [Template](#template-object) fixture 
+that evaluates the Python embedded in the HTML, interpolate its return values into the HTML,
+and converts the result into a string. Often that string is rendered as HTML to be displayed as a web page.
 
 ### @action Examples:
 
@@ -39,14 +47,14 @@ so `myapp/edit/2022` would call the controller function named `edit`. It could, 
 
 ## controller
 
-Controller functions are Python code that handle the program's business logic, also known as the application workflow.
-py4web makes controllers that use the [action](#action) decorator visible as HTTP requests, mapping the requests
-to Python code. Often controller functions interact with the [model](#model) layer to make database queries
+Controller functions are Python code that handle the program's application logic, also known as its business rules.
+py4web controllers use the [action](#action) decorator to convert HTTP requests into
+Python functions or parameters. Often controller functions interact with the [model](#model) layer to make database queries
 or process forms, then produce dictionaries that get passed to the [view](#view) layer.
 
 Here's an example of a brief but complete controller function. The `@action('new')` decorator routes the path
-`myapp/new` (for example) to the Python function named `new()`, which creates a form from the database table
-named `task`.
+`myapp/new` (for example) to the Python function named `new()`, which creates a default form that uses the database table
+named `task` to determine the field names, types, and [validation](#validator) rules.
 
 ##### file controllers.py
 ```python
@@ -177,6 +185,10 @@ It prevents records from being saved at the database (technicallly, DAL) level u
 `requires` is a [validator](#validator) passed to the [Field](#field) constructor when defining a table in [PyDAL](#pydal). It controls data entry
 at the [form level](https://py4web.com/_documentation/static/index.html#chapter-05#field-constructor), preventing any attempt to save a record interactively until the validator's requirements are met. The record insert (save) is then called at the DAL level, which means a [required](#required) validator may also prevent the record insertion.
 
+## Template object
+The `Template` object is a [fixture](#fixture) that takes the specified [template](#template) file, converts
+it into a Python dictionary
+
 ## template
 
 A py4web **template** is actually the view portion of the [model/view/controller](#mvc) paradigm. It's an HTML file with embedded Python code. Py4web looks for its templates, also known as views, in the [templates directory](#templates-directory).
@@ -210,6 +222,7 @@ delimits Python code (using `[[` and `]]` by default but the delimiters can be c
 
 
 ## uses
+The `uses` method of the [@action](#action) decorator specifies fixtures to apply to the action.
 
 ### See also
 * py4web [Fixtures](https://py4web.com/_documentation/static/index.html#chapter-04) documentation
