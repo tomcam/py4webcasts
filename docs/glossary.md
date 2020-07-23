@@ -1,10 +1,13 @@
 # py4web glossary
 
 [//]: # "TODO: Unfinished"
+[//]: # "Consider define_table insert, truncate, drop, import_from_csv_file http://www.web2py.com/books/default/chapter/29/06/the-database-abstraction-layer#The-DAL-A-quick-tour"
 [//]: # "action"
 [//]: # "create-model"
 [//]: # "create-controller"
 [//]: # "create-view"
+[//]: # "decorator"
+[//]: # "fixture"
 [//]: # "mvc"
 [//]: # "Field"
 [//]: # "required"
@@ -17,24 +20,56 @@
 
 ## action
 
+An action is a public function in a controller file that responds to an HTTP request. 
+In py4web the action returns either a string or a dictionary. The py4web `@action` [decorator](#decorator)
+routes HTTP requests.
+
+## @action Examples:
+
+* The action named `@action('index')` would respond to the HTTP request `myapp/index`
+* The action named `@action('view/<id>'` would respond to HTTP requests like `myapp/view/2022` to
+call a function named `view` on the record whose ID is 2022
+* The action named `@action('edit/<id>',method=['GET','POST'])` would work on an edit form, 
+so `myapp/edit/2022` could show the contents of the record whose ID is 2022 (the `GET` request),
+and post back any changes to it (the `EDIT` request)
+
 ## DAL
+
 DAL stands for Database Abstraction Layer (DAL). From the [PyDAL](https://github.com/web2py/pydal) documentation: A DAL is "an API that maps Python objects into database objects such as queries, tables, and records." A DAL differ from an [ORM](#orm) in that it doesn't use an extensive object model. In practice that means it's lightweight, faster, and requires less overhead to both to write and to execute. It also lets you perform database operations on noSQL and SQL databases using the same Python code.
 
 By default py4web uses [PyDal](#pydal) for its DAL, though you can use any Python ORM or DAL package you like.
+
+## decorator
+
+In Python, a decorator is a function that wraps another function. 
+By convention Python decorators begin with the `@` character.
+In py4web, decorators are most ofen used for [actions](#action), which give the developer a simplified, intuitive
+way to create routes to your application such as `myapp/edit`.
+
+See also [Python Wiki](https://wiki.python.org/moin/PythonDecorators), Real Python [Primer on Python Decorators](https://realpython.com/primer-on-python-decorators/)
 
 ## define_table
 
 define_table is a [PyDAL](#pydal) function that creates a database table in a portable way, eliminating
 the need to do the equivalent of a SQL `CREATE TABLE` statement, or whatever the equivalent [NoSQL](#nosql)
-command would be. See See the [PyDAL example](#pydal-example) for a typical use of `define_table`.
+command would be. This allows the same Python code to be used for a wide variety of databases.
 
-See also: define_table [source code](https://github.com/web2py/pydal/blob/master/pydal/base.py), [readthedocs](https://pydal.readthedocs.io/en/latest/index.html#pydal.base.DAL.define_table)
+### See also
+
+* [PyDAL example](#pydal-example) for a typical use of `define_table` `define_table` 
+* PyDAL [source code](https://github.com/web2py/pydal/blob/master/pydal/base.py)
+* [readthedocs](https://pydal.readthedocs.io/en/latest/index.html#pydal.base.DAL.define_table)
 
 ## Field()
 
-`Field()` is a constructor passed to the [PyDal](#pydal) `define_table()` function. It represents both a field (aka column)
-to be added to a database table definition, but also validation rules used for entering data in at the forms level, 
-or as constraints for records to be accepted into the table at the database level.
+`Field()` is a constructor passed to the [PyDal](#pydal) [define_table()](#define_table) function. 
+It represents both a field (aka column) to be added to a database table definition.
+Optional parameters also allow validation rules used for entering data in at the forms level, 
+and as constraints for records to be accepted into the table at the database level.
+
+## fixture
+
+See also the [py4web documentation](https://py4web.com/_documentation/static/index.html#chapter-04)
 
 ## length
 
