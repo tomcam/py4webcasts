@@ -3,6 +3,7 @@
 [//]: # "TODO: Unfinished"
 [//]: # "Consider define_table insert, truncate, drop, import_from_csv_file http://www.web2py.com/books/default/chapter/29/06/the-database-abstraction-layer#The-DAL-A-quick-tour"
 [//]: # "action"
+[//]: # "controller"
 [//]: # "create-model"
 [//]: # "create-controller"
 [//]: # "create-view"
@@ -32,6 +33,12 @@ calling the controller function `index`.
 call a controller function named `view` on the record whose ID is 2022
 * The action named `@action('edit/<id>',method=['GET','POST'])` would work on an edit form,
 so `myapp/edit/2022` would call the controller function named `edit`. It could, for example, display the contents of the record whose ID is 2022 (the `GET` request) in form, and post back any changes to it (the `EDIT` request)
+
+## controller
+
+Controllers are Python functions that handle the program's business logic, also known as the application workflow.
+
+See also [MVC](#mvc)
 
 ## DAL
 
@@ -75,6 +82,13 @@ See also the [py4web documentation](https://py4web.com/_documentation/static/ind
 
 `length` is a parameter passed to the [Field](#field) constructor restricting the size of a field. [It applies only to](https://py4web.com/_documentation/static/index.html#chapter-05) fields of type `string`, `uploadfield`, and `authorize`.
 See the [PyDAL example](#pydal-example) for a typical use of `length`.
+
+<a id="mvc"></a>
+## MVC or Model/View/Controller
+
+Model/View/Controller or MVC describes web frameworks like py4web, and connotes how the database layer (model),
+display logic (view), and application logic (controller) are separated. That separation is particularly clean
+and pronounced in py4web.
 
 ## NoSQL
 
