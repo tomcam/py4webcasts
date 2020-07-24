@@ -17,7 +17,7 @@ sudo python3.7 -m pip uninstall pydal
 sudo python3.8 -m pip uninstall pydal
 ```
 
-You may need to do this twice. Python3 appears not to get this right every time, a phenomenon not observed with Python 2.x.
+You may need to do this twice. Unlike Python 2.x, Python3 appears not to get this right every time.
 
 ## To install PyDAL for a particular version of Python
 
