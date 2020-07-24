@@ -8,6 +8,8 @@ Sometimes you're told in places like the [py4web group](https://groups.google.co
 python3 -m pip install -U pydal
 ```
 
+If that doesn't work, you may need to uninstall previous version explicitly, or install for a particular version of Python itself. If so, read on.
+
 ## If you need to uninstall a previous version of PyDAL
 
 You may need to remove earlier versions of PyDAL. If so, see [How to uninstall PyDAL](https://github.com/tomcam/py4webcasts/blob/master/docs/how-to-uninstall-pydal)
