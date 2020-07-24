@@ -1,0 +1,27 @@
+# How to uninstall PyDAL
+
+Some problems have been reported updating PyDAL and removing earlier versions is sometimes necessary--possibly more than once.
+You may need to uninstall earlier versions explicitly. For example:
+
+## To uninstall earlier versions of PyDAL
+
+Suppose you want the newest version of PyDAL and wish to avoid version conflicts. 
+Depending on how long you've been using it, you may need to run commands like this (obviously the versions you used may differ):
+
+```
+:: Windows users can omit the sudo
+sudo python3.6 -m pip uninstall pydal
+sudo python3.7 -m pip uninstall pydal
+sudo python3.8 -m pip uninstall pydal
+```
+
+You may need to do this twice. Python3 appears not to get this right every time, a phenomenon not observedw with Python 2.x.
+
+## To install a specific version
+
+Then to install a particular version of PyDAL, for example the one for Python 3.8, use `pip` as expected:
+
+```
+python3.8 -m pip install -U pydal
+```
+
