@@ -33,7 +33,7 @@ The py4web `@action` [decorator](#decorator) maps HTTP requests to controller fu
 function-level [fixtures](#fixture) to the code that alter its results or add features such as
 saving session data.
 Often the dictionary object returned by the action is applied to a [Template](#template-object) fixture 
-that evaluates the Python embedded in the HTML, interpolate its return values into the HTML,
+that evaluates the Python embedded in the HTML, interpolates its return values into the HTML,
 and converts the result into a string. Often that string is rendered as HTML to be displayed as a web page.
 
 ### @action Examples:
@@ -103,14 +103,40 @@ and as constraints for records to be accepted into the table at the database lev
 
 ## fixture
 A py4web fixture is a form of middleware applied at the level of an [action](#action) (controller function).
-The advantage to this approach is that 
+Most middleware adds overhead to all functions in the package, or requires boilerplate code to be added
+to all functions. The advantage to the approach used by py4web is that it's per function, not per package,
+and it's also easier to understand what's going on.
+
+The example below shows two fixtures in action. The first maps the `/new` URL to the `new()` function defined
+under it. The second adds a login requirement to the `new.html` [template](#template) without any changes required to 
+the template code.
+
+##### file controllers.py
+```python
+@action('new')
+@action.uses(auth, 'new.html')
+def new():
+    form=Form(db.task)
+    return dict(form=form)
+```
+
 
 ### See also 
 * py4web [Fixture documentation](https://py4web.com/_documentation/static/index.html#chapter-04)
 
 ## IS_IN_SET
 
-`IS_IN_SET` is a py4web [validator](#validator) 
+`IS_IN_SET` is a py4web [validator](#validator) used to ensure that data entered into a form
+is restricted to the values in the Python set object passed to it. In the example below the
+`Priority` field limits data entry to integers from 1-3 inclusive.
+
+##### file models.py
+```python
+db.define_table('task',
+    Field('title',length=80,notnull=True),
+    Field('description','text'),
+    Field('priority','integer',default=2,requires=IS_IN_SET([1,2,3]))
+```
 
 ## model
 In py4web, the model is the database layer of a py4web app, represented as code using [PyDAL](#pydal).
@@ -135,7 +161,6 @@ Py4web's model database layer uses [PyDAL](#pydal)
 by default, but could use another DAL if needed. Its view layer is provided by the [YATL](#yatl)
 template language, which allows you to mix pure Python with HTML code to display data, and the
 business logic is found in the Python file `controllers.py`, which manages HTTP requests and routing. 
-
 
 ## NoSQL
 [PyDAL](#pydal) lets you create, query, and manipulate database tables identically, whether they're
@@ -206,9 +231,12 @@ db.define_table('task',
 ```
 
 ## view
-An HTML file with Python interplolated using Used interchangeably with [template](#template)
-Unfortunately Django web framework confuses "view" with template, so py4web sometimes applies
-the same usage.
+An HTML file with Python code interplolated. The term `view` is used interchangeably with [template](#template)
+Unfortunately Django web framework confuses `view` with `template`, so py4web sometimes perpetuates
+that usage.
+
+### See also
+* [template](#template)
 
 ## YATL
 One of the most important functions of py4web is the ability to add pure Python code to an HTML file.
@@ -222,7 +250,20 @@ delimits Python code (using `[[` and `]]` by default but the delimiters can be c
 
 
 ## uses
-The `uses` method of the [@action](#action) decorator specifies fixtures to apply to the action.
+The `uses` method of the [@action](#action) decorator specifies a [fixture](#fixture) to apply to an action.
+
+### uses example
+
+Here's a typical example of `uses`, which adds authentication to the form used by the `new` action.
+
+##### file controllers.py
+```python
+@action('new')
+@action.uses(auth, 'new.html')
+def new():
+    form=Form(db.task)
+    return dict(form=form)
+```
 
 ### See also
 * py4web [Fixtures](https://py4web.com/_documentation/static/index.html#chapter-04) documentation
