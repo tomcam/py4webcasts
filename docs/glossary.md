@@ -21,7 +21,7 @@
 [//]: # "uses (have an expert check my definition)"
 [//]: # "validator"
 [//]: # "view"
-[//]: # "yatl-add example?"
+[//]: # "yatl: add example"
 
 
 ## action
@@ -212,7 +212,7 @@ at the [form level](https://py4web.com/_documentation/static/index.html#chapter-
 
 ## Template object
 The `Template` object is a [fixture](#fixture) that takes the specified [template](#template) file, converts
-it into a Python dictionary
+it into a Python [dictionary object](https://realpython.com/python-dicts/).
 
 ## template
 
@@ -235,22 +235,62 @@ An HTML file with Python code interplolated. The term `view` is used interchange
 Unfortunately Django web framework confuses `view` with `template`, so py4web sometimes perpetuates
 that usage.
 
+The python code is embedded into HTML using square brackets as delimiter by convention, although
+that can be changed on a per-function bases with py4web (shown below). This example ranges through
+a set named `query` returned from a [PyDAL](#pydal) `select` call:
+
+```html
+    [[for q in query:]]
+        <tr><td>[[=q.priority]]</td><td>[[=q.title]]</td></tr>
+    [[pass]]
+```
+
+### view example
+
+Here's a complete though simplistic example of Python embedded in a view. The controller
+generates a query of the `task` table that returns all tasks in reverse priority order.
+It returns that query as a Python [dictionary object](https://realpython.com/python-dicts/):
+
+##### file controllers.py
+
+```python
+@action('index')
+def index():
+    query=db(db.task).select(orderby=~db.task.priority)
+    return dict(query=query)
+```
+
+The `index` [action](#action) shown above is shorthand for this:
+
+```python
+@action.uses(Template('index.html', delimiters='[[ ]]')
+```
+
+The `Template` [fixture](#fixture) serializes that dictionary into HTML usable by
+the `index.html` [template](#template):
+
+##### file index.html
+
+```python
+[[extend 'layout.html']]
+<div class="vue">
+    <h1>Tasks</h1>
+    <table class="table is-full-width">
+        <tr><th>Priority</th><th>Title</th></tr>
+    [[for q in query:]]
+        <tr><td>[[=q.priority]]</td><td>[[=q.title]]</td></tr>
+    [[pass]]
+    </table>
+    [[=A('New task', _href=URL('new'))]]    
+</div>
+```
+
 ### See also
 * [template](#template)
-
-## YATL
-One of the most important functions of py4web is the ability to add pure Python code to an HTML file.
-YATL, which stands for Yet Another Template Language, preprocesses the HTML file and 
-delimits Python code (using `[[` and `]]` by default but the delimiters can be changed).
-
-### See also
-* [YATL template language](https://py4web.com/_documentation/static/index.html#chapter-07)
-* [template](#template)
-* [MVC](#mvc)
 
 
 ## uses
-The `uses` method of the [@action](#action) decorator specifies a [fixture](#fixture) to apply to an action.
+The `uses` method of the [@action](#action) decorator specifies a [fixture](#fixture) to apply to an action. 
 
 ### uses example
 
@@ -265,6 +305,47 @@ def new():
     return dict(form=form)
 ```
 
+### All @action decorators have a uses method
+
+All `@action` decorators have a `uses` method. Since the most common case by far is 
+using the Template fixture to convert the dictionary returned by the action into
+a form, py4web shortcuts that case. In the example above,
+
+```python
+@action.uses(auth, 'new.html')
+```
+
+is actually the equivalent of:
+
+```python
+@action.uses(Template('new.html', delimiters='[[ ]]')
+```
+
+One reason you might want the full version is to change the delimiters. In py4web's predecessor
+[web2py](https://web2py.com) the delimiters were curly braces, so form code started like this:
+
+```python
+{{extend 'layout.html'}}
+```
+
+If you wanted to reuse some old web2py form code you could do it as easily as:
+
+##### file controllers.py
+```
+@action.uses(Template('new.html', delimiters='{{ }}')
+```
+
 ### See also
 * py4web [Fixtures](https://py4web.com/_documentation/static/index.html#chapter-04) documentation
 * [core.py](https://github.com/web2py/py4web/blob/master/py4web/core.py) py4web source code
+
+## YATL
+One of the most important functions of py4web is the ability to add pure Python code to an HTML file.
+YATL, which stands for Yet Another Template Language, preprocesses the HTML file and 
+delimits Python code (using `[[` and `]]` by default but the delimiters can be changed).
+
+### See also
+* [YATL template language](https://py4web.com/_documentation/static/index.html#chapter-07)
+* [template](#template)
+* [MVC](#mvc)
+
