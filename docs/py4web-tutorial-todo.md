@@ -51,8 +51,7 @@ py4web uses a database access abstraction layer (DAL) package called [PyDal](glo
 
 What makes PyDal more compelling than other DALs is that it is packed with features that control how data is validated going in through forms, or going in through database import, or how it is displayed. PyDal supports many, many different databases but lets you do virtually everything you need in Pythoh. You may never have to drop into SQL at all.
 
-
-### Add the following lines to `models.py`:
+* [Create the following model:](how-create-model.md)
 
 ```python
 from datetime import datetime
