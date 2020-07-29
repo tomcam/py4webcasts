@@ -4,7 +4,7 @@
 
 ## PyDAL
 * [How to upgrade PyDAL](how-upgrade-pydal.md)
-* [How to uinstall PyDAL](how-to-uninstall-pydal)
+* [How to uninstall PyDAL](how-to-uninstall-pydal)
 
 ## Resources
 * [Glossary](glossary.md)
