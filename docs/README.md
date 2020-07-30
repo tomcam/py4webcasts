@@ -7,6 +7,7 @@
 * [How to uninstall PyDAL](how-to-uninstall-pydal)
 
 ## Resources
+* Gist for a minimal [py4web crud example](https://gist.github.com/tomcam/7b723cbb5f6542f54532d45c1dbc2d19)
 * [Glossary](glossary.md)
 * py4web [Site](https://py4web.com/)
 * py4web [Documentation](https://py4web.com/_documentation/static/index.html)
