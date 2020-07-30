@@ -1,0 +1,9 @@
+# Common Py4web errors
+
+## OSError: [Errno 98] Address already in use
+This probably means the HTTP port, which is 8000 by default, is busy. Try restarting py4web with a different port number:
+
+```bash
+:: Listen on port 8001 instead of the default 8000
+py4web run -p 8001
+```
