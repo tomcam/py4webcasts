@@ -1,5 +1,7 @@
 # py4web tutorial: create a todo list web app in 75 lines of code
 
+* Based on this [gist](https://gist.github.com/tomcam/7b723cbb5f6542f54532d45c1dbc2d19)
+
 ## TODO: 
 * The whole thing has just been started 7/5/2020 so obviously most of it is missing, but the code for it can be found at this [gist](https://gist.github.com/tomcam/7b723cbb5f6542f54532d45c1dbc2d19).
 * There will be lots of screenshots, but things change so I usually wait near the end for those
