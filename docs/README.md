@@ -1,6 +1,7 @@
 # py4webcasts
 
 * Py4web tutorial: [Create a todo list app](py4web-tutorial-todo.md) in 75 lines
+* [Topics I'd like to cover](todo.md)
 
 ## PyDAL
 * [How to upgrade PyDAL](how-upgrade-pydal.md)
