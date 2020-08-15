@@ -1,5 +1,6 @@
 # Topics I'd like to drill down on 
 
+* [Remove static from a URL](https://mail.google.com/mail/u/0/?zx=g45lhcfwef9s#inbox/FMfcgxwJXVFjcRgfBsdljmZzWXDQCbKm)
 * [Q() in utils.js](https://groups.google.com/g/py4web/c/-wvLOWBplZo/m/USTve_cHAwAJ)
 * Single sign-n
   [py4groups overview](https://groups.google.com/g/py4web/c/jsG2szED3uk/m/FyB3c99EAwAJ)
