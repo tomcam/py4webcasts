@@ -10,19 +10,20 @@ It is meant for people with limited system administration knowledge, and it shou
 Every keystroke should be documented. If you encounter any problems, or
 need something explained better, please [file an issue](https://github.com/tomcam/py4webcasts/issues).
 
-## Download Git to your own machine
-
-This tutorial requires that you have the Git command-line utility installed.
-
-* Download Git from [git-scm.com](https://git-scm.com/).
-
-Git is only used once here. It helps but isn't required that you follow the excellent tutorial at [git-scm.com](https://git-scm.com/).
-
 ## Create a PythonAnywhere account
 
 You need to create a free PythonAnywhere account. They don't require a credit card, which is impressive.
 
 * [Create a PythonAnywhere account](create-pythonanywhere-account.md)
+
+### Your username is your subdomain
+
+The username you create will also serve as the subdomain name on a free account. For example,
+if you username is totallycoolsite then its URL will be:
+
+```
+http://totallycoolsite.pythonanywhere.com
+```
 
 ## Go to the PythonAnywhere dashboard
 
@@ -34,7 +35,7 @@ You'll see a navigation menu near the top of the page that says **Dashboard  Con
 
 ## Go to the WebApps page and create a new web app
 
-On the navigation bar near the top of the page that says **Dashboard  Consoles  Files  Web  Tasks  Databases** choose **Web**
+* On the navigation bar near the top of the page that says **Dashboard  Consoles  Files  Web  Tasks  Databases** choose **Web**.
 
 * Choose **Add a new web app**.
 
@@ -54,24 +55,31 @@ Py4web uses [Bottle](http://bottlepy.org). So:
 
 You're asked to select a Python version.
 
-* Choose **Python 3.8** or **Python 3.7**.
+* Choose **Python 3.8** (Bottle doesn't work with earlier versions):
+
+![Screenshot showing Pythong 3.8 and Bottle being selected](pythonanywhere-create-new-web-app-1024x839.png)
 
 The **Quickstart new Bottle Project** dialog appears. You're asked to give the location where a `bottle_app.py` file will be generated. 
-It looks something like this, where `XXX` stands in for the username you created on signup.
+It looks something like this, where `username` stands in for the username you created on signup.
 
 ```bash
 Path:
-/home/XXX/mysite/bottle_app.py
+/home/username/mysite/bottle_app.py
 ```
 
-* Replace the `mysite` portion with `py4web`. The whole thing would look like this, where 
-you would replace the `XXX` with your account name. For example:
+* Replace the `mysite` portion with `py4web`. 
+
+* Replace the `username` with your account name. 
+
+For example:
 
 ```bash
-/home/XXX/py4web/bottle_app.py
+/home/username/py4web/bottle_app.py
 ```
 
 * Choose **Next**.
+
+You're shown a message saying `All done! Your web app is now set up. Details below.`
 
 ## Installing py4web from source on pythonanywhere
 
@@ -130,6 +138,9 @@ $ cd py4web
 * Enter **python3 -m pip install --user -r requirements.txt** to install using pip:
 
 ```bash
+# --user means install in your local directory 
+#   Required on PythonAnywhere because you don't have 
+#   permission to install globally.
 $ python3 -m pip install --user -r requirements.txt
 ```
 
@@ -146,14 +157,16 @@ The `./py4web.py set_password` step asks you twice for a password. That will be 
 
 ## Change your site's working directory
 
+* Return to your PythonAnywhere tab.
+
 * From the **Dashboard  Consoles  Files  Web  Tasks  Databases** navigation menu choose **Web**.
 
 * Scroll down to the section headed **Code**, which shows **Source Code**, **Working Directory**, and other information.
 
 ### Make your py4web folder both the source code and working directory
 
-* Click the URL next to **Source Code**. It is made editable. Make sure the end contains your URL followed by `/py4web`. Replace `XXX`
-in the following example with your project URL:
+* Click the URL next to **Source Code**. It is made editable. Make sure the end contains your URL followed by `/py4web`. Replace `username`
+in the following example with your PythonAnywhere username:
 
 /home/XXX/py4web
 
@@ -166,17 +179,17 @@ You can open up a built-in editor for it simply by clicking.
 
 * Click the link for **WSGI configuration file** and your WSGI configuration file appears in an editor.
 
-You'll see something like this, with your username in place of `XXX`:
+You'll see something like this, with your username in place of `username`:
 
 ```
-project_home = '/home/XXX/mysite'
+project_home = '/home/username/mysite'
 ```
 
 * Change it to your py4web apps folder name like this, replacing `XXX` with your username, and replacing `mysite` with `py4web/apps` Make sure it all
 stays within the quote marks:
 
 ```
-project_home = '/home/XXX/py4web/apps'
+project_home = '/home/username/py4web/apps'
 ```
 
 * At the top of the page choose **Save** to preserve your changes.
@@ -192,14 +205,14 @@ Run your favorite editor on the file `~/py4web/bottle_app.py`:
 vim ~/py4web/bottle_app.py
 ```
 
-* Replace the contents of `bottle_app.py` as follows:
+* Replace the contents of `bottle_app.py` as follows. **Be sure to replace `apps` with `username/apps`, where `username` is your PythonAnywhere username.
 
 ```
 import os
 from py4web.core import wsgi
 PASSWORD_FILENAME = 'password.txt'
 DASHBOARD_MODE = 'full' or 'demo' or 'none'
-APPS_FOLDER = 'apps'
+APPS_FOLDER = 'username/apps'
 
 password_file = os.path.abspath(os.path.join(os.path.dirname(__file__), PASSWORD_FILENAME))
 application = wsgi(password_file=password_file,
@@ -211,7 +224,7 @@ application = wsgi(password_file=password_file,
 
 ### Reload your web app
 
-You're returned to the **Web** page
+* Return to the PythonAnywhere **Web** page
 
 There is now a **Configuration** section with the name of your URL, and a big green **Reload** button with your URL on it.
 
@@ -236,7 +249,7 @@ online at your PythonAnywhere URL.
 
 * Open a browser to the URL PythonAnywhere assigned you when you created the account. 
 
-It's your username followed by `.pythonanywhere.com`, so if your username were `xxx` the URL to open in your browser would be `http://websafetyschool.pythonanywhere.com/`.
+It's your username followed by `.pythonanywhere.com`, so if your username were `username` the URL to open in your browser would be `http://username.pythonanywhere.com/`.
 
 It should look like this:
 
@@ -263,6 +276,3 @@ See [Upgrading py4web without affecting your apps](upgrading-py4web.md)
 ```bash
 $ python3 -m pip install -U py4web
 ```
-
-
-
