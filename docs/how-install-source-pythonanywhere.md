@@ -10,7 +10,7 @@
   And not as shown in the docs:
   + python3 -m pip install  -r requirements.txt
 
-## Download Git
+## Download Git to your own machine
 
 This tutorial requires that you have the [Git] command-line utility
 
@@ -18,22 +18,7 @@ This tutorial requires that you have the [Git] command-line utility
 
 It helps but isn't required that you follow its excellent tutorial.
 
-## Create a free account on PythonAnywhere
-
-PythonAnywhere generously allows you to create a full working account for free, allowing you to create py4web apps.
-You don't need a credit card to create the free account.
-
-* Visit [PythonAnywhere](https://www.pythonanywhere.com/pricing/) and choose **Create a Beginner Account**
-
-* Enter your desired login information on the [Create Your Account](https://www.pythonanywhere.com/registration/register/beginner/) page.
-
-If you're using the free account, remember that your username will also be your subdomain (the first part of your URL).
-
-* Check the terms and conditions box and choose **Register**.
-
-You're given brief online tour of PythonAnywhere.
-
-* Choose **End Tour** when you're done.
+* [Create a PythonAnywhere account](create-pythonanywhere-account.md)
 
 ## Go to the PythonAnywhere dashboard
 
