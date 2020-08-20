@@ -236,3 +236,10 @@ It's your username followed by `.pythonanywhere.com`, so if your username were `
 It should look like this:
 
 ![Screen shot of the py4web home page](assets/img/py4web-home-1024x384.png)
+
+To begin writing py4web apps choose **Dashboard**.
+
+* You'll be asked for the password you created earlier. When you enter it you'll see the py4web dashboard:
+
+![Screen shot of the py4web home page](assets/img/py4web-dash-1024x384.png)
+
