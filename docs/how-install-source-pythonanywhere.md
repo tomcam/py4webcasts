@@ -233,4 +233,4 @@ It's your username followed by `.pythonanywhere.com`, so if your username were `
 
 It should look like this:
 
-![Screen shot of the py4web home page](/assets/img/py4web-home-1024x384.png)
+![Screen shot of the py4web home page](assets/img/py4web-home-1024x384.png)
