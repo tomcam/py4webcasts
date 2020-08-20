@@ -40,31 +40,31 @@ You're informed that PythonAnywhere is creating a URL for your site and displays
 
 * Choose **Next**.
 
-### Choose the Flask framework
+### Choose the Bottle framework
 
 The **Select a Python Web framework**  dialog appears, showing a list of frameworks like web2py, Django, Flask, and so on.
 
-Currently there's no built-in support for py4web, but py4web is based partly on Flask. So:
+Currently there's no built-in support for py4web, but py4web is based partly on [Bottle](http://bottlepy.org). So:
 
-* Choose **Flask** from the list.
+* Choose **Bottle** from the list.
 
 You're asked to select a Python version.
 
 * Choose **Python 3.8** or **Python 3.7**.
 
-The **Quickstart new Flask Project** dialog appears. You're asked to give the location where a `flask_app.py` file will be generated. 
+The **Quickstart new Bottle Project** dialog appears. You're asked to give the location where a `bottle_app.py` file will be generated. 
 It looks something like this, where `XXX` would be the username you created on signup. You'll need to change it.
 
 **Path**  
 
 ```bash
-/home/XXX/mysite/flask_app.py
+/home/XXX/mysite/bottle_app.py
 ```
 
 * Replace the `mysite` portion with `py4web`. The whole thing would look like this, where `XXX` is used in place of your account name. For example:
 
 ```bash
-/home/XXX/py4web/flask_app.py
+/home/XXX/py4web/bottle_app.py
 ```
 
 * Choose **Next**.
@@ -173,13 +173,13 @@ project_home = '/home/XXX/py4web/apps'
 
 * Choose the browser tab running the PythonAnywhere bash shell.
 
-run your favorite editor on the file `~/py4web/flask_app.py`:
+run your favorite editor on the file `~/py4web/bottle_app.py`:
 
 ```bash
-nano ~/py4web/flask_app.py
+vim ~/py4web/bottle_app.py
 ```
 
-* Replace the contents of `flask_app.py` as follows:
+* Replace the contents of `bottle_app.py` as follows:
 
 
 ```
