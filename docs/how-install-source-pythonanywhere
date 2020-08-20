@@ -1,1 +1,105 @@
-# UNRELIABLE FOR NOW: How to install from source on PythonAnywhere
+# NOT FULLY TESTED: How to install from source on PythonAnywhere
+
+## TODO:
+* Is this specific enough? 
+  + * Choose **Python 3.8** or **Python 3.7**.
+
+## Download Git
+
+This tutorial requires that you have the [Git] command-line utility
+
+* Download Git from [git-scm.com](https://git-scm.com/).
+
+It helps but isn't required that you follow its excellent tutorial.
+
+## Create a free account on PythonAnywhere
+
+PythonAnywhere generously allows you to create a full working account for free, allowing you to create py4web apps.
+You don't need a credit card to create the free account.
+
+* Visit [PythonAnywhere](https://www.pythonanywhere.com/pricing/) and choose **Create a Beginner Account**
+
+* Enter your desired login information on the [Create Your Account](https://www.pythonanywhere.com/registration/register/beginner/) page.
+
+* Check the terms and conditions box and choose **Register**.
+
+You're given brief online tour of PythonAnywhere.
+
+* Choose **End Tour** when you're done.
+
+## Go to the PythonAnywhere dashboard
+
+Let's make sure we're on the same page, which should the the dashboard.
+
+* Choose the [PythonAnywhere logo](https://www.pythonanywhere.com/) at the top of the page to navigate to the PythonAnywhere dashboard.
+
+You'll see a navigation menu near the top of the page that says **Dashboard  Consoles  Files  Web  Tasks  Databases**.
+
+## Go to the WebApps page and create a new web app
+
+On the navigation bar near the top of the page that says **Dashboard  Consoles  Files  Web  Tasks  Databases** choose **Web**
+
+* Choose **Add a new web app**.
+
+* A dialog appears called  **Create a new web app**
+
+You're informed that PythonAnywhere is creating a URL for your site and displays that URL.
+
+* Choose **Next**.
+
+### Choose the Flask framework
+
+The **Select a Python Web framework**  dialog appears, showing a list of frameworks like web2py, Django, Flask, and so on.
+
+Currently there's no built-in support for py4web, but py4web is based partly on Flask. So:
+
+* Choose **Flask** from the list.
+
+You're asked to select a Python version.
+
+* Choose **Python 3.8** or **Python 3.7**.
+
+The **Quickstart new Flask Project** dialog appears. You're asked to give the location where a `flask_app.py` file will be generated. 
+It looks something like this, where `XXX` would be the account name you created on signup. You'll need to change it.
+
+**Path**  
+
+```bash
+/home/XXX/mysite/flask_app.py
+```
+
+* Replace the `mysite` portion with `py4web`. The whole thing would look like this, where `XXX` is used in place of your account name. For example:
+
+```bash
+/home/XXX/py4web/flask_app.py
+```
+
+* Choose **Next**.
+
+### Reload your web app
+
+You're returned to the **Web** page
+
+There is now a **Configuration** section with the name of your URL, and a big green **Reload** button with your URL on it.
+
+* Choose the **Reload XXX.pythonanywhere.com** button, where XXX is used in place of your account name.
+
+A wait icon appears for a few seconds, then the page returns to its previous state. You're finally ready to install py4web.
+
+## Installing py4web from source on pythonanywhere
+
+One of the distinct features of py4web is that it is nothing more than a Python program. py4web apps are nothing more than a simple
+directory tree structure with a few files inside an applications subdirectory. This section shows how to clone the py4web repo
+from GitHub. It uses the Bash command line console supplied with PythonAnywhere.
+
+* From the **Dashboard  Consoles  Files  Web  Tasks  Databases** navigation menu choose **Consoles**.
+
+After a few seconds, the Bash prompt appears. It's pretty much just a `$` sign.
+
+* Enter `git clone https://github.com/web2py/py4web.git` at the prompt:
+
+```
+$ git clone https://github.com/web2py/py4web.git
+```
+
+
