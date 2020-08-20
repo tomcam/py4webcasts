@@ -57,7 +57,7 @@ You're asked to select a Python version.
 
 * Choose **Python 3.8** (Bottle doesn't work with earlier versions):
 
-![Screenshot showing Pythong 3.8 and Bottle being selected](assets/img/pythonanywhere-create-new-web-app-1024x839.png)
+![Screenshot showing Python 3.8 and Bottle being selected](assets/img/pythonanywhere-create-new-web-app-1024x839.png)
 
 The **Quickstart new Bottle Project** dialog appears. You're asked to give the location where a `bottle_app.py` file will be generated. 
 It looks something like this, where `username` stands in for the username you created on signup.
