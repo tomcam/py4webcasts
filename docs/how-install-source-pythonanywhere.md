@@ -1,26 +1,26 @@
-# NOT FULLY TESTED: How to install from source on PythonAnywhere
+# How to install py4web from source on PythonAnywhere for free
 
-## TODO:
-* Explain what this does ./py4web.py set_password
-* Is this specific enough? 
-  + * Choose **Python 3.8** or **Python 3.7**.
-* I can only install with the `--user` option like this:
-  + python3 -m pip install --user -r requirements.txt
+One of the best ways to learn [py4web](https://py4web.com) is to create a
+free account on [PythonAnywhere](https://pythonanywhere.com). While
+PythonAnywhere has ready-to-go  presets for other frameworks, such as 
+webp2y or Django, you'll have to install py4web yourself.
 
-  And not as shown in the docs:
-  + python3 -m pip install  -r requirements.txt
+This tutorial shows you step by step how to install and run py4web.
+It is meant for people with limited system administration knowledge, and it shouldn't leave anything out. 
+Every keystroke should be documented. If you encounter any problems, or
+need something explained better, please [file an issue](https://github.com/tomcam/py4webcasts/issues).
 
 ## Download Git to your own machine
 
-This tutorial requires that you have the [Git] command-line utility installed.
+This tutorial requires that you have the Git command-line utility installed.
 
 * Download Git from [git-scm.com](https://git-scm.com/).
 
-It helps but isn't required that you follow its excellent tutorial.
+Git is only used once here. It helps but isn't required that you follow the excellent tutorial at [git-scm.com](https://git-scm.com/).
 
 ## Create a PythonAnywhere account
 
-You need to create a free PythonAnywhere account. You don't need a credit card.
+You need to create a free PythonAnywhere account. They don't require a credit card, which is impressive.
 
 * [Create a PythonAnywhere account](create-pythonanywhere-account.md)
 
@@ -58,7 +58,6 @@ You're asked to select a Python version.
 
 The **Quickstart new Bottle Project** dialog appears. You're asked to give the location where a `bottle_app.py` file will be generated. 
 It looks something like this, where `XXX` stands in for the username you created on signup.
-
 
 ```bash
 Path:
@@ -213,7 +212,7 @@ There is now a **Configuration** section with the name of your URL, and a big gr
 
 A wait icon appears for a few seconds, then the page returns to its previous state. You're finally ready to install py4web.
 
-## Run py4web
+## Start py4web
 
 * Choose the browser tab running the PythonAnywhere bash shell.
 
@@ -223,3 +222,15 @@ A wait icon appears for a few seconds, then the page returns to its previous sta
 $ ./py4web.py run apps
 ```
 
+This starts the built-in py4web web server and runs its own copy of the py4web site. It is now available
+online at your PythonAnywhere URL.
+
+## Visit your website
+
+* Open a browser to the URL PythonAnywhere assigned you when you created the account. 
+
+It's your username followed by `.pythonanywhere.com`, so if your username were `xxx` the URL to open in your browser would be `http://websafetyschool.pythonanywhere.com/`.
+
+It should look like this:
+
+![Screen shot of the py4web home page](/assets/img/py4web-home-1024x384.png)
