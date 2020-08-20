@@ -137,6 +137,8 @@ $ ./py4web.py setup apps
 $ ./py4web.py set_password
 ```
 
+The `./py4web.py set_password` step asks you twice for a password. That will be used when you log into the py4web dashboard.
+
 ## Change your site's working directory
 
 * From the **Dashboard  Consoles  Files  Web  Tasks  Databases** navigation menu choose **Web**.
