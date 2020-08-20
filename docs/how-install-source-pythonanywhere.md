@@ -82,6 +82,11 @@ from GitHub. It uses the Bash command line console supplied with PythonAnywhere.
 
 ### Start the bash console
 
+PythonAnywhere lets you run a bash console directly in your browser.
+That means you don't have to install and configure ssh to remote in. Just run bash from 
+their web page. It simulates a console right there. You can perform many common tasks as if it were happening on your
+own desktop without having to fiddle with ssh configuration.
+
 * From the **Dashboard  Consoles  Files  Web  Tasks  Databases** navigation menu choose **Consoles**.
 
 You'll see **Start a new Console**.
