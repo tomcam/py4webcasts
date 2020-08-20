@@ -183,6 +183,8 @@ nano ~/py4web/flask_app.py
 
 
 ```
+import os
+from py4web.core import wsgi
 PASSWORD_FILENAME = 'password.txt'
 DASHBOARD_MODE = 'full' or 'demo' or 'none'
 APPS_FOLDER = 'apps'
