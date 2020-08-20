@@ -248,3 +248,21 @@ To begin writing py4web apps choose **Dashboard**.
 
 ![Screen shot of the py4web home page](assets/img/py4web-dash-1024x384.png)
 
+## Upgrading the framework code
+
+At some point you may learn about a new py4web release.
+
+# Upgrading py4web without affecting your apps 
+
+At some point after you've installed py4web you'll want to update the framework code.
+To update the framework without altering your `apps` folder, just use pip as described in
+this linked article.
+
+See [Upgrading py4web without affecting your apps](upgrading-py4web.md)
+
+```bash
+$ python3 -m pip install -U py4web
+```
+
+
+
