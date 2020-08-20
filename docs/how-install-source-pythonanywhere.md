@@ -83,7 +83,7 @@ You'll see **Start a new Console**.
 
 * Next to Other, choose **Bash**.
 
-After a few seconds, the Bash prompt appears. It looks roughly like this: `~ $`.
+After a few seconds, the Bash prompt appears in a new browser tab. It looks roughly like this: `~ $`.
 
 
 ## Clone the GitHub repo
@@ -120,7 +120,7 @@ $ cd py4web
 * Enter **python3 -m pip install -r requirements.txt** to install using pip:
 
 ```bash
-$ python3 -m pip install -r requirements.txt
+$ python3 -m pip install --user -r requirements.txt
 ```
 
 ### Setup py4web itself
@@ -169,6 +169,32 @@ project_home = '/home/XXX/py4web/apps'
 
 * At the top of the page choose **Save** to preserve your changes.
 
+### Update
+
+* Choose the browser tab running the PythonAnywhere bash shell.
+
+run your favorite editor on the file `~/py4web/flask_app.py`:
+
+```bash
+nano ~/py4web/flask_app.py
+```
+
+* Replace the contents of `flask_app.py` as follows:
+
+
+```
+PASSWORD_FILENAME = 'password.txt'
+DASHBOARD_MODE = 'full' or 'demo' or 'none'
+APPS_FOLDER = 'apps'
+
+password_file = os.path.abspath(os.path.join(os.path.dirname(__file__), PASSWORD_FILENAME))
+application = wsgi(password_file=password_file,
+                   dashboard_mode=DASHBOARD_MODE,
+                   apps_folder=APPS_FOLDER)
+
+```
+
+
 ### Reload your web app
 
 You're returned to the **Web** page
@@ -178,4 +204,14 @@ There is now a **Configuration** section with the name of your URL, and a big gr
 * Choose the **Reload XXX.pythonanywhere.com** button, where XXX is used in place of your account name.
 
 A wait icon appears for a few seconds, then the page returns to its previous state. You're finally ready to install py4web.
+
+## Run py4web
+
+* Choose the browser tab running the PythonAnywhere bash shell.
+
+* Start py4web like so:
+
+```bash
+$ ./py4web.py run apps
+```
 
