@@ -12,11 +12,15 @@
 
 ## Download Git to your own machine
 
-This tutorial requires that you have the [Git] command-line utility
+This tutorial requires that you have the [Git] command-line utility installed.
 
 * Download Git from [git-scm.com](https://git-scm.com/).
 
 It helps but isn't required that you follow its excellent tutorial.
+
+## Create a PythonAnywhere account
+
+You need to create a free PythonAnywhere account. You don't need a credit card.
 
 * [Create a PythonAnywhere account](create-pythonanywhere-account.md)
 
@@ -36,15 +40,15 @@ On the navigation bar near the top of the page that says **Dashboard  Consoles  
 
 * A dialog appears called  **Create a new web app**
 
-You're informed that PythonAnywhere is creating a URL for your site and displays that URL.
+You're informed that PythonAnywhere is creating a URL for your site and displays that URL. The main part of the URL is your username followed by `pythonanywhere.com`.
 
 * Choose **Next**.
 
 ### Choose the Bottle framework
 
-The **Select a Python Web framework**  dialog appears, showing a list of frameworks like web2py, Django, Flask, and so on.
+The **Select a Python Web framework**  dialog appears, showing a list of frameworks like web2py, Django, Bottle, and so on.
 
-Currently there's no built-in support for py4web, but py4web is based partly on [Bottle](http://bottlepy.org). So:
+Py4web uses [Bottle](http://bottlepy.org). So:
 
 * Choose **Bottle** from the list.
 
@@ -53,15 +57,16 @@ You're asked to select a Python version.
 * Choose **Python 3.8** or **Python 3.7**.
 
 The **Quickstart new Bottle Project** dialog appears. You're asked to give the location where a `bottle_app.py` file will be generated. 
-It looks something like this, where `XXX` would be the username you created on signup. You'll need to change it.
+It looks something like this, where `XXX` stands in for the username you created on signup.
 
-**Path**  
 
 ```bash
+Path:
 /home/XXX/mysite/bottle_app.py
 ```
 
-* Replace the `mysite` portion with `py4web`. The whole thing would look like this, where `XXX` is used in place of your account name. For example:
+* Replace the `mysite` portion with `py4web`. The whole thing would look like this, where 
+you would replace the `XXX` with your account name. For example:
 
 ```bash
 /home/XXX/py4web/bottle_app.py
@@ -72,7 +77,8 @@ It looks something like this, where `XXX` would be the username you created on s
 ## Installing py4web from source on pythonanywhere
 
 One of the distinct features of py4web is that it is nothing more than a Python program. py4web apps are nothing more than a simple
-directory tree structure with a few files inside an applications subdirectory. This section shows how to clone the py4web repo
+directory tree structure with a few files inside an applications subdirectory, called `apps` by default. 
+This section shows how to clone the py4web repo
 from GitHub. It uses the Bash command line console supplied with PythonAnywhere.
 
 ### Start the bash console
@@ -117,7 +123,7 @@ Make py4web the current directory:
 $ cd py4web
 ```
 
-* Enter **python3 -m pip install -r requirements.txt** to install using pip:
+* Enter **python3 -m pip install --user -r requirements.txt** to install using pip:
 
 ```bash
 $ python3 -m pip install --user -r requirements.txt
@@ -149,8 +155,8 @@ in the following example with your project URL:
 
 ### Update your WSGI configuration file 
 
-The WSGI configuration needs your project's home directory updated from its default value. Just under **Source code** and **Working directory** you'll see **WSGI configuration file**. You can open up a built-in editor
-for it simply by clicking.
+The WSGI configuration needs your project's home directory updated from its default value. Just under **Source code** and **Working directory** you'll see **WSGI configuration file**. 
+You can open up a built-in editor for it simply by clicking.
 
 * Click the link for **WSGI configuration file** and your WSGI configuration file appears in an editor.
 
@@ -160,7 +166,7 @@ You'll see something like this, with your username in place of `XXX`:
 project_home = '/home/XXX/mysite'
 ```
 
-* Change it to your py4web apps folder name like this, replacing `XXX` with your username. Make sure it all
+* Change it to your py4web apps folder name like this, replacing `XXX` with your username, and replacing `mysite` with `py4web/apps` Make sure it all
 stays within the quote marks:
 
 ```
@@ -169,18 +175,18 @@ project_home = '/home/XXX/py4web/apps'
 
 * At the top of the page choose **Save** to preserve your changes.
 
-### Update
+### Update bottle_app.py
 
 * Choose the browser tab running the PythonAnywhere bash shell.
 
-run your favorite editor on the file `~/py4web/bottle_app.py`:
+Run your favorite editor on the file `~/py4web/bottle_app.py`:
 
 ```bash
+# Replace vim with whatever editor you prefer
 vim ~/py4web/bottle_app.py
 ```
 
 * Replace the contents of `bottle_app.py` as follows:
-
 
 ```
 import os
