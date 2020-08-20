@@ -69,16 +69,6 @@ It looks something like this, where `XXX` would be the username you created on s
 
 * Choose **Next**.
 
-### Reload your web app
-
-You're returned to the **Web** page
-
-There is now a **Configuration** section with the name of your URL, and a big green **Reload** button with your URL on it.
-
-* Choose the **Reload XXX.pythonanywhere.com** button, where XXX is used in place of your account name.
-
-A wait icon appears for a few seconds, then the page returns to its previous state. You're finally ready to install py4web.
-
 ## Installing py4web from source on pythonanywhere
 
 One of the distinct features of py4web is that it is nothing more than a Python program. py4web apps are nothing more than a simple
@@ -177,5 +167,15 @@ stays within the quote marks:
 project_home = '/home/XXX/py4web/apps'
 ```
 
-* At the top of the page choose **Save** to preserve your chnanges.
+* At the top of the page choose **Save** to preserve your changes.
+
+### Reload your web app
+
+You're returned to the **Web** page
+
+There is now a **Configuration** section with the name of your URL, and a big green **Reload** button with your URL on it.
+
+* Choose the **Reload XXX.pythonanywhere.com** button, where XXX is used in place of your account name.
+
+A wait icon appears for a few seconds, then the page returns to its previous state. You're finally ready to install py4web.
 
