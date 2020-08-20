@@ -1,8 +1,14 @@
 # NOT FULLY TESTED: How to install from source on PythonAnywhere
 
 ## TODO:
+* Explain what this does ./py4web.py set_password
 * Is this specific enough? 
   + * Choose **Python 3.8** or **Python 3.7**.
+* I can only install with the `--user` option like this:
+  + python3 -m pip install --user -r requirements.txt
+
+  And not as shown in the docs:
+  + python3 -m pip install  -r requirements.txt
 
 ## Download Git
 
@@ -20,6 +26,8 @@ You don't need a credit card to create the free account.
 * Visit [PythonAnywhere](https://www.pythonanywhere.com/pricing/) and choose **Create a Beginner Account**
 
 * Enter your desired login information on the [Create Your Account](https://www.pythonanywhere.com/registration/register/beginner/) page.
+
+If you're using the free account, remember that your username will also be your subdomain (the first part of your URL).
 
 * Check the terms and conditions box and choose **Register**.
 
@@ -60,7 +68,7 @@ You're asked to select a Python version.
 * Choose **Python 3.8** or **Python 3.7**.
 
 The **Quickstart new Flask Project** dialog appears. You're asked to give the location where a `flask_app.py` file will be generated. 
-It looks something like this, where `XXX` would be the account name you created on signup. You'll need to change it.
+It looks something like this, where `XXX` would be the username you created on signup. You'll need to change it.
 
 **Path**  
 
@@ -92,14 +100,97 @@ One of the distinct features of py4web is that it is nothing more than a Python 
 directory tree structure with a few files inside an applications subdirectory. This section shows how to clone the py4web repo
 from GitHub. It uses the Bash command line console supplied with PythonAnywhere.
 
+### Start the bash console
+
 * From the **Dashboard  Consoles  Files  Web  Tasks  Databases** navigation menu choose **Consoles**.
 
-After a few seconds, the Bash prompt appears. It's pretty much just a `$` sign.
+You'll see **Start a new Console**.
+
+* Next to Other, choose **Bash**.
+
+After a few seconds, the Bash prompt appears. It looks roughly like this: `~ $`.
+
+
+## Clone the GitHub repo
+
+The next step is to obtain a copy of the py4web distribution. The following copies the latest
+supported major release into its own directory.
 
 * Enter `git clone https://github.com/web2py/py4web.git` at the prompt:
 
-```
+```bash
 $ git clone https://github.com/web2py/py4web.git
 ```
 
+A list of progress messages scrolls down. It looks something like this, but longer:
+
+```
+Cloning into 'py4web'...
+remote: Enumerating objects: 167, done.
+remote: Counting objects: 100% (167/167), done.
+...
+Checking out files: 100% (660/660), done.
+04:21 ~ $ 
+```
+The result is a `py4web` subdirectory in your root directory containing the py4web source treee.
+
+### Change to the py4web directory and install using pip
+
+Make py4web the current directory:
+
+```bash
+$ cd py4web
+```
+
+* Enter **python3 -m pip install -r requirements.txt** to install using pip:
+
+```bash
+$ python3 -m pip install -r requirements.txt
+```
+
+### Setup py4web itself
+
+Now configure py4web:
+
+```bash
+$ ./py4web.py setup apps
+$ ./py4web.py set_password
+```
+
+## Change your site's working directory
+
+* From the **Dashboard  Consoles  Files  Web  Tasks  Databases** navigation menu choose **Web**.
+
+* Scroll down to the section headed **Code**, which shows **Source Code**, **Working Directory**, and other information.
+
+### Make your py4web folder both the source code and working directory
+
+* Click the URL next to **Source Code**. It is made editable. Make sure the end contains your URL followed by `/py4web`. Replace `XXX`
+in the following example with your project URL:
+
+/home/XXX/py4web
+
+* Do the same for **Working directory**.
+
+### Update your WSGI configuration file 
+
+The WSGI configuration needs your project's home directory updated from its default value. Just under **Source code** and **Working directory** you'll see **WSGI configuration file**. You can open up a built-in editor
+for it simply by clicking.
+
+* Click the link for **WSGI configuration file** and your WSGI configuration file appears in an editor.
+
+You'll see something like this, with your username in place of `XXX`:
+
+```
+project_home = '/home/XXX/mysite'
+```
+
+* Change it to your py4web apps folder name like this, replacing `XXX` with your username. Make sure it all
+stays within the quote marks:
+
+```
+project_home = '/home/XXX/py4web/apps'
+```
+
+* At the top of the page choose **Save** to preserve your chnanges.
 
