@@ -7,7 +7,10 @@ webp2y or Django, you'll have to install py4web yourself.
 
 This tutorial shows you step by step how to install and run py4web.
 It is meant for people with limited system administration knowledge, and it shouldn't leave anything out. 
-Every keystroke should be documented. If you encounter any problems, or
+
+## Important note: If this doesn't work, please file an issue
+
+Everything you need to install py4web on PythonAnywhere should be documented here. If you encounter any problems, or
 need something explained better, please [file an issue](https://github.com/tomcam/py4webcasts/issues).
 
 ## Create a PythonAnywhere account
@@ -168,7 +171,9 @@ The `./py4web.py set_password` step asks you twice for a password. That will be 
 * Click the URL next to **Source Code**. It is made editable. Make sure the end contains your URL followed by `/py4web`. Replace `username`
 in the following example with your PythonAnywhere username:
 
-/home/XXX/py4web
+```
+/home/username/py4web
+```
 
 * Do the same for **Working directory**.
 
@@ -249,7 +254,7 @@ online at your PythonAnywhere URL.
 
 * Open a browser to the URL PythonAnywhere assigned you when you created the account. 
 
-It's your username followed by `.pythonanywhere.com`, so if your username were `username` the URL to open in your browser would be `http://username.pythonanywhere.com/`.
+It's your PythonAnywhere username followed by `.pythonanywhere.com`, so if your username were `username` the URL to open in your browser would be `http://username.pythonanywhere.com/`.
 
 It should look like this:
 
@@ -261,18 +266,3 @@ To begin writing py4web apps choose **Dashboard**.
 
 ![Screen shot of the py4web home page](assets/img/py4web-dash-1024x384.png)
 
-## Upgrading the framework code
-
-At some point you may learn about a new py4web release.
-
-# Upgrading py4web without affecting your apps 
-
-At some point after you've installed py4web you'll want to update the framework code.
-To update the framework without altering your `apps` folder, just use pip as described in
-this linked article.
-
-See [Upgrading py4web without affecting your apps](upgrading-py4web.md)
-
-```bash
-$ python3 -m pip install -U py4web
-```
