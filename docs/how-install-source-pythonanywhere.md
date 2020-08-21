@@ -211,7 +211,7 @@ Run your favorite editor on the file `~/py4web/bottle_app.py`:
 vim ~/py4web/bottle_app.py
 ```
 
-* Replace the contents of `bottle_app.py` as follows. **Be sure to replace `apps` with `username/apps`, where `username` is your PythonAnywhere username.
+* Replace the contents of `bottle_app.py` as follows. **Be sure to replace `mysite/apps` with `your_username/apps`, where `your_username` is your PythonAnywhere username.**
 
 ```
 import os
@@ -220,7 +220,7 @@ from py4web.core import wsgi
 # BEGIN CONFIGURATION
 PASSWORD_FILENAME = 'password.txt'
 DASHBOARD_MODE = 'full' or 'demo' or 'none'
-APPS_FOLDER = 'mysite/apps'
+APPS_FOLDER = 'apps'
 # END CONFIGURATION
 
 password_file = os.path.abspath(os.path.join(os.path.dirname(__file__), PASSWORD_FILENAME))
