@@ -202,7 +202,7 @@ project_home = '/home/your_username/py4web/apps'
 
 ### Update bottle_app.py
 
-* Choose the browser tab running the PythonAnywhere bash shell.
+* Return to the PythonAnywhere bash shell.
 
 Run your favorite editor on the file `~/py4web/bottle_app.py`:
 
@@ -242,7 +242,7 @@ A progress icon appears for a few seconds, then the page returns to its previous
 
 ## Start py4web
 
-* Choose the browser tab running the PythonAnywhere bash shell.
+* Return to the PythonAnywhere bash shell.
 
 * Start py4web like so:
 
