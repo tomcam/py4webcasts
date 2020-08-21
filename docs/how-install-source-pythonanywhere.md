@@ -236,9 +236,9 @@ application = wsgi(password_file=password_file,
 
 There is now a **Configuration** section with the name of your URL, and a big green **Reload** button with your URL on it.
 
-* Choose the **Reload XXX.pythonanywhere.com** button, where XXX is used in place of your account name.
+* Choose the **Reload your_username.pythonanywhere.com** button, where your_username is used in place of your PythonAnywhere account name.
 
-A wait icon appears for a few seconds, then the page returns to its previous state. You're finally ready to install py4web.
+A progress icon appears for a few seconds, then the page returns to its previous state. You're finally ready to install py4web.
 
 ## Start py4web
 
