@@ -21,8 +21,8 @@ You need to create a free PythonAnywhere account. They don't require a credit ca
 
 ### Your username is your subdomain
 
-The username you create will also serve as the subdomain name on a free account. For example,
-if you username is totallycoolsite then its URL will be:
+The username you create will also serve as the subdomain name on a free PythonAnywhere account. For example,
+if you username is `totallycoolsite` then its URL will be:
 
 ```
 http://totallycoolsite.pythonanywhere.com
@@ -63,21 +63,21 @@ You're asked to select a Python version.
 ![Screenshot showing Python 3.8 and Bottle being selected](assets/img/pythonanywhere-create-new-web-app-1024x839.png)
 
 The **Quickstart new Bottle Project** dialog appears. You're asked to give the location where a `bottle_app.py` file will be generated. 
-It looks something like this, where `username` stands in for the username you created on signup.
+It looks something like this, where `your_username` stands in for the PythonAnywhere username you created on signup.
 
 ```bash
 Path:
-/home/username/mysite/bottle_app.py
+/home/your_username/mysite/bottle_app.py
 ```
 
 * Replace the `mysite` portion with `py4web`. 
 
-* Replace the `username` with your account name. 
+* Replace `your_username` with your PythonAnywhere username. 
 
 For example:
 
 ```bash
-/home/username/py4web/bottle_app.py
+/home/your_username/py4web/bottle_app.py
 ```
 
 * Choose **Next**.
@@ -168,11 +168,11 @@ The `./py4web.py set_password` step asks you twice for a password. That will be 
 
 ### Make your py4web folder both the source code and working directory
 
-* Click the URL next to **Source Code**. It is made editable. Make sure the end contains your URL followed by `/py4web`. Replace `username`
+* Click the URL next to **Source Code**. It is made editable. Make sure the end contains your URL followed by `/py4web`. Replace `your_username`
 in the following example with your PythonAnywhere username:
 
 ```
-/home/username/py4web
+/home/your_username/py4web
 ```
 
 * Do the same for **Working directory**.
@@ -184,17 +184,17 @@ You can open up a built-in editor for it simply by clicking.
 
 * Click the link for **WSGI configuration file** and your WSGI configuration file appears in an editor.
 
-You'll see something like this, with your username in place of `username`:
+You'll see something like this, with your PythonAnywhere username in place of `your_username`:
 
 ```
-project_home = '/home/username/mysite'
+project_home = '/home/your_username/mysite'
 ```
 
-* Change it to your py4web apps folder name like this, replacing `XXX` with your username, and replacing `mysite` with `py4web/apps` Make sure it all
+* Change it to your py4web apps folder name like this, replacing `your_username` with your PythonAnywhere username, and replacing `mysite` with `py4web/apps` Make sure it all
 stays within the quote marks:
 
 ```
-project_home = '/home/username/py4web/apps'
+project_home = '/home/your_username/py4web/apps'
 ```
 
 * At the top of the page choose **Save** to preserve your changes.
@@ -215,15 +215,17 @@ vim ~/py4web/bottle_app.py
 ```
 import os
 from py4web.core import wsgi
+
+# BEGIN CONFIGURATION
 PASSWORD_FILENAME = 'password.txt'
 DASHBOARD_MODE = 'full' or 'demo' or 'none'
-APPS_FOLDER = 'username/apps'
+APPS_FOLDER = 'mysite/apps'
+# END CONFIGURATION
 
 password_file = os.path.abspath(os.path.join(os.path.dirname(__file__), PASSWORD_FILENAME))
-application = wsgi(password_file=password_file,
+application = wsgi(password_file=password_file, 
                    dashboard_mode=DASHBOARD_MODE,
                    apps_folder=APPS_FOLDER)
-
 ```
 
 
@@ -254,7 +256,7 @@ online at your PythonAnywhere URL.
 
 * Open a browser to the URL PythonAnywhere assigned you when you created the account. 
 
-It's your PythonAnywhere username followed by `.pythonanywhere.com`, so if your username were `username` the URL to open in your browser would be `http://username.pythonanywhere.com/`.
+It's your PythonAnywhere username followed by `.pythonanywhere.com`, so if your username were `your_username` the URL to open in your browser would be `http://your_username.pythonanywhere.com/`.
 
 It should look like this:
 
