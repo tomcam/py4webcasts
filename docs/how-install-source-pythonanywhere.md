@@ -22,7 +22,7 @@ You need to create a free PythonAnywhere account. They don't require a credit ca
 ### Your username is your subdomain
 
 The username you create will also serve as the subdomain name on a free PythonAnywhere account. For example,
-if you username is `totallycoolsite` then its URL will be:
+if your username is `totallycoolsite` then its URL will be:
 
 ```
 http://totallycoolsite.pythonanywhere.com
