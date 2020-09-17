@@ -176,11 +176,13 @@ You're shown a message saying `All done! Your web app is now set up. Details bel
 ### Make your py4web folder both the source code and working directory by replacung mysite
 
 * Click the URL next to **Source Code**. It is made editable. Make sure the end contains your URL followed by `/py4web` intead of `/mysite`. 
-Replace `your_username` in the following example with your PythonAnywhere username:
+Replace `your_username` in the following example with your PythonAnywhere username, and after typing in the correct values
+**be sure to click the checkmark button** to confirm your changes:
 
 ```
 # 1. Replace your_username with your own PythonAnywhere username
 # 2. Replace mysite with py4web
+# 3. BE SURE to click the checkmark to confirm your change!
 /home/your_username/py4web
 ```
 
