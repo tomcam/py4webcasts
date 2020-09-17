@@ -93,10 +93,11 @@ $ cd py4web
 * Enter **python3 -m pip install -U --user -r requirements.txt** to install using pip:
 
 ```bash
+# --U updates old modules.
 # --user means install in your local directory 
 #   Required on PythonAnywhere because you don't have 
 #   permission to install globally.
-$ python3 -m pip install --user -r requirements.txt
+$ python3 -m pip install -U --user -r requirements.txt
 ```
 
 ### Setup py4web itself
