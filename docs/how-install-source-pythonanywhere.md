@@ -15,7 +15,8 @@ need something explained better, please [file an issue](https://github.com/tomca
 
 ## Create a PythonAnywhere account
 
-You need to create a free PythonAnywhere account. They don't require a credit card, which is much appreciated.
+You need to create a free PythonAnywhere account. They don't require a credit card, which 
+means it's practical for developers without good access to an American payment system.
 
 * [Create a PythonAnywhere account](create-pythonanywhere-account.md)
 
