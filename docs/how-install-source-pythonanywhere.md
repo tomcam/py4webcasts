@@ -111,7 +111,15 @@ $ ./py4web.py set_password
 
 The `./py4web.py set_password` step asks you twice for a password. That will be used when you log into the py4web dashboard.
 
+## Open a second tab for PythonAnywhere
+
+You currently have a web page open running a simulated bash console for py4web. Open a second PythonAnywhere tab.
+
+* There's a PythonAnywhere logo at the top of the page. Right-click (or Command-Click on MacOS) that logo to 
+open another PythonAnywhere page.
+
 ## Go to the WebApps page and create a new web app
+
 
 * On the navigation bar near the top of the page that says **Dashboard  Consoles  Files  Web  Tasks  Databases** choose **Web**.
 
