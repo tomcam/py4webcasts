@@ -36,54 +36,6 @@ Let's make sure we're on the same page, which should the the dashboard.
 
 You'll see a navigation menu near the top of the page that says **Dashboard  Consoles  Files  Web  Tasks  Databases**.
 
-## Go to the WebApps page and create a new web app
-
-* On the navigation bar near the top of the page that says **Dashboard  Consoles  Files  Web  Tasks  Databases** choose **Web**.
-
-* Choose **Add a new web app**.
-
-* A dialog appears called  **Create a new web app**
-
-You're informed that PythonAnywhere is creating a URL for your site and displays that URL. The main part of the URL is your username followed by `pythonanywhere.com`.
-
-* Choose **Next**.
-
-### Choose the Bottle framework
-
-The **Select a Python Web framework**  dialog appears, showing a list of frameworks like web2py, Django, Bottle, and so on.
-
-Py4web uses [Bottle](http://bottlepy.org). So:
-
-* Choose **Bottle** from the list.
-
-You're asked to select a Python version.
-
-* Choose **Python 3.8** (Bottle doesn't work with earlier versions):
-
-![Screenshot showing Python 3.8 and Bottle being selected](assets/img/pythonanywhere-create-new-web-app-1024x839.png)
-
-The **Quickstart new Bottle Project** dialog appears. You're asked to give the location where a `bottle_app.py` file will be generated. 
-It looks something like this, where `your_username` stands in for the PythonAnywhere username you created on signup.
-
-```bash
-Path:
-/home/your_username/mysite/bottle_app.py
-```
-
-* Replace the `mysite` portion with `py4web`. 
-
-* Replace `your_username` with your PythonAnywhere username. 
-
-For example:
-
-```bash
-/home/your_username/py4web/bottle_app.py
-```
-
-* Choose **Next**.
-
-You're shown a message saying `All done! Your web app is now set up. Details below.`
-
 ## Installing py4web from source on pythonanywhere
 
 One of the distinct features of py4web is that it is nothing more than a Python program. py4web apps are nothing more than a simple
@@ -138,7 +90,7 @@ Make py4web the current directory:
 $ cd py4web
 ```
 
-* Enter **python3 -m pip install --user -r requirements.txt** to install using pip:
+* Enter **python3 -m pip install -U --user -r requirements.txt** to install using pip:
 
 ```bash
 # --user means install in your local directory 
@@ -158,11 +110,57 @@ $ ./py4web.py set_password
 
 The `./py4web.py set_password` step asks you twice for a password. That will be used when you log into the py4web dashboard.
 
+## Go to the WebApps page and create a new web app
+
+* On the navigation bar near the top of the page that says **Dashboard  Consoles  Files  Web  Tasks  Databases** choose **Web**.
+
+* Choose **Add a new web app**.
+
+* A dialog appears called  **Create a new web app**
+
+You're informed that PythonAnywhere is creating a URL for your site and displays that URL. The main part of the URL is your username followed by `pythonanywhere.com`.
+
+* Choose **Next**.
+
+### Choose the Bottle framework
+
+The **Select a Python Web framework**  dialog appears, showing a list of frameworks like web2py, Django, Bottle, and so on.
+
+Py4web uses [Bottle](http://bottlepy.org). So:
+
+* Choose **Bottle** from the list.
+
+You're asked to select a Python version.
+
+* Choose **Python 3.8** (Bottle doesn't work with earlier versions):
+
+![Screenshot showing Python 3.8 and Bottle being selected](assets/img/pythonanywhere-create-new-web-app-1024x839.png)
+
+The **Quickstart new Bottle Project** dialog appears. You're asked to give the location where a `bottle_app.py` file will be generated. 
+It looks something like this, where `your_username` stands in for the PythonAnywhere username you created on signup.
+
+```bash
+Path:
+/home/your_username/mysite/bottle_app.py
+```
+
+* Replace the `mysite` portion with `py4web`. 
+
+* Replace `your_username` with your PythonAnywhere username. 
+
+For example:
+
+```bash
+/home/your_username/py4web/bottle_app.py
+```
+
+* Choose **Next**.
+
+You're shown a message saying `All done! Your web app is now set up. Details below.`
+
+
+
 ## Change your site's working directory
-
-* Return to your PythonAnywhere tab.
-
-* From the **Dashboard  Consoles  Files  Web  Tasks  Databases** navigation menu choose **Web**.
 
 * Scroll down to the section headed **Code**, which shows **Source Code**, **Working Directory**, and other information.
 
@@ -210,7 +208,7 @@ Run your favorite editor on the file `~/py4web/bottle_app.py`:
 vim ~/py4web/bottle_app.py
 ```
 
-* Replace the contents of `bottle_app.py` as follows. **Be sure to replace `mysite/apps` with `your_username/apps`, where `your_username` is your PythonAnywhere username.**
+* Replace the contents of `bottle_app.py` as follows
 
 ```
 import os
