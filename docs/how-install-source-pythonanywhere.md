@@ -266,9 +266,11 @@ online at your PythonAnywhere URL.
 
 ## Visit your website
 
-* Open a browser to the URL PythonAnywhere assigned you when you created the account. 
+* Return to the PythonAnywhere **Web** page: on the navigation bar near the top of the page that says **Dashboard  Consoles  Files  Web  Tasks  Databases** choose **Web**.
 
-It's your PythonAnywhere username followed by `.pythonanywhere.com`, so if your username were `your_username` the URL to open in your browser would be `http://your_username.pythonanywhere.com/`.
+Near the top you'll see **Configuration for** and the URL of your website in link form.
+
+* Click your website's URL under  **Configuration for**.
 
 It should look like this:
 
