@@ -83,7 +83,7 @@ Checking out files: 100% (660/660), done.
 ```
 The result is a `py4web` subdirectory in your root directory containing the py4web source treee.
 
-### Change to the py4web directory and install using pip
+### Change to the py4web directory and install requirements using pip
 
 Make py4web the current directory:
 
