@@ -15,6 +15,7 @@
 * py4web [Documentation](https://py4web.com/_documentation/static/index.html)
 * py4web [Google Group](https://groups.google.com/forum/#!forum/py4web)
 * py4web [Source code](https://github.com/web2py/py4web) with selected entries:
+  - [examples](https://github.com/web2py/py4web/tree/master/apps/examples) app
   - [form.py](https://github.com/web2py/py4web/blob/master/py4web/utils/form.py)
   - [publisher.py (subject to change)](https://github.com/web2py/py4web/blob/master/py4web/utils/publisher.py)
   - [tags.py](https://github.com/web2py/py4web/blob/master/py4web/utils/tags.py)
@@ -25,3 +26,4 @@
 
 ### Inspirations
 * [DjangoGirls tutorial](https://tutorial.djangogirls.org/en/django_start_project/)
+* Corey Schafer's [Django YouTube videos](https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p)
