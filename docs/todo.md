@@ -1,6 +1,7 @@
 # Topics I'd like to drill down on 
 
 * [JSONB suport](https://mail.google.com/mail/u/0/#inbox/FMfcgxwJXpNZQRbtWDwrGbtjtLFxhvzk)
+* [Changing button labels](https://groups.google.com/g/py4web/c/tK4s8nao3dc)
 * [Remove static from a URL](https://mail.google.com/mail/u/0/?zx=g45lhcfwef9s#inbox/FMfcgxwJXVFjcRgfBsdljmZzWXDQCbKm)
 * [Q() in utils.js](https://groups.google.com/g/py4web/c/-wvLOWBplZo/m/USTve_cHAwAJ)
 * [QuicknDirty How-To for SSO between web2py and py4web with KeyCloak](https://groups.google.com/g/py4web/c/CiHvAUVhEP8)
