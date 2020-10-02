@@ -7,6 +7,7 @@
 * [QuicknDirty How-To for SSO between web2py and py4web with KeyCloak](https://groups.google.com/g/py4web/c/CiHvAUVhEP8)
 * Single sign-n
   [py4groups overview](https://groups.google.com/g/py4web/c/jsG2szED3uk/m/FyB3c99EAwAJ)
+* [CPanel script by Jacinto](https://mail.google.com/mail/u/0/#inbox/FMfcgxwJZJSxwPpVtVlqzMbvtCGgrZTq)
 * Get db.table object from string table name (https://groups.google.com/g/py4web/c/v88MHLqOzjY)
 * Adding buttons to forms (https://groups.google.com/g/py4web/c/QwnEjVYbaBY/m/DkvCEAC2AgAJ)
 * Pythonanywhere
