@@ -10,5 +10,6 @@
 * [CPanel script by Jacinto](https://mail.google.com/mail/u/0/#inbox/FMfcgxwJZJSxwPpVtVlqzMbvtCGgrZTq)
 * Get db.table object from string table name (https://groups.google.com/g/py4web/c/v88MHLqOzjY)
 * Adding buttons to forms (https://groups.google.com/g/py4web/c/QwnEjVYbaBY/m/DkvCEAC2AgAJ)
+* [Custom auth](https://mail.google.com/mail/u/0/#inbox/FMfcgxwKhqjGpRzsgGrBKTggddVnpDvc)
 * Pythonanywhere
   [installation](https://mail.google.com/mail/u/0/?zx=ja0bdk3nuo9#search/pythonanywhere/FMfcgxwJXLbMsZXKQfvMFvPBBhkHzQrW?compose=DmwnWtDqNJWBmQdZtkLhMZnrPKSpgnghpVSldgNbhtMZJTqWTGWKbxlkTtTRTrDbCSwpBrwcqnLV) and [John Bannister's essential tutorial](https://groups.google.com/d/msgid/py4web/5f9cda29-6e27-4741-99df-ead216f4e791o%40googlegroups.com?utm_medium=email&utm_source=footer) ([GitHub version](https://github.com/Eudorajab1/py4web_pythonanywhere_source))
