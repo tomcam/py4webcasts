@@ -1,6 +1,8 @@
 # Topics I'd like to drill down on 
 
+
 * Controllers [file location](https://groups.google.com/g/py4web/c/GZm3ysmEdY8/m/OLjHlMmLAQAJ)
+* Amazon S3 [file upload](https://mail.google.com/mail/u/0/#inbox/FMfcgxwJZJbtVmFVKzxnthSBvknxCsWN)
 * [JSONB suport](https://mail.google.com/mail/u/0/#inbox/FMfcgxwJXpNZQRbtWDwrGbtjtLFxhvzk)
 * [Changing button labels](https://groups.google.com/g/py4web/c/tK4s8nao3dc)
 * [Remove static from a URL](https://mail.google.com/mail/u/0/?zx=g45lhcfwef9s#inbox/FMfcgxwJXVFjcRgfBsdljmZzWXDQCbKm)
