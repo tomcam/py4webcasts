@@ -10,6 +10,7 @@
 [//]: # "decorator"
 [//]: # "dict()"
 [//]: # "fixture (have an expert check my definition)"
+[//]: # "flash"
 [//]: # "mvc"
 [//]: # "IS_IN_SET"
 [//]: # "Field"
