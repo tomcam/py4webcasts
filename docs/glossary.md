@@ -27,7 +27,7 @@
 
 ## action
 
-An action is a public function in a [controller](#controller) file that processes an HTTP request and
+An action is a public function in a [controller](#controller) that processes an HTTP request and
 maps it to Python code in the controller. 
 In py4web the action returns either a string or a Python dictionary object.
 The py4web `@action` [decorator](#decorator) maps HTTP requests to controller functions, often applying
