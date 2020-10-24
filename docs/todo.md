@@ -16,6 +16,7 @@
 * Get db.table object from string table name (https://groups.google.com/g/py4web/c/v88MHLqOzjY)
 * Adding buttons to forms (https://groups.google.com/g/py4web/c/QwnEjVYbaBY/m/DkvCEAC2AgAJ)
 * [Custom auth](https://mail.google.com/mail/u/0/#inbox/FMfcgxwKhqjGpRzsgGrBKTggddVnpDvc)
+* Debugger support in PyCharm and Visual Studio Code [https://groups.google.com/g/py4web/c/Lv6nL3zSHn0](https://groups.google.com/g/py4web/c/Lv6nL3zSHn0)
 
 ## Completed
 * Pythonanywhere
