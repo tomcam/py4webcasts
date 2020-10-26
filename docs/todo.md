@@ -2,6 +2,7 @@
 
 
 * Controllers [file location](https://groups.google.com/g/py4web/c/GZm3ysmEdY8/m/OLjHlMmLAQAJ)
+* [GAE support](https://mail.google.com/mail/u/0/#inbox/FMfcgxwKjBPvXHwhmFlVmCSBncSBQZdB?compose=DmwnWtDmBFGHGchbMrrkRMVgJtbzcpQsDmkcNzjpPvNZDGqJQBFNcGLsTMJddRbSnqKqpLZMCqWl)
 * Hidden form fields and JWT https://gist.github.com/mdipierro/4d9d3704e6ba542bb3f8d34c925b051d,  https://freenode.logbot.info/py4web/20201024,https://docs.google.com/document/d/1LsBLf_QnkKei0ey9vscjeuBe-ndNwdaGDijI2xN8sns/edit#)
 * PWA using vue [MyFeed app](https://mail.google.com/mail/u/0/#inbox/FMfcgxwKjBKLGWfkrhQtDMrNfHvMJqKh)
 * Amazon S3 [file upload](https://mail.google.com/mail/u/0/#inbox/FMfcgxwJZJbtVmFVKzxnthSBvknxCsWN)
