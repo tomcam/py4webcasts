@@ -1,11 +1,9 @@
 # TODO:
 * Find out if the default style sheet has been settled on
-
+* Wouldn't it be best practice to define the title length? Massimo doesn't in his examples so I'm not sure. SEO practice suggests 60 chars; HN goes to 85. Mobile limits suggest something shortish.
 # Stages
 
 ## newsitt1
-* controllers.py: Can I get away with the default imports? Maybe just need to add Form?
-* models.py Can I get away with the default imports?
 
 ##### models.py
 ```python
@@ -47,9 +45,22 @@ def index():
     return dict(query=query)
 
 @action("new",method=['GET','POST'])    
-#@action("new")    
 @action.uses('new.html')
 def new():
     form=Form(db.post)
     return dict(form=form)
 ```
+
+## newsitt2
+Same as before but add to the new controller:
+
+##### controllers.py
+```python
+@authenticated()
+@action("new",method=['GET','POST'])    
+@action.uses(auth,'new.html')
+def new():
+    form=Form(db.post)
+    return dict(form=form)
+```
+
