@@ -1,8 +1,11 @@
 # py4webcasts
 
+## Usable
 * Py4web tutorial: [How to install py4web from source on PythonAnywhere for free](how-install-source-pythonanywhere.md)
-* Py4web tutorial: [Create a todo list app](py4web-tutorial-todo.md) in 75 lines
-* [Topics I'd like to cover](todo.md)
+* [How to upgrade PyDAL](how-upgrade-pydal.md)
+* [How to uninstall PyDAL](how-to-uninstall-pydal)
+
+## [Topics I'd like to cover](todo.md)
 
 ## PyDAL
 * [How to upgrade PyDAL](how-upgrade-pydal.md)
@@ -10,6 +13,7 @@
 
 ## Example projects
 * Andrew's complete [blog source code](https://github.com/agavgavi/py4web-blog-app) and [Running on PythonAnywhere](https://agavgavi.pythonanywhere.com/blog)
+* Py4web tutorial: [Create a todo list app](py4web-tutorial-todo.md) in 75 lines
 
 ## Resources
 * Gist for a minimal [py4web crud example](https://gist.github.com/tomcam/7b723cbb5f6542f54532d45c1dbc2d19)
