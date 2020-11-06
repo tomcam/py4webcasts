@@ -12,6 +12,7 @@
 * [How to uninstall PyDAL](how-to-uninstall-pydal)
 
 ## Example projects
+* [myfeed](https://github.com/web2py/py4web/tree/master/apps/myfeed)
 * Andrew's complete [blog source code](https://github.com/agavgavi/py4web-blog-app) and [Running on PythonAnywhere](https://agavgavi.pythonanywhere.com/blog)
 * Py4web tutorial: [Create a todo list app](py4web-tutorial-todo.md) in 75 lines
 
