@@ -24,6 +24,7 @@
 * py4web [Google Group](https://groups.google.com/forum/#!forum/py4web)
 * py4web [Source code](https://github.com/web2py/py4web) with selected entries:
   - [examples](https://github.com/web2py/py4web/tree/master/apps/examples) app
+  - Not sure: is [starrater](https://github.com/web2py/py4web/blob/master/apps/examples/components/starrater.py) good example of source documentation?
   - [form.py](https://github.com/web2py/py4web/blob/master/py4web/utils/form.py)
   - [publisher.py (subject to change)](https://github.com/web2py/py4web/blob/master/py4web/utils/publisher.py)
   - [tags.py](https://github.com/web2py/py4web/blob/master/py4web/utils/tags.py)
