@@ -149,8 +149,8 @@ def new():
 ## forms level
 
 When you define a model in [PyDal](#pydal), you can pass parameters called [validators](#validator) to the [Field](#field) constructor 
-controlling how data is entered into a form at runtime. T
-hese forms-level operations happen independently of, and before, [database level](#database-level) constraints.
+controlling how data is entered into a form at runtime. 
+These forms-level operations happen independently of, and before, [database level](#database-level) constraints.
 
 In the example below, a column in the `task` table named `priority` uses the validators `default=2`
 and `requires=IS_IN_SET([1,2,3])`. The `default` validator gets applied when a data entry form for a new task is rendered, 
