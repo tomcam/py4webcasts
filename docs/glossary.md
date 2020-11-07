@@ -94,7 +94,7 @@ db.define_table('task',
 No matter what the PyDal form validators say, it's impossible in the above example
 for a record to be added to the database with an empty `title` field, hence the term *database level*.
 
-This differs from parameters applied at the *[forms level]*(#forms-level), which constrain data entry at runtime.
+This differs from parameters applied at the *[forms level](#forms-level)*, which constrain data entry at runtime.
 
 ## decorator
 
