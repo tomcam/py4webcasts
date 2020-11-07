@@ -11,6 +11,8 @@
 [//]: # "dict()"
 [//]: # "fixture (have an expert check my definition)"
 [//]: # "flash"
+[//]: # "formstyle: add illustrations from newsitt example"
+[//]: # "helper"
 [//]: # "mvc"
 [//]: # "IS_IN_SET"
 [//]: # "Field"
@@ -169,6 +171,17 @@ db.define_table('task',
 In all cases, forms level validators are attempts at runtime to constrain user entry before it gets 
 inserted into the database. That's what makes them different from [database-level](#database-level)
 validators.
+
+## formstyle
+
+`formstyle` is an optional parameter for the [Form constructor](#form-constructor) that determines
+the appearance of a form. It's a helper function that maps different CSS frameworks to
+py4web's own HTML generator. For example, `FormStyleBulma` applies [Bulma](https://bulma.io)
+to your form, and `FormStyleBootstrap4` applies [Boostrap 4](https://getbootstrap.com) styles.
+
+
+### See also
+* py4web [form.py source](https://github.com/web2py/py4web/blob/master/py4web/utils/form.py)
 
 ## IS_IN_SET
 
