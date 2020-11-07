@@ -76,7 +76,7 @@ By default py4web uses [PyDal](#pydal) for its DAL, though you can use any Pytho
 
 ## database level
 
-When you define a model in [PyDal](#pydal), you can pass parameters to the [Field](#field) constructor 
+When you define a model in [PyDal](#pydal), you can pass parameters to the [Field constructor](#field-constructor)  
 constraining whether record can be inserted into the database. The term used informally in py4web 
 for this is that these are applied *database level*.
 
@@ -117,7 +117,7 @@ command would be. This allows the same Python code to be used for a wide variety
 * PyDAL [source code](https://github.com/web2py/pydal/blob/master/pydal/base.py)
 * [readthedocs](https://pydal.readthedocs.io/en/latest/index.html#pydal.base.DAL.define_table)
 
-## Field()
+## Field constructor
 
 `Field()` is a constructor passed to the [PyDal](#pydal) [define_table()](#define_table) function. 
 It represents both a field (aka column) to be added to a database table definition.
@@ -148,7 +148,7 @@ def new():
 
 ## forms level
 
-When you define a model in [PyDal](#pydal), you can pass parameters called [validators](#validator) to the [Field](#field) constructor 
+When you define a model in [PyDal](#pydal), you can pass parameters called [validators](#validator) to the [Field constructor](#field-constructor) constructor 
 controlling how data is entered into a form at runtime. 
 These forms-level operations happen independently of, and before, [database level](#database-level) constraints.
 
@@ -192,7 +192,7 @@ and application flow (the [controller](#controller)). [PyDAL example](#pydal-exa
 PyDAL model code defining a database table.
 
 ## length
-`length` is a parameter passed to the [Field](#field) constructor restricting the size of a field. [It applies only to](https://py4web.com/_documentation/static/index.html#chapter-05) fields of type `string`, `uploadfield`, and `authorize`.
+`length` is a parameter passed to the [Field constructor](#field-constructor) restricting the size of a field. [It applies only to](https://py4web.com/_documentation/static/index.html#chapter-05) fields of type `string`, `uploadfield`, and `authorize`.
 See the [PyDAL example](#pydal-example) for a typical use of `length`.
 
 <a id="mvc"></a>
@@ -250,11 +250,11 @@ This simple, but complete, executable example:
 You can use other DALs with py4web. PyDAL stands alone and is simply a Python package that happens to be bundled with py4web.
 
 ## required
-`required` is a [validator](#validator) passed to the [Field](#field) constructor when defining a table in [PyDAL](#pydal). 
+`required` is a [validator](#validator) passed to the [Field constructor](#field-constructor) when defining a table in [PyDAL](#pydal). 
 It prevents records from being saved at the database (technicallly, DAL) level unless a value for the field is specified.
 
 ## requires
-`requires` is a [validator](#validator) passed to the [Field](#field) constructor when defining a table in [PyDAL](#pydal). It controls data entry
+`requires` is a [validator](#validator) passed to the [Field constructor](#field-constructor) when defining a table in [PyDAL](#pydal). It controls data entry
 at the [form level](https://py4web.com/_documentation/static/index.html#chapter-05#field-constructor), preventing any attempt to save a record interactively until the validator's requirements are met. The record insert (save) is then called at the DAL level, which means a [required](#required) validator may also prevent the record insertion.
 
 ## Template object
