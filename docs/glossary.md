@@ -177,7 +177,7 @@ validators.
 `formstyle` is an optional parameter for the [Form constructor](#form-constructor) that determines
 the appearance of a form. It's a helper function that maps different CSS frameworks to
 py4web's own HTML generator. For example, `FormStyleBulma` applies [Bulma](https://bulma.io)
-to your form, and `FormStyleBootstrap4` applies [Boostrap 4](https://getbootstrap.com) styles.
+to your form, and `FormStyleBootstrap4` applies [Bootstrap 4](https://getbootstrap.com) styles.
 
 
 ### See also
