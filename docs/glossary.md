@@ -3,7 +3,7 @@
 [//]: # "TODO: Unfinished"
 [//]: # "Consider define_table insert, truncate, drop, import_from_csv_file http://www.web2py.com/books/default/chapter/29/06/the-database-abstraction-layer#The-DAL-A-quick-tour"
 [//]: # "action (have an expert check my definition)"
-[//]: # "controller"
+[//]: # "controller: Mention they also respond, for example, show an edit controller"
 [//]: # "create-model"
 [//]: # "create-controller"
 [//]: # "create-view"
