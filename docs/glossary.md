@@ -20,7 +20,7 @@
 [//]: # "Template object"
 [//]: # "[templates directory](#templates-directory)"
 [//]: # "uses (have an expert check my definition)"
-[//]: # "validator"
+[//]: # "validator needs finishing"
 [//]: # "view"
 [//]: # "yatl: add example"
 
@@ -74,6 +74,28 @@ DAL stands for Database Abstraction Layer (DAL). From the [PyDAL](https://github
 
 By default py4web uses [PyDal](#pydal) for its DAL, though you can use any Python ORM or DAL package you like.
 
+## database level
+
+When you define a model in [PyDal]](#pydal), you can pass parameters to the [Field](#field) constructor 
+constraining whether record can be inserted into the database. The term used informally in py4web 
+for this is that these are applied *database level*.
+
+For example, if your back end is SQL this would be a considered SQL constraint. 
+In the example below, a column in the `task` table named `title` is defined as `notnull`. 
+While it works on all back ends py4web supports, if it's a SQL database `notnull` would be
+translated into a `NOT NULL` SQL constraint. 
+
+```python
+db.define_table('task',
+    Field('title',length=80,notnull=True),
+    Field('description','text'))
+```
+
+No matter what the PyDal form validators say, it's impossible in the above example
+for a record to be added to the database with an empty `title` field, hence the term *database level*.
+
+This differs from parameters applied at the *[forms level]*(#forms-level), which constrain data entry at runtime.
+
 ## decorator
 
 In Python, a decorator is a function that wraps another function. 
@@ -121,9 +143,33 @@ def new():
     return dict(form=form)
 ```
 
-
 ### See also 
 * py4web [Fixture documentation](https://py4web.com/_documentation/static/index.html#chapter-04)
+
+## forms level
+
+When you define a model in [PyDal]](#pydal), you can pass parameters called [validators](#validator) to the [Field](#field) constructor 
+controlling how data is entered into a form at runtime. T
+hese forms-level operations happen independently of, and before, [database level](#database-level) constraints.
+
+In the example below, a column in the `task` table named `priority` uses the validators `default=2`
+and `requires=IS_IN_SET([1,2,3])`. The `default` validator gets applied when a data entry form for a new task is rendered, 
+causing the number 2 to appear in the field before data entry starts. 
+
+The `requires=IS_IN_SET([1,2,3])` validator ensures that a user can only enter 1, 2, or 3 into the `priority` field.
+Because it's enforced at the forms level and not the database level, a database being imported could contain
+values other than 1, 2, or 3.
+
+```python
+db.define_table('task',
+    Field('title',length=80,notnull=True),
+    Field('description','text'),
+    Field('priority','integer',default=2,requires=IS_IN_SET([1,2,3]))
+```
+
+In all cases, forms level validators are attempts at runtime to constrain user entry before it gets 
+inserted into the database. That's what makes them different from [database-level](#database-level)
+validators.
 
 ## IS_IN_SET
 
@@ -175,7 +221,7 @@ SQL-based or not.
 An Object Relational Mapper. An ORM lets you manipulate databases, queries, and tables using Python instead of, say, SQL. An ORM is object-oriented abstraction over database access, and is familiar to uses of legacy languages such as Java. ORMs tend to include many class libraries over and above the normal SQL access. That makes them somewhat harder to learn, and slower to execute, than DALs like [PyDAL](#pydal). [SQLAlchemy](https://www.sqlalchemy.org/) is a popular Python ORM.
 
 ## notnull
-`notnull` is a [PyDal](#pydal) field [validator](#validator) that ensures a record can't be inserted into the database with the specified field empty.
+`notnull` is a [PyDal](#pydal) field [validator](#validator) ensuring, at the [database level](#database-level), that a record can't be inserted into the database with the specified field empty.
 
 ## PyDAL
 The database abstraction later, or [DAL](#dal), that py4web uses by default.
