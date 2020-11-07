@@ -148,7 +148,7 @@ def new():
 
 ## forms level
 
-When you define a model in [PyDal]](#pydal), you can pass parameters called [validators](#validator) to the [Field](#field) constructor 
+When you define a model in [PyDal](#pydal), you can pass parameters called [validators](#validator) to the [Field](#field) constructor 
 controlling how data is entered into a form at runtime. T
 hese forms-level operations happen independently of, and before, [database level](#database-level) constraints.
 
