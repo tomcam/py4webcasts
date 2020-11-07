@@ -3,6 +3,7 @@
 
 * Controllers [file location](https://groups.google.com/g/py4web/c/GZm3ysmEdY8/m/OLjHlMmLAQAJ)
 * [nocss](https://github.com/mdipierro/no.css#the-nav-block)
+* [Getting an ID for a controller (bad summary but I'm tired](https://groups.google.com/forum/#!topic/py4web/yFpVzzOe7R0)
 * [GAE support](https://mail.google.com/mail/u/0/#inbox/FMfcgxwKjBPvXHwhmFlVmCSBncSBQZdB?compose=DmwnWtDmBFGHGchbMrrkRMVgJtbzcpQsDmkcNzjpPvNZDGqJQBFNcGLsTMJddRbSnqKqpLZMCqWl)
 * Policies. [Thread with examples](https://mail.google.com/mail/u/0/#inbox/FMfcgxwKjBRGVhcMxgGkxCwVmBtttSfn),
 * Hidden form fields and JWT https://gist.github.com/mdipierro/4d9d3704e6ba542bb3f8d34c925b051d,  https://freenode.logbot.info/py4web/20201024,https://docs.google.com/document/d/1LsBLf_QnkKei0ey9vscjeuBe-ndNwdaGDijI2xN8sns/edit#)
