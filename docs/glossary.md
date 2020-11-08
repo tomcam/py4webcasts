@@ -198,7 +198,7 @@ db.define_table('task',
 ```
 
 ## model
-In py4web, the model is the database layer of a py4web app, represented as code using [PyDAL](#pydal).
+In py4web, the model is the database layer of the app, represented as code using [PyDAL](#pydal).
 [MVC applications](#mvc) separate database access logic (the model) from display logic (the [view](#view)),
 and application flow (the [controller](#controller)). [PyDAL example](#pydal-example) shows typical
 PyDAL model code defining a database table.
