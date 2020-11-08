@@ -34,6 +34,7 @@
 * ZetCode [pyDAL tutorial](http://zetcode.com/python/pydal/)
 * Bulma [source on GitHub](https://github.com/jgthms/bulma)
   - [bulma.css](https://github.com/jgthms/bulma/blob/master/css/bulma.css)
+* Correct formatting: PyDAL and Py4WEB
 
 ### Inspirations
 * [DjangoGirls tutorial](https://tutorial.djangogirls.org/en/django_start_project/)
