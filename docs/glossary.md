@@ -78,8 +78,7 @@ By default py4web uses [PyDal](#pydal) for its DAL, though you can use any Pytho
 
 ## database level
 
-When you define a model in [PyDal](#pydal), you can pass parameters to the [Field constructor](#field-constructor)  
-constraining whether record can be inserted into the database. The term used informally in py4web  for this is that these are applied *database level*.
+When you define a model in [PyDal](#pydal), you can pass parameters to the [Field constructor](#field-constructor) constraining whether record can be inserted into the database. The term used informally in py4web  for this is that these are applied *database level*.
 
 For example, if your back end is SQL this would be a considered SQL constraint. 
 In the example below, a column in the `task` table named `title` is defined as `notnull`. 
