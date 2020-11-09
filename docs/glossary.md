@@ -43,7 +43,7 @@ and converts the result into a string. Often that string is rendered as HTML to 
 
 * The action named `@action('index')` would process the HTTP request `myapp/index`, 
 calling the controller function `index`.
-* The action named `@action('view/<id>'` would process HTTP requests like `myapp/view/2022` to
+* The action named `@action('view/<id>')` would process HTTP requests like `myapp/view/2022` to
 call a controller function named `view` on the record whose ID is 2022
 * The action named `@action('edit/<id>',method=['GET','POST'])` would work on an edit form,
 so `myapp/edit/2022` would call the controller function named `edit`. It could, for example, display the contents of the record whose ID is 2022 (the `GET` request) in form, and post back any changes to it (the `EDIT` request)
