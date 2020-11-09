@@ -72,7 +72,7 @@ See also [MVC](#mvc)
 
 ## DAL
 
-DAL stands for Database Abstraction Layer (DAL). From the [PyDAL](https://github.com/web2py/pydal) documentation: A DAL is "an API that maps Python objects into database objects such as queries, tables, and records." A DAL differ from an [ORM](#orm) in that it doesn't use an extensive object model. In practice that means it's lightweight, faster, and requires less overhead to both to write and to execute. It also lets you perform database operations on noSQL and SQL databases using the same Python code.
+DAL stands for Database Abstraction Layer (DAL). From the [PyDAL](https://github.com/web2py/pydal) documentation: A DAL is "an API that maps Python objects into database objects such as queries, tables, and records." A DAL differ from an [ORM](#orm) in that it doesn't use an extensive object model. In practice that means it's lightweight, faster, and requires less overhead both to write and to execute. It also lets you perform database operations on noSQL and SQL databases using the same Python code.
 
 By default py4web uses [PyDal](#pydal) for its DAL, though you can use any Python ORM or DAL package you like.
 
