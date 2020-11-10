@@ -1,0 +1,7 @@
+[[extend 'layout.html']]
+<table>
+[[for q in query:]]
+    <tr><td>[[=q.title]]</td></tr>
+[[pass]]
+</table>
+[[=A('New post', _href=URL('new'))]]
