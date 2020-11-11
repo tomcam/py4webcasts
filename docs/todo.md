@@ -2,7 +2,7 @@
 
 
 * Controllers [file location](https://groups.google.com/g/py4web/c/GZm3ysmEdY8/m/OLjHlMmLAQAJ)
-* Illuminating thread on Stifan's [AJAX questions](https://mail.google.com/mail/u/0/#inbox/FMfcgxwKjKwjXZJsvmGfSpLLvxkNKNGW?compose=DmwnWrRnZfWhcJSJSWHzQWbVZwwzVvmWxlRFNphXWtSlhfqjCMcMwhdmZgSShHtWClzrPKXbfGwl)
+* Illuminating thread on Stifan's [AJAX questions](https://groups.google.com/g/py4web/c/fIL8Jmb3hqY)
 * [nocss](https://github.com/mdipierro/no.css#the-nav-block)
 * [Getting an ID for a controller (bad summary but I'm tired](https://groups.google.com/forum/#!topic/py4web/yFpVzzOe7R0)
 * Default validators (mention in glossary), mentioned in [web2py docs](http://www.web2py.com/books/default/chapter/29/06/the-database-abstraction-layer)
