@@ -94,8 +94,9 @@ def index():
 @action("new",method=['GET','POST'])    
 @action.uses('new.html')
 def new():
-    #form=Form(db.post,formstyle=FormStyleBulma)
     form=Form(db.post)
+    if form.accepted:
+        redirect(URL('index'))
     return dict(form=form)
 	
 ##### templates/index.html
