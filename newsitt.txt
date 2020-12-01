@@ -99,14 +99,22 @@ def new():
         redirect(URL('index'))
     return dict(form=form)
 	
+@action("post/<id>")
+@action.uses('post.html')
+def post(id):
+    post=db.post(id)
+    form=Form(db.post,post)
+    return dict(post=post,form=form)
+    
 ##### templates/index.html
 
 [[extend 'layout.html']]
 <table>
 [[for q in query:]]
-    <tr><td>[[=q.title]]</td></tr>
+    <tr><td><a href="[[=URL('post',q.id)]]">[[=q.title]]</a></td></tr>
 [[pass]]
 </table>
+
 [[=A('New post', _href=URL('new'))]]
 
 ##### templates/new.html
@@ -115,4 +123,10 @@ def new():
 <h1>New Post</h1>
 [[=form]]
 [[=A('Home', _href=URL('index'))]]
+
+##### templates/post.html
+[[extend 'layout.html']]
+<h1>[[=post.title]]</h1>
+[[=A('Home', _href=URL('index'))]]
+
 
