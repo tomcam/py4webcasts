@@ -2,6 +2,7 @@
 
 
 * Controllers [file location](https://groups.google.com/g/py4web/c/GZm3ysmEdY8/m/OLjHlMmLAQAJ)
+* @authenticated [here](https://groups.google.com/g/py4web/c/q4S5deDkrPA/m/qFEoVD68AQAJ)
 * Illuminating thread on Stifan's [AJAX questions](https://groups.google.com/g/py4web/c/fIL8Jmb3hqY)
 * [nocss](https://github.com/mdipierro/no.css#the-nav-block)
 * [Getting an ID for a controller (bad summary but I'm tired](https://groups.google.com/forum/#!topic/py4web/yFpVzzOe7R0)
