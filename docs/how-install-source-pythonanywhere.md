@@ -249,19 +249,8 @@ There is now a **Configuration** section with the name of your URL, and a big gr
 
 * Choose the **Reload your_username.pythonanywhere.com** button, where your_username is used in place of your PythonAnywhere account name.
 
-A progress icon appears for a few seconds, then the page returns to its previous state. You're finally ready to run py4web.
-
-## Start py4web
-
-* Return to the PythonAnywhere bash shell.
-
-* Start py4web like so:
-
-```bash
-$ ./py4web.py run apps
-```
-
-This starts the built-in py4web web server and runs its own copy of the py4web site. It is now available
+A progress icon appears for a few seconds, then the page returns to its previous state.
+This restarts your py4web web framework server with the updated settings. It is now available
 online at your PythonAnywhere URL.
 
 ## Visit your website
