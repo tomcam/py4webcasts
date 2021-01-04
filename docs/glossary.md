@@ -43,7 +43,7 @@ and converts the result into a string. Often that string is rendered as HTML to 
 
 * The action named `@action('index')` would process the HTTP request `myapp/index`, 
 calling the controller function `index`.
-* The action named `@action('view/<id>'` would process HTTP requests like `myapp/view/2022` to
+* The action named `@action('view/<id>')` would process HTTP requests like `myapp/view/2022` to
 call a controller function named `view` on the record whose ID is 2022
 * The action named `@action('edit/<id>',method=['GET','POST'])` would work on an edit form,
 so `myapp/edit/2022` would call the controller function named `edit`. It could, for example, display the contents of the record whose ID is 2022 (the `GET` request) in form, and post back any changes to it (the `EDIT` request)
@@ -72,19 +72,17 @@ See also [MVC](#mvc)
 
 ## DAL
 
-DAL stands for Database Abstraction Layer (DAL). From the [PyDAL](https://github.com/web2py/pydal) documentation: A DAL is "an API that maps Python objects into database objects such as queries, tables, and records." A DAL differ from an [ORM](#orm) in that it doesn't use an extensive object model. In practice that means it's lightweight, faster, and requires less overhead to both to write and to execute. It also lets you perform database operations on noSQL and SQL databases using the same Python code.
+DAL stands for Database Abstraction Layer (DAL). From the [PyDAL](https://github.com/web2py/pydal) documentation: A DAL is "an API that maps Python objects into database objects such as queries, tables, and records." A DAL differ from an [ORM](#orm) in that it doesn't use an extensive object model. In practice that means it's lightweight, faster, and requires less overhead both to write and to execute. It also lets you perform database operations on noSQL and SQL databases using the same Python code.
 
 By default py4web uses [PyDal](#pydal) for its DAL, though you can use any Python ORM or DAL package you like.
 
 ## database level
 
-When you define a model in [PyDal](#pydal), you can pass parameters to the [Field constructor](#field-constructor)  
-constraining whether record can be inserted into the database. The term used informally in py4web  for this is that these are applied *database level*.
+When you define a model in [PyDal](#pydal), you can pass parameters to the [Field constructor](#field-constructor) constraining whether the record can be inserted into the database. The term used informally in py4web for this is that these are applied considered atn *database level*.
 
-For example, if your back end is SQL this would be a considered SQL constraint. 
+For example, if your back end is SQL this would be considered an SQL constraint. 
 In the example below, a column in the `task` table named `title` is defined as `notnull`. 
-While it works on all back ends py4web supports, if it's a SQL database `notnull` would be
-translated into a `NOT NULL` SQL constraint. 
+While it works on all database platforms py4web supports, if it's an SQL database `notnull` would be translated into a `NOT NULL` SQL constraint. 
 
 ```python
 db.define_table('task',
@@ -92,8 +90,7 @@ db.define_table('task',
     Field('description','text'))
 ```
 
-No matter what the PyDal form validators say, it's impossible in the above example
-for a record to be added to the database with an empty `title` field, hence the term *database level*.
+No matter what the PyDal form validators say, it's impossible in the above example for a record to be added to the database with an empty `title` field, hence the term *database level*.
 
 This differs from parameters applied at the *[forms level](#forms-level)*, which constrain data entry at runtime.
 
@@ -295,28 +292,28 @@ Unfortunately Django web framework confuses `view` with `template`, so py4web so
 that usage.
 
 The python code is embedded into HTML using square brackets as delimiter by convention, although
-that can be changed on a per-function bases with py4web (shown below). This example ranges through
-a set named `query` returned from a [PyDAL](#pydal) `select` call:
+that can be changed on a per-function basis with py4web (shown below). This example loops through
+a set named `records` returned from a [PyDAL](#pydal) `select` call:
 
 ```html
-    [[for q in query:]]
-        <tr><td>[[=q.priority]]</td><td>[[=q.title]]</td></tr>
+    [[for r in records:]]
+        <tr><td>[[=r.priority]]</td><td>[[=r.title]]</td></tr>
     [[pass]]
 ```
 
 ### view example
 
 Here's a complete though simplistic example of Python embedded in a view. The controller
-generates a query of the `task` table that returns all tasks in reverse priority order.
-It returns that query as a Python [dictionary object](https://realpython.com/python-dicts/):
+generates a set of records based on the `task` table that includes all tasks in reverse priority order.
+It returns those records as a Python [dictionary object](https://realpython.com/python-dicts/):
 
 ##### file controllers.py
 
 ```python
 @action('index')
 def index():
-    query=db(db.task).select(orderby=~db.task.priority)
-    return dict(query=query)
+    records=db(db.task).select(orderby=~db.task.priority)
+    return dict(records=records)
 ```
 
 The `index` [action](#action) shown above is shorthand for this:
@@ -336,8 +333,8 @@ the `index.html` [template](#template):
     <h1>Tasks</h1>
     <table class="table is-full-width">
         <tr><th>Priority</th><th>Title</th></tr>
-    [[for q in query:]]
-        <tr><td>[[=q.priority]]</td><td>[[=q.title]]</td></tr>
+    [[for r in records:]]
+        <tr><td>[[=r.priority]]</td><td>[[=r.title]]</td></tr>
     [[pass]]
     </table>
     [[=A('New task', _href=URL('new'))]]    
